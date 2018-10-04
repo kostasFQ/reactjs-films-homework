@@ -6,7 +6,7 @@ module.exports = {
     main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.js']
   },
   output: {
-    path: path.join(__dirname, '../../dist'),
+    path: path.join(__dirname, '../../build'),
     publicPath: '/',
     filename: '[name].js'
   },
@@ -17,7 +17,7 @@ module.exports = {
     rules: [
       {
         enforce: "pre",
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: "eslint-loader",
         options: {
@@ -27,7 +27,7 @@ module.exports = {
         }
       },
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: "babel-loader",
       },
@@ -43,7 +43,7 @@ module.exports = {
         ]
       },
       { 
-        test: /\.css$/,
+        test: /\.s?css$/,
         use: [ 'style-loader', 'css-loader' ]
       },
       {
