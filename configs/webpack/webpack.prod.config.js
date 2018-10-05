@@ -6,12 +6,15 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/index.js'
+    main: './src/index.jsx'
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, '../../build'),
     publicPath: '/',
     filename: '[name].js'
+  },
+  resolve: {
+    extensions: ['.js','.jsx']
   },
   target: 'web',
   devtool: '#source-map',
@@ -50,6 +53,25 @@ module.exports = {
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader']
+      },
+      {
+        test: /\.scss/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              modules: true,
+              localIdentName: "[hash:base64:5]"
+            }
+          },
+          {
+            loader: "sass-loader"
+          }
+        ]
       },
     ]
   },

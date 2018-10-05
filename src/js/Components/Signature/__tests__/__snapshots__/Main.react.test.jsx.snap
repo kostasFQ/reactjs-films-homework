@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test component 1`] = `
+<div
+  className="content"
+>
+  <h2>
+    KST
+  </h2>
+</div>
+`;

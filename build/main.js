@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "55c82cd0e98e30523392";
+/******/ 	var hotCurrentHash = "c13cff908c284aacdbaf";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -982,41 +982,24 @@ ansiHTML.reset()
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./src/css/style.css":
-/*!*****************************************************!*\
-  !*** ./node_modules/css-loader!./src/css/style.css ***!
-  \*****************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/sass-loader/lib/loader.js!./src/js/Components/Signature/style.scss":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--8-1!./node_modules/sass-loader/lib/loader.js!./src/js/Components/Signature/style.scss ***!
+  \*****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(true);
 // imports
 
 
 // module
-exports.push([module.i, "h1, h2, h3, h4, h5, p {\r\n  font-family: helvetica;\r\n  color: #3e3e3e;\r\n}\r\n.description {\r\n  font-size: 14px;\r\n  color: #9e9e9e;\r\n}\r\n.awful-selfie{\r\n  width: 300px;\r\n  height: 300px;\r\n  background-size: 100% auto;\r\n  background-repeat: no-repeat;\r\n}", ""]);
+exports.push([module.i, ".name___sXBkw {\n  color: red; }\n", "", {"version":3,"sources":["C:/Users/QA-Brest/Desktop/reactjs-films-homework/src/js/Components/Signature/style.scss"],"names":[],"mappings":"AAAA;EACE,WAAW,EAAE","file":"style.scss","sourcesContent":[".name {\n  color: red; }\n"],"sourceRoot":""}]);
 
 // exports
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./src/js/Components/Signature/styles.css":
-/*!**************************************************************************!*\
-  !*** ./node_modules/css-loader!./src/js/Components/Signature/styles.css ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".name {\r\n  color: red;\r\n}", ""]);
-
-// exports
-
+exports.locals = {
+	"name": "name___sXBkw"
+};
 
 /***/ }),
 
@@ -24811,65 +24794,10 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./src/css/style.css":
-/*!***************************!*\
-  !*** ./src/css/style.css ***!
-  \***************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../node_modules/css-loader!./style.css */ "./node_modules/css-loader/index.js!./src/css/style.css");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(true) {
-	module.hot.accept(/*! !../../node_modules/css-loader!./style.css */ "./node_modules/css-loader/index.js!./src/css/style.css", function() {
-		var newContent = __webpack_require__(/*! !../../node_modules/css-loader!./style.css */ "./node_modules/css-loader/index.js!./src/css/style.css");
-
-		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/index.jsx":
+/*!***********************!*\
+  !*** ./src/index.jsx ***!
+  \***********************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -24884,15 +24812,13 @@ var _reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/i
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Main = __webpack_require__(/*! ./js/Components/Signature/Main.jsx */ "./src/js/Components/Signature/Main.jsx");
+var _Main = __webpack_require__(/*! ./js/Components/Signature/Main */ "./src/js/Components/Signature/Main.jsx");
 
 var _Main2 = _interopRequireDefault(_Main);
 
-__webpack_require__(/*! ./css/style.css */ "./src/css/style.css");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_Main2.default, { name: 'KOST' }), document.getElementById('APP') // eslint-disable-line no-undef
+_reactDom2.default.render(_react2.default.createElement(_Main2.default, { name: 'KST' }), document.getElementById('APP') // eslint-disable-line no-undef
 );
 
 if (typeof module.hot !== 'undefined') {
@@ -24924,41 +24850,42 @@ var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-type
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _styles = __webpack_require__(/*! ./styles.css */ "./src/js/Components/Signature/styles.css");
+var _style = __webpack_require__(/*! ./style.scss */ "./src/js/Components/Signature/style.scss");
 
-var _styles2 = _interopRequireDefault(_styles);
+var _style2 = _interopRequireDefault(_style);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Main = function Main(props) {
-  console.log('-', _styles2.default); // eslint-disable-line no-undef
+  var name = props.name;
+
   return _react2.default.createElement(
     'div',
     { className: 'content' },
     _react2.default.createElement(
-      'h1',
-      { className: _styles2.default.name },
-      props.name
+      'h2',
+      { className: _style2.default.name },
+      name
     )
   );
 };
 
 Main.propTypes = {
-  name: _propTypes2.default.string
+  name: _propTypes2.default.string.isRequired
 };
 exports.default = Main;
 
 /***/ }),
 
-/***/ "./src/js/Components/Signature/styles.css":
+/***/ "./src/js/Components/Signature/style.scss":
 /*!************************************************!*\
-  !*** ./src/js/Components/Signature/styles.css ***!
+  !*** ./src/js/Components/Signature/style.scss ***!
   \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../node_modules/css-loader!./styles.css */ "./node_modules/css-loader/index.js!./src/js/Components/Signature/styles.css");
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--8-1!../../../../node_modules/sass-loader/lib/loader.js!./style.scss */ "./node_modules/css-loader/index.js?!./node_modules/sass-loader/lib/loader.js!./src/js/Components/Signature/style.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -24977,8 +24904,8 @@ var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/a
 if(content.locals) module.exports = content.locals;
 
 if(true) {
-	module.hot.accept(/*! !../../../../node_modules/css-loader!./styles.css */ "./node_modules/css-loader/index.js!./src/js/Components/Signature/styles.css", function() {
-		var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader!./styles.css */ "./node_modules/css-loader/index.js!./src/js/Components/Signature/styles.css");
+	module.hot.accept(/*! !../../../../node_modules/css-loader??ref--8-1!../../../../node_modules/sass-loader/lib/loader.js!./style.scss */ "./node_modules/css-loader/index.js?!./node_modules/sass-loader/lib/loader.js!./src/js/Components/Signature/style.scss", function() {
+		var newContent = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--8-1!../../../../node_modules/sass-loader/lib/loader.js!./style.scss */ "./node_modules/css-loader/index.js?!./node_modules/sass-loader/lib/loader.js!./src/js/Components/Signature/style.scss");
 
 		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
 
@@ -25006,14 +24933,14 @@ if(true) {
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************!*\
-  !*** multi webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000 ./src/index.js ***!
-  \********************************************************************************************/
+/*!*********************************************************************************************!*\
+  !*** multi webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000 ./src/index.jsx ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000 */"./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&timeout=20000");
-module.exports = __webpack_require__(/*! ./src/index.js */"./src/index.js");
+module.exports = __webpack_require__(/*! ./src/index.jsx */"./src/index.jsx");
 
 
 /***/ })
