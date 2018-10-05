@@ -10,7 +10,10 @@
     "start": "node ./build/server.js"
   },
   "jest": {
-    "transform": {".*": "<rootDir>/node_modules/jest-css-modules"}
+    "transform": {".*": "<rootDir>/node_modules/jest-css-modules"},
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
   },
   "repository": {
     "type": "git",
