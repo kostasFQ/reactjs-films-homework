@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "rm -rf build && webpack --mode development --config ./configs/webpack/webpack.server.config.js && webpack --mode development --config ./configs/webpack/webpack.dev.config.js && node ./build/server.js",
+    "build": "rm -rf build && webpack --mode production --config ./configs/webpack/webpack.server.config.js && webpack --mode production --config ./configs/webpack/webpack.prod.config.js",
+    "lint": "eslint -c .eslintrc.js ./src --fix",
     "test": "jest --coverage --config jest.config.js",
-    "buildDev": "rm -rf build && webpack --mode development --config ./configs/webpack/webpack.server.config.js && webpack --mode development --config ./configs/webpack/webpack.dev.config.js",
-    "buildProd": "rm -rf build && webpack --mode production --config ./configs/webpack/webpack.server.config.js && webpack --mode production --config ./configs/webpack/webpack.prod.config.js",
-    "start": "node ./build/server.js"
+    "prod": "node ./build/server.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,11 @@
     "express": "^4.16.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "webpack": "^4.20.2",
+    "webpack-dev-middleware": "^3.4.0",
+    "webpack-hot-middleware": "^2.24.2",
+    "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -61,17 +66,12 @@
     "stylelint-config-standard": "^18.2.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "uglifyjs-webpack-plugin": "^2.0.1",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-middleware": "^3.4.0",
-    "webpack-hot-middleware": "^2.24.2",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-cli": "^3.1.2"
   },
     "husky": {
       "hooks": {
         "pre-commit": "npm run test",
-        "pre-push": "npm run test",
-        "...": "..."
+        "pre-push": "npm run test"
       }
     }
 }

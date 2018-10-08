@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "c13cff908c284aacdbaf";
+/******/ 	var hotCurrentHash = "d3b5feea36ef044b4597";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -24863,7 +24863,7 @@ var Main = function Main(props) {
     'div',
     { className: 'content' },
     _react2.default.createElement(
-      'h2',
+      'h1',
       { className: _style2.default.name },
       name
     )

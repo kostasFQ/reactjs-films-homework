@@ -6,7 +6,7 @@ const Main = (props) => {
   const {name} = props;
   return (
     <div className="content">
-      <h2 className={styles.name}>{name}</h2>
+      <h1 className={styles.name}>{name}</h1>
     </div>
   )
 }

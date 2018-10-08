@@ -4,10 +4,10 @@ exports[`test component 1`] = `
 <div
   className="content"
 >
-  <h2
+  <h1
     className="name"
   >
     KST
-  </h2>
+  </h1>
 </div>
 `;

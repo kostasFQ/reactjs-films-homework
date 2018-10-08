@@ -1,4 +1,4 @@
-module.exports = {
+module.exports ={
   "env": {
     "browser": true
   },
@@ -9,4 +9,4 @@ module.exports = {
     "airbnb"
   ],
   "parser": "babel-eslint"
-};
+}
