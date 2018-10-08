@@ -6,7 +6,7 @@
   "scripts": {
     "start": "rm -rf build && webpack --mode development --config ./configs/webpack/webpack.server.config.js && webpack --mode development --config ./configs/webpack/webpack.dev.config.js && node ./build/server.js",
     "build": "rm -rf build && webpack --mode production --config ./configs/webpack/webpack.server.config.js && webpack --mode production --config ./configs/webpack/webpack.prod.config.js",
-    "lint": "eslint -c .eslintrc.js ./src --fix",
+    "lint": "eslint -c .eslintrc.js ./src/**/*.jsx --fix",
     "test": "jest --coverage --config jest.config.js",
     "prod": "node ./build/server.js"
   },

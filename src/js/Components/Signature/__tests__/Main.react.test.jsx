@@ -1,10 +1,10 @@
 import React from 'react';
-import Main from '../Main';
 import renderer from 'react-test-renderer';
+import Main from '../Main';
 
 test('test component', () => {
   const render = renderer.create(
-    <Main name='KST'/>
+    <Main name="KST" />,
   );
 
   const component = render.toJSON();
@@ -12,9 +12,9 @@ test('test component', () => {
   expect(component).toMatchSnapshot();
   expect(component.type).toBe('div');
   expect.objectContaining({
-    className: 'content'
-  })
+    className: 'content',
+  });
   expect.objectContaining({
-    children: expect.any(Object)
-  })
-})
+    children: expect.any(Object),
+  });
+});
