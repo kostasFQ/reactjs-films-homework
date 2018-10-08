@@ -8,14 +8,14 @@ test('test component', () => {
   );
 
   const component = render.toJSON();
-  console.log(render.toJSON());
+  console.log(render.toJSON().children);
 
   expect(component).toMatchSnapshot();
-  /*expect(component.type).toBe('div');
+  expect(component.type).toBe('div');
   expect.objectContaining({
     className: 'content'
   })
   expect.objectContaining({
     children: expect.any(Object)
-  }) */
+  })
 })
