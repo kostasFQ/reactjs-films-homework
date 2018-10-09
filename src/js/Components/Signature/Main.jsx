@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader';
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './style.scss';
@@ -14,4 +15,4 @@ const Main = (props) => {
 Main.propTypes = {
   name: PropTypes.string.isRequired,
 };
-export default Main;
+export default hot(module)(Main);

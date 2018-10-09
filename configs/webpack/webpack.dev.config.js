@@ -1,4 +1,4 @@
-const path = require('path')
+// const path = require('path')
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
@@ -7,50 +7,38 @@ module.exports = {
   entry: {
     main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.jsx']
   },
-  output: {
+  /* output: {
     path: path.join(__dirname, '../../build'),
     publicPath: '/',
     filename: '[name].js'
   },
   resolve: {
     extensions: ['.js','.jsx']
-  },
+  }, */
   mode: 'development',
-  target: 'web',
-  devtool: '#source-map',
+  // target: 'web',
+  // devtool: '#source-map',
   module: {
     rules: [
       {
         enforce: "pre",
-        test: /\.jsx?$/,
+        test: /\.jsx$/,
         exclude: /node_modules/,
-        loader: "eslint-loader",
-        options: {
-          emitWarning: true,
-          failOnError: false,
-          failOnWarning: false,
-          fix: true
-        }
-      },
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: "babel-loader",
-      },
-      {
-        test: /\.html$/,
         use: [
+          "babel-loader",
           {
-            loader: "html-loader",
+            loader: "eslint-loader",
+            options: {
+              emitWarning: true,
+              failOnError: false,
+              failOnWarning: false,
+              fix: true
+            }
           }
         ]
       },
-      { 
-        test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
-      },
-      {
-        test: /\.scss/,
+      /* {
+        test: /\.(sa|sc|c)ss$/,
         use: [
           {
             loader: "style-loader"
@@ -67,10 +55,10 @@ module.exports = {
             loader: "sass-loader"
           }
         ]
-      },
+      }, */
       {
        test: /\.(png|svg|jpg|gif)$/,
-       use: ['file-loader']
+       use: ['file-loader', 'url-loader']
       }
     ]
   },
@@ -78,7 +66,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/html/index.html",
       filename: "./index.html",
-      excludeChunks: [ 'server' ]
+      // excludeChunks: [ 'server' ]
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),

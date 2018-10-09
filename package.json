@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "rm -rf build && webpack --mode development --config ./configs/webpack/webpack.server.config.js && webpack --mode development --config ./configs/webpack/webpack.dev.config.js && node ./build/server.js",
+    "start": "rm -rf build && webpack --mode development --config ./configs/webpack/webpack.server.config.js && webpack --mode development --config ./configs/webpack/webpack.dev.config.js && node ./build/server.js --hot",
     "build": "rm -rf build && webpack --mode production --config ./configs/webpack/webpack.server.config.js && webpack --mode production --config ./configs/webpack/webpack.prod.config.js",
     "lint": "eslint -c .eslintrc.js ./src/**/*.jsx --fix",
-    "test": "jest --coverage --config jest.config.js",
+    "test": "jest --coverage --config ./configs/jest/jest.config.js && stylelint ./**/*.scss",
     "prod": "node ./build/server.js"
   },
   "repository": {
@@ -23,15 +23,17 @@
   "homepage": "https://github.com/kostasFQ/reactjs-films-homework#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "prop-types": "^15.6.2",
+    "react-hot-loader": "^4.3.11",
     "webpack": "^4.20.2",
     "webpack-dev-middleware": "^3.4.0",
     "webpack-hot-middleware": "^2.24.2",
     "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
+    "autoprefixer": "^9.1.5",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
@@ -66,13 +68,13 @@
     "stylelint-config-standard": "^18.2.0",
     "stylelint-webpack-plugin": "^0.10.5",
     "uglifyjs-webpack-plugin": "^2.0.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.1.4"
   },
-    "husky": {
-      "hooks": {
-        "pre-commit": "npm run test",
-        "pre-push": "npm run test"
-      }
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test && npm run lint",
+      "pre-push": "npm run test && npm run lint"
     }
-    
+  }
 }

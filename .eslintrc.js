@@ -3,10 +3,6 @@ module.exports ={
     "browser": true
   },
   "plugins": [ "react", "jsx-a11y", "import" ],
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "airbnb"
-  ],
+  "extends": "airbnb",
   "parser": "babel-eslint"
 }
