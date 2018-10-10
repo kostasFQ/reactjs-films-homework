@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './js/Components/Signature/Main';
+import App from './js/Components/App';
 
 ReactDOM.render(
-  <Main name="KST" />,
-  document.getElementById('APP'), // eslint-disable-line no-undef
+  <App />,
+  document.getElementById('APP'),
 );
