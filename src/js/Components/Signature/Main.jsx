@@ -6,7 +6,7 @@ import styles from './style.scss';
 const Main = (props) => {
   const { name } = props;
   return (
-    <div className="content">
+    <div>
       <h1 className={styles.name}>{name}</h1>
     </div>
   );

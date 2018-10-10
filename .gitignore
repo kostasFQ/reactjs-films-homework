@@ -329,18 +329,7 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 
-/packages/*/build/
-/packages/*/build-es5/
-/packages/*/coverage/
-/packages/*/node_modules/
-/packages/*/package-lock.json
-
-/website/build
-/website/backers.json
-/website/node_modules
-/website/yarn.lock
-/website/translated_docs
-/website/i18n/*
+build
 
 coverage
 lerna-debug.log
