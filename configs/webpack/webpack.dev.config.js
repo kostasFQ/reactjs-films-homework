@@ -1,23 +1,13 @@
-// const path = require('path')
 const webpack = require('webpack')
-const HtmlWebPackPlugin = require('html-webpack-plugin')
+const merge = require('webpack-merge');
 const StyleLintPlugin = require('stylelint-webpack-plugin')
+const common = require('./webpack.common.config.js');
 
-module.exports = {
+module.exports = merge(common, {
   entry: {
     main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.jsx']
   },
-  /* output: {
-    path: path.join(__dirname, '../../build'),
-    publicPath: '/',
-    filename: '[name].js'
-  },
-  resolve: {
-    extensions: ['.js','.jsx']
-  }, */
   mode: 'development',
-  // target: 'web',
-  // devtool: '#source-map',
   module: {
     rules: [
       {
@@ -37,7 +27,7 @@ module.exports = {
           }
         ]
       },
-      /* {
+      {
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
@@ -55,21 +45,12 @@ module.exports = {
             loader: "sass-loader"
           }
         ]
-      }, */
-      {
-       test: /\.(png|svg|jpg|gif)$/,
-       use: ['file-loader', 'url-loader']
-      }
+      },
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/html/index.html",
-      filename: "./index.html",
-      // excludeChunks: [ 'server' ]
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new StyleLintPlugin({ fix: true })
   ]
-}
+})

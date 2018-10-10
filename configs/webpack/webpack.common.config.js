@@ -1,6 +1,5 @@
 const path = require('path');
-
-const cssLoader = mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader';
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 
 module.exports = {
@@ -19,27 +18,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(sa|sc|c)ss$/,
-        use: [
-          {
-            cssLoader
-          },
-          {
-            loader: "css-loader",
-            options: {
-              sourceMap: true,
-              modules: true,
-              localIdentName: "[local]___[hash:base64:5]"
-            }
-          },
-          {
-            loader: "sass-loader"
-          }
-        ]
-      },
-      {
        test: /\.(png|svg|jpg|gif)$/,
-       use: ['file-loader']
+       use: ['file-loader', 'url-loader']
       }
     ]
   },
@@ -49,8 +29,5 @@ module.exports = {
       filename: "./index.html",
       excludeChunks: [ 'server' ]
     }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new StyleLintPlugin({ fix: true })
   ]
 }
