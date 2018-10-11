@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid green;
+  font-family: 'Work Sans', sans-serif;
+  margin-left: 5%;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item {
+  padding-bottom: 50px;
+  margin-right: 1em;
+  display: block;
+  list-style-type: none;
+}
+
+.h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+}

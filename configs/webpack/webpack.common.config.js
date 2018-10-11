@@ -19,7 +19,17 @@ module.exports = {
     rules: [
       {
        test: /\.(png|svg|jpg|gif)$/,
-       use: ['file-loader']
+       use: [
+        {
+          loader: 'file-loader',
+          options: {
+            publicPath: '../',
+            context: 'src/',
+            emitFile: true,
+            name: 'imgs/[name].[ext]',
+          },
+        },
+      ],
       }
     ]
   },

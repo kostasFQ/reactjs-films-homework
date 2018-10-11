@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: white;
+  z-index: 10;
+  position: relative;
+  bottom: 230px;
+  height: 230px;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 2px red solid;
+  width: 50%;
+}

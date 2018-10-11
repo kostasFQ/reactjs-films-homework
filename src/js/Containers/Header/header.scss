@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Fahkwang');
+
+.container {
+  height: 60px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Fahkwang', sans-serif;
+  position: fixed;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  color: white;
+  margin-left: 3%;
+}
+
+input[type=text] {
+  margin: 20px 100px 0 0;
+  border: 2px solid white;
+  border-radius: 4px;
+  background: none;
+  height: 2em;
+  width: 300px;
+  color: white;
+  background-image: url('../../../imgs/icons/search-3-32.png');
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 90%;
+
+  &::placeholder {
+    color: white;
+  }
+}
