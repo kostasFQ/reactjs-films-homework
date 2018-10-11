@@ -23,4 +23,5 @@ Details.propTypes = {
   title: PropTypes.string.isRequired,
   genres: PropTypes.element.isRequired,
   duration: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
 };
