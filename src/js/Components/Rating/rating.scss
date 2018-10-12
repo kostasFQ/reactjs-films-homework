@@ -1,4 +1,14 @@
 .container {
   display: flex;
-  border: 1px solid blue;
+  flex-direction: row;
+}
+
+.ratingBox {
+  font-size: 0.9em;
+  border: solid 1px rgb(9, 173, 227);
+  border-radius: 3px;
+}
+
+.star {
+  padding-right: 5px;
 }

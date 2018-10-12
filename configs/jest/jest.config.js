@@ -2,7 +2,7 @@ module.exports = {
   verbose: true,
   moduleNameMapper: { 
     "\\.(css|less|scss|sass)$": "identity-obj-proxy", 
-    '\\.(png)$': "<rootDir>/config/jest/__mocks__/fileMock.js"
+    '\\.(png)$': "<rootDir>/configs/jest/__mocks__/fileMock.js"
   },
   collectCoverageFrom: [
     "<rootDir>/src/js/**/*.{js,jsx}",

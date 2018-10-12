@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test component 1`] = `
+<button
+  className="container"
+  onClick={null}
+  type="button"
+>
+  button
+</button>
+`;

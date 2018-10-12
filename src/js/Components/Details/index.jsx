@@ -21,7 +21,7 @@ export default Details;
 
 Details.propTypes = {
   title: PropTypes.string.isRequired,
-  genres: PropTypes.element.isRequired,
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
   duration: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
 };

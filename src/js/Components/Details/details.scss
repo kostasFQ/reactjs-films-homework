@@ -1,14 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
-
 .container {
   display: flex;
   flex-direction: column;
-  border: 1px solid green;
-  font-family: 'Work Sans', sans-serif;
+  justify-content: flex-start;
   margin-left: 5%;
 }
 
 .list {
+  height: 40px;
   margin: 0;
   padding: 0;
   display: flex;

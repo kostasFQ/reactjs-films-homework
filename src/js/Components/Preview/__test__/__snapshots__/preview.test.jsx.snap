@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test component render 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="buttonsBlock"
+  >
+    <button
+      className="container"
+      onClick={null}
+      type="button"
+    >
+      Watch Now
+    </button>
+    <button
+      className="container"
+      onClick={[Function]}
+      type="button"
+    >
+      View Info
+    </button>
+  </div>
+</div>
+`;

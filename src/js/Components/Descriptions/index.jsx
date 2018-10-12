@@ -1,17 +1,15 @@
 import React from 'react';
 import s from './descriptions.scss';
 import Details from '../Details';
-import PropTypes from 'prop-types';
+import Preview from '../Preview';
 
 const Descriptions = (props) => {
+  const { preview } = props;
   return (
     <div className={s.container}>
       <div className={s.div}>
         <Details {...props}/>
-      </div>
-      <div className={s.div}>
-        <div>DESCRIPTION</div>
-        <div>DE</div>
+        <Preview preview={preview}/>
       </div>
     </div>
   )
@@ -19,6 +17,3 @@ const Descriptions = (props) => {
 
 export default Descriptions;
 
-Descriptions.propTypes = {
-  title: PropTypes.string.isRequired,
-};
