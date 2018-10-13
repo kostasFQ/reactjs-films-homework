@@ -68,40 +68,16 @@ exports[`test component render 1`] = `
           <div
             className="container"
           >
-            <img
-              alt="star"
-              className="star"
-              height="20px"
-              src="test-file-stub"
-              width="20px"
+            <div
+              className="whiteStars"
             />
-            <img
-              alt="star"
-              className="star"
-              height="20px"
-              src="test-file-stub"
-              width="20px"
-            />
-            <img
-              alt="star"
-              className="star"
-              height="20px"
-              src="test-file-stub"
-              width="20px"
-            />
-            <img
-              alt="star"
-              className="star"
-              height="20px"
-              src="test-file-stub"
-              width="20px"
-            />
-            <img
-              alt="star"
-              className="star"
-              height="20px"
-              src="test-file-stub"
-              width="20px"
+            <div
+              className="fillStars"
+              style={
+                Object {
+                  "width": "96px",
+                }
+              }
             />
             <div
               className="ratingBox"
@@ -123,13 +99,17 @@ exports[`test component render 1`] = `
             >
               Watch Now
             </button>
-            <button
-              className="container"
-              onClick={[Function]}
-              type="button"
+            <div
+              className="x"
             >
-              View Info
-            </button>
+              <button
+                className="container"
+                onClick={[Function]}
+                type="button"
+              >
+                View Info
+              </button>
+            </div>
           </div>
         </div>
       </div>
