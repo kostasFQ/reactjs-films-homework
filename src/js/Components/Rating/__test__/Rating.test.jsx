@@ -4,7 +4,7 @@ import Rating from '../index';
 
 test('test component render (rating is correct)', () => {
   const render = renderer.create(
-    <Rating rating={5}/>,
+    <Rating rating={5} />,
   );
   const component = render.toJSON();
 
@@ -13,11 +13,11 @@ test('test component render (rating is correct)', () => {
 });
 
 test('test component render (rating is incorrect)', () => {
-    const render = renderer.create(
-      <Rating rating={8}/>,
-    );
-    const component = render.toJSON();
-  
-    expect(component).toMatchSnapshot();
-    expect(component.type).toBe('div');
-  });
+  const render = renderer.create(
+    <Rating rating={8} />,
+  );
+  const component = render.toJSON();
+
+  expect(component).toMatchSnapshot();
+  expect(component.type).toBe('div');
+});

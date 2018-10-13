@@ -4,7 +4,7 @@ import App from '../index';
 
 test('test component render', () => {
   const render = renderer.create(
-    <App/>,
+    <App />,
   );
   const component = render.toJSON();
 

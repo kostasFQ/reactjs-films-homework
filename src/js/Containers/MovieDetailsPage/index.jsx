@@ -8,9 +8,9 @@ const MovieDetailsPage = (props) => {
   return (
     <div>
       <Poster pict={pict} />
-      <Descriptions {...props}/>
+      <Descriptions {...props} />
     </div>
-  )
+  );
 };
 
 export default MovieDetailsPage;

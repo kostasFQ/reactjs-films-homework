@@ -8,12 +8,11 @@ const Descriptions = (props) => {
   return (
     <div className={s.container}>
       <div className={s.div}>
-        <Details {...props}/>
-        <Preview preview={preview}/>
+        <Details {...props} />
+        <Preview preview={preview} />
       </div>
     </div>
-  )
+  );
 };
 
 export default Descriptions;
-
