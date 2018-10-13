@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 5%;
+}
+
+.list {
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item {
+  padding-bottom: 50px;
+  margin-right: 1em;
+  display: block;
+  list-style-type: none;
+}
+
+.h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+}

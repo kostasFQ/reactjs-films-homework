@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test component render 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <h1
+      className="title"
+    >
+      FILMS
+    </h1>
+    <div>
+      <input
+        className="input"
+        placeholder="search"
+        type="text"
+      />
+    </div>
+  </div>
+  <div>
+    <img
+      alt="pic"
+      className="poster"
+      src="test-file-stub"
+    />
+    <div
+      className="container"
+    >
+      <div
+        className="div"
+      >
+        <div
+          className="container"
+        >
+          <h1
+            className="h1"
+          >
+            THE JUNGLE BOOK
+          </h1>
+          <ul
+            className="list"
+          >
+            <li
+              className="item"
+            >
+              Adventure
+            </li>
+            <li
+              className="item"
+            >
+              Drama
+            </li>
+            <li
+              className="item"
+            >
+              Family
+            </li>
+            <li
+              className="item"
+            >
+              Fantasy
+            </li>
+            <span>
+              1h 46m
+            </span>
+          </ul>
+          <div
+            className="container"
+          >
+            <div
+              className="whiteStars"
+            />
+            <div
+              className="fillStars"
+              style={
+                Object {
+                  "width": "96px",
+                }
+              }
+            />
+            <div
+              className="ratingBox"
+            >
+              4.8
+            </div>
+          </div>
+        </div>
+        <div
+          className="container"
+        >
+          <div
+            className="buttonsBlock"
+          >
+            <button
+              className="container"
+              onClick={null}
+              type="button"
+            >
+              Watch Now
+            </button>
+            <div
+              className="x"
+            >
+              <button
+                className="container"
+                onClick={[Function]}
+                type="button"
+              >
+                View Info
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
