@@ -12,7 +12,7 @@ const Details = (props) => {
       <h1 className={s.h1}>{title.toUpperCase()}</h1>
       <ul className={s.list}>
         {genres.map(item => <li key={item} className={s.item}>{item}</li>)}
-        <span>{duration}</span>
+        <span>| {duration}</span>
       </ul>
       <Rating rating={rating} />
     </div>

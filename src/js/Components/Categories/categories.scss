@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  height: 30px;
+  width: 90%;
+}
+
+.item {
+  padding-right: 1.5em;
+  color: rgb(9, 173, 227);
+  font-size: 20px;
+  font-family: 'K2D', sans-serif;
+  border: none;
+
+  &:hover {
+    border-bottom: 2px solid rgb(9, 173, 227);
+    cursor: pointer;
+  }
+}
+
+.select {
+  @extend .item;
+}

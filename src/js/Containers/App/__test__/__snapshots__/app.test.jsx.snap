@@ -62,6 +62,7 @@ exports[`test component render 1`] = `
               Fantasy
             </li>
             <span>
+              | 
               1h 46m
             </span>
           </ul>
@@ -80,7 +81,7 @@ exports[`test component render 1`] = `
               }
             />
             <div
-              className="ratingBox"
+              className="container"
             >
               4.8
             </div>
@@ -113,6 +114,72 @@ exports[`test component render 1`] = `
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="inner"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="item"
+        >
+          Trending
+        </div>
+        <div
+          className="item"
+        >
+          Top Rated
+        </div>
+        <div
+          className="item"
+        >
+          Coming Soon
+        </div>
+        <div
+          className="item"
+        >
+          <select
+            className="select"
+          >
+            <option>
+              Genre
+            </option>
+            <option
+              value="1"
+            >
+              1
+            </option>
+            <option
+              value="2"
+            >
+              2
+            </option>
+            <option
+              value="3"
+            >
+              3
+            </option>
+          </select>
+        </div>
+      </div>
+      <div
+        className="displayStyle"
+      >
+        <div
+          className="tableStyle"
+        />
+        <div
+          className="rowsStyle"
+        />
+      </div>
+    </div>
+    <div>
+      table
     </div>
   </div>
 </div>

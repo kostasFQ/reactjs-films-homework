@@ -4,6 +4,7 @@ import './styles.scss';
 import Header from '../Header';
 import MovieDetailsPage from '../MovieDetailsPage';
 import image from '../../../imgs/cover-image.png';
+import List from '../List';
 
 const fakeFilm = {
   pict: image,
@@ -18,6 +19,7 @@ const App = () => (
   <div>
     <Header />
     <MovieDetailsPage {...fakeFilm} />
+    <List/>
   </div>
 );
 

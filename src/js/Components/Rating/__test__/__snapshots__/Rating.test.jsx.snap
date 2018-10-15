@@ -16,7 +16,7 @@ exports[`test component render (rating is correct) 1`] = `
     }
   />
   <div
-    className="ratingBox"
+    className="container"
   >
     5
   </div>
