@@ -100,13 +100,22 @@ exports[`test component 1`] = `
         >
           Watch Now
         </button>
-        <button
-          className="container"
-          onClick={[Function]}
-          type="button"
+        <div
+          className="x"
         >
-          View Info
-        </button>
+          <div
+            className="previewField"
+          >
+            There 
+          </div>
+          <button
+            className="container"
+            onClick={[Function]}
+            type="button"
+          >
+            View Info
+          </button>
+        </div>
       </div>
     </div>
   </div>

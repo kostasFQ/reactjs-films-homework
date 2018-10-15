@@ -8,12 +8,12 @@ const fakeFilm = {
   genres: ['Adventure', 'Drama', 'Family', 'Fantasy'],
   duration: '1h 46m',
   rating: 4.8,
-  preview: `There `
-}
+  preview: 'There ',
+};
 
 test('test component', () => {
   const render = renderer.create(
-    <Description {...fakeFilm}/>,
+    <Description {...fakeFilm} />,
   );
 
   const component = render.toJSON();

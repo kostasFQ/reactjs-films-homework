@@ -11,12 +11,12 @@ const fakeFilm = {
   genres: ['Adventure', 'Drama', 'Family', 'Fantasy'],
   duration: '1h 46m',
   rating: 4.8,
-  preview: `There are growing dangers in the wizarding world of 1926 New York.  Something mysterious is leaving a path of destruction in the streets, threatening to expose the wizarding`
-}
+  preview: 'There are growing dangers in the wizarding world of 1926 New York.  Something mysterious is leaving a path of destruction in the streets, threatening to expose the wizarding',
+};
 
 const App = () => (
   <div>
-    <Header/>
+    <Header />
     <MovieDetailsPage {...fakeFilm} />
   </div>
 );

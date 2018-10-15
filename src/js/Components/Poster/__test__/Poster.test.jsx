@@ -5,7 +5,7 @@ import pict from '../../../../imgs/cover-image.png';
 
 test('test component', () => {
   const render = renderer.create(
-    <Poster pict={pict}/>,
+    <Poster pict={pict} />,
   );
 
   const component = render.toJSON();

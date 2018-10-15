@@ -4,7 +4,7 @@ import Button from '../index';
 
 test('test component', () => {
   const render = renderer.create(
-    <Button name='button'/>,
+    <Button name="button" />,
   );
 
   const component = render.toJSON();
