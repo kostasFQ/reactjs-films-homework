@@ -19,7 +19,7 @@ const App = () => (
   <div>
     <Header />
     <MovieDetailsPage {...fakeFilm} />
-    <List/>
+    <List />
   </div>
 );
 

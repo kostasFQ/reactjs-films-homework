@@ -10,7 +10,7 @@ const Rating = (props) => {
       <div className={s.container}>
         <div className={s.whiteStars} />
         <div className={s.fillStars} style={{ width: `${rating * 20}px` }} />
-        <RatingBox rating={rating}/>
+        <RatingBox rating={rating} />
       </div>
     );
   }
