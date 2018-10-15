@@ -68,40 +68,16 @@ exports[`test component render 1`] = `
           <div
             className="container"
           >
-            <img
-              alt="star"
-              className="star"
-              height="20px"
-              src="test-file-stub"
-              width="20px"
+            <div
+              className="whiteStars"
             />
-            <img
-              alt="star"
-              className="star"
-              height="20px"
-              src="test-file-stub"
-              width="20px"
-            />
-            <img
-              alt="star"
-              className="star"
-              height="20px"
-              src="test-file-stub"
-              width="20px"
-            />
-            <img
-              alt="star"
-              className="star"
-              height="20px"
-              src="test-file-stub"
-              width="20px"
-            />
-            <img
-              alt="star"
-              className="star"
-              height="20px"
-              src="test-file-stub"
-              width="20px"
+            <div
+              className="fillStars"
+              style={
+                Object {
+                  "width": "96px",
+                }
+              }
             />
             <div
               className="ratingBox"
@@ -126,11 +102,6 @@ exports[`test component render 1`] = `
             <div
               className="x"
             >
-              <div
-                className="previewField"
-              >
-                There are growing dangers in the wizarding world of 1926 New York.  Something mysterious is leaving a path of destruction in the streets, threatening to expose the wizarding
-              </div>
               <button
                 className="container"
                 onClick={[Function]}

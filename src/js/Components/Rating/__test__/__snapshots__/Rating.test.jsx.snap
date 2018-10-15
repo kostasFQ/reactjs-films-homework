@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test component render (rating is correct) 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="whiteStars"
+  />
+  <div
+    className="fillStars"
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+  />
+  <div
+    className="ratingBox"
+  >
+    5
+  </div>
+</div>
+`;
+
+exports[`test component render (rating is incorrect) 1`] = `
+<div>
+  Sorry, no rating
+</div>
+`;

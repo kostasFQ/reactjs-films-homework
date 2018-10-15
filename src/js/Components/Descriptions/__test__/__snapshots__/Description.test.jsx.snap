@@ -45,40 +45,16 @@ exports[`test component 1`] = `
       <div
         className="container"
       >
-        <img
-          alt="star"
-          className="star"
-          height="20px"
-          src="test-file-stub"
-          width="20px"
+        <div
+          className="whiteStars"
         />
-        <img
-          alt="star"
-          className="star"
-          height="20px"
-          src="test-file-stub"
-          width="20px"
-        />
-        <img
-          alt="star"
-          className="star"
-          height="20px"
-          src="test-file-stub"
-          width="20px"
-        />
-        <img
-          alt="star"
-          className="star"
-          height="20px"
-          src="test-file-stub"
-          width="20px"
-        />
-        <img
-          alt="star"
-          className="star"
-          height="20px"
-          src="test-file-stub"
-          width="20px"
+        <div
+          className="fillStars"
+          style={
+            Object {
+              "width": "96px",
+            }
+          }
         />
         <div
           className="ratingBox"
@@ -103,11 +79,6 @@ exports[`test component 1`] = `
         <div
           className="x"
         >
-          <div
-            className="previewField"
-          >
-            There 
-          </div>
           <button
             className="container"
             onClick={[Function]}

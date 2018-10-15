@@ -17,11 +17,6 @@ exports[`test component render 1`] = `
     <div
       className="x"
     >
-      <div
-        className="previewField"
-      >
-        string
-      </div>
       <button
         className="container"
         onClick={[Function]}
