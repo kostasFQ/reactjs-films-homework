@@ -1,15 +1,20 @@
 .container {
   display: flex;
-  height: 30px;
+  justify-content: space-between;
   width: 90%;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 }
 
 .item {
-  padding-right: 1.5em;
   color: rgb(9, 173, 227);
   font-size: 20px;
   font-family: 'K2D', sans-serif;
-  border: none;
+  height: 30px;
+  width: 140px;
+  box-sizing: border-box;
 
   &:hover {
     border-bottom: 2px solid rgb(9, 173, 227);
@@ -19,4 +24,18 @@
 
 .select {
   @extend .item;
+
+  background: none;
+  border: none;
+  margin-top: -3px;
+  margin-left: -3px;
+
+  &:hover {
+    border-bottom: none;
+    cursor: pointer;
+  }
+
+  &:active {
+    border: none;
+  }
 }

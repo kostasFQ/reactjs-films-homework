@@ -1,6 +1,7 @@
 .poster {
-  display: flex;
   height: auto;
   width: 100%;
+  position: relative;
+  bottom: 60px;
   z-index: -10;
 }

@@ -16,11 +16,11 @@ const fakeFilm = {
 };
 
 const App = () => (
-  <div>
+  <React.Fragment>
     <Header />
     <MovieDetailsPage {...fakeFilm} />
     <List />
-  </div>
+  </React.Fragment>
 );
 
 export default hot(module)(App);

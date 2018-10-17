@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './js/Containers/App';
+import 'normalize.css';
 
 ReactDOM.render(
   <App />,

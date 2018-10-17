@@ -7,7 +7,7 @@
   flex-direction: row;
   justify-content: space-between;
   font-family: 'Fahkwang', sans-serif;
-  position: fixed;
+  position: relative;
   width: 100%;
 }
 
@@ -18,12 +18,12 @@
 }
 
 input[type=text] {
-  margin: 20px 100px 0 0;
+  margin: 20px 2em 0 0;
   border: 2px solid white;
   border-radius: 4px;
   background: none;
   height: 2em;
-  width: 300px;
+  width: 90%;
   color: white;
   background-image: url('../../../imgs/icons/search-3-32.png');
   background-size: 16px;
@@ -32,5 +32,9 @@ input[type=text] {
 
   &::placeholder {
     color: white;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 60%;
   }
 }
