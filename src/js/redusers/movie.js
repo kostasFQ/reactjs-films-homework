@@ -1,4 +1,4 @@
-import genres from '../../assets/genres';
+import { GET_MOVIE } from '../actions/movie';
 
 const testMovie = {
   "vote_count": 4424,
@@ -24,7 +24,10 @@ const testMovie = {
 }
 
 const movie = (state = testMovie, action) => {
-  switch (action) {
+  switch (action.type) {
+    case GET_MOVIE:
+      return action.payload;
+      
     
     default:
       return state;
