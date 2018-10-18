@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from '../index';
 import { Provider } from 'react-redux';
-import reduser from '../../../redusers';
 import { createStore } from 'redux';
+import App from '../index';
+import reduser from '../../../redusers';
 
 const store = createStore(reduser);
 test('test component render', () => {

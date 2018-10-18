@@ -9,7 +9,7 @@ import List from '../List';
 const App = () => (
   <React.Fragment>
     <Header />
-    <MovieDetailsPage/>
+    <MovieDetailsPage />
     <List />
   </React.Fragment>
 );

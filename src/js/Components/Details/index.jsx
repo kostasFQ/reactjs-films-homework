@@ -9,7 +9,7 @@ const Details = (props) => {
     original_title, genre_ids, vote_average,
   } = props;
 
-  const genresTitles = genres.filter( item => genre_ids.includes(item.id) );
+  const genresTitles = genres.filter(item => genre_ids.includes(item.id));
 
   return (
     <div className={s.container}>

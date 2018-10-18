@@ -1,7 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Poster from '../../Components/Poster';
 import Descriptions from '../../Components/Descriptions';
-import { connect } from 'react-redux';
 
 const MovieDetailsPage = (props) => {
   const { movie } = props;
@@ -16,5 +16,5 @@ const MovieDetailsPage = (props) => {
 export default connect(
   state => ({
     movie: state.movie,
-  })
+  }),
 )(MovieDetailsPage);
