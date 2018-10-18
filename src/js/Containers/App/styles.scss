@@ -1,12 +1,16 @@
 @import '../../../../node_modules/normalize.css/normalize.css';
 
 body {
+  padding: 0;
+  margin: 0;
   min-width: 450px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #APP {
   display: flex;
-  flex-direction: column;
+  height: 500px;
 }
 
 *:focus {

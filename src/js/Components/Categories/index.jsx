@@ -1,6 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 import s from './categories.scss';
+import {genres} from '../../../assets/genres';
 
 const Categories = () => (
   <div className={s.container}>
@@ -9,10 +10,8 @@ const Categories = () => (
     <div className={s.item}>Coming Soon</div>
     <div className={s.item}>
       <select className={s.select}>
-        <option>Genre</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value={null}>Genre</option>
+        {genres.map( (item) => <option value={item.name} key={item.id}>{item.name}</option> )}
       </select>
     </div>
   </div>

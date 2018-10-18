@@ -17,13 +17,13 @@ class Preview extends React.Component {
 
   render() {
     const { visible } = this.state;
-    const { preview } = this.props;
+    const { overview } = this.props;
     return (
       <div className={s.container}>
         <div className={s.buttonsBlock}>
           <Button name="Watch Now" />
           <div className={s.x}>
-            {visible ? <div className={s.previewField}>{preview}</div> : null}
+            {visible ? <div className={s.previewField}>{overview}</div> : null}
             <Button name="View Info" action={this.handler} />
           </div>
         </div>
@@ -35,5 +35,5 @@ class Preview extends React.Component {
 export default Preview;
 
 Preview.propTypes = {
-  preview: PropTypes.string.isRequired,
+  overview: PropTypes.string.isRequired,
 };

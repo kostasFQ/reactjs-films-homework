@@ -1,20 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Poster from '../../Components/Poster';
 import Descriptions from '../../Components/Descriptions';
+import { connect } from 'react-redux';
 
 const MovieDetailsPage = (props) => {
-  const { pict } = props;
+  const { movie } = props;
   return (
-    <div>
-      <Poster pict={pict} />
-      <Descriptions {...props} />
-    </div>
+    <React.Fragment>
+      <Poster pict={`http://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} />
+      <Descriptions {...movie} />
+    </React.Fragment>
   );
 };
 
-export default MovieDetailsPage;
-
-MovieDetailsPage.propTypes = {
-  pict: PropTypes.string.isRequired,
-};
+export default connect(
+  state => ({
+    movie: state.movie,
+  })
+)(MovieDetailsPage);

@@ -5,5 +5,8 @@ module.exports ={
   },
   "plugins": [ "react", "jsx-a11y", "import", "jest" ],
   "extends": ["airbnb", "plugin:jest/recommended"],
-  "parser": "babel-eslint"
+  "parser": "babel-eslint",
+  "rules": {
+    "camelcase": 0
+  }
 }

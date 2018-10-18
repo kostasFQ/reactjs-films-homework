@@ -4,12 +4,12 @@ import Details from '../Details';
 import Preview from '../Preview';
 
 const Descriptions = (props) => {
-  const { preview } = props;
+  const { overview } = props;
   return (
     <div className={s.container}>
       <div className={s.div}>
         <Details {...props} />
-        <Preview preview={preview} />
+        <Preview overview={overview} />
       </div>
     </div>
   );

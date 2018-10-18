@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import s from './details.scss';
 import Rating from '../Rating';
+import { genres } from '../../../assets/genres';
 
 const Details = (props) => {
   const {
-    title, genres, duration, rating,
+    original_title, genre_ids, vote_average,
   } = props;
+
+  const genresTitles = genres.filter( item => genre_ids.includes(item.id) );
+
   return (
     <div className={s.container}>
-      <h1 className={s.h1}>{title.toUpperCase()}</h1>
+      <h1 className={s.h1}>{original_title.toUpperCase()}</h1>
       <ul className={s.list}>
-        {genres.map(item => <li key={item} className={s.item}>{item}</li>)}
-        <span>
-|
-          {duration}
-        </span>
+        {genresTitles.map(item => <li key={item.id} className={s.item}>{item.name}</li>)}
       </ul>
-      <Rating rating={rating} />
+      <Rating rating={vote_average} />
     </div>
   );
 };
@@ -25,8 +25,7 @@ const Details = (props) => {
 export default Details;
 
 Details.propTypes = {
-  title: PropTypes.string.isRequired,
-  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
-  duration: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired,
+  original_title: PropTypes.string.isRequired,
+  genre_ids: PropTypes.arrayOf(PropTypes.number).isRequired,
+  vote_average: PropTypes.number.isRequired,
 };

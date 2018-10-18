@@ -13,7 +13,7 @@ exports[`test component 1`] = `
       <h1
         className="h1"
       >
-        THE JUNGLE BOOK
+        TITLE
       </h1>
       <ul
         className="list"
@@ -26,22 +26,13 @@ exports[`test component 1`] = `
         <li
           className="item"
         >
+          Animation
+        </li>
+        <li
+          className="item"
+        >
           Drama
         </li>
-        <li
-          className="item"
-        >
-          Family
-        </li>
-        <li
-          className="item"
-        >
-          Fantasy
-        </li>
-        <span>
-          | 
-          1h 46m
-        </span>
       </ul>
       <div
         className="container"
@@ -53,14 +44,14 @@ exports[`test component 1`] = `
           className="fillStars"
           style={
             Object {
-              "width": "96px",
+              "width": "90px",
             }
           }
         />
         <div
           className="container"
         >
-          4.8
+          4.5
         </div>
       </div>
     </div>

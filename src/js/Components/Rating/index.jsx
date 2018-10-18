@@ -5,7 +5,7 @@ import RatingBox from '../RatingBox';
 
 const Rating = (props) => {
   const { rating } = props;
-  if (rating <= 5 && rating >= 0) {
+  if (rating <= 10 && rating >= 0) {
     return (
       <div className={s.container}>
         <div className={s.whiteStars} />

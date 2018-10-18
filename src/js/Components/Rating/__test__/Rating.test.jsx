@@ -14,7 +14,7 @@ test('test component render (rating is correct)', () => {
 
 test('test component render (rating is incorrect)', () => {
   const render = renderer.create(
-    <Rating rating={8} />,
+    <Rating rating={12} />,
   );
   const component = render.toJSON();
 
