@@ -5,6 +5,7 @@ import { createStore } from 'redux';
 import App from '../index';
 import reduser from '../../../redusers';
 
+
 const store = createStore(reduser);
 test('test component render', () => {
   const render = renderer.create(

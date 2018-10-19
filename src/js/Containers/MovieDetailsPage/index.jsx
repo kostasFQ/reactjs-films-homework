@@ -2,19 +2,28 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Poster from '../../Components/Poster';
 import Descriptions from '../../Components/Descriptions';
+import { apiUrl } from '../../../assets';
 
 class MovieDetailsPage extends React.PureComponent {
 
-  
-
   render() {
     const { movie } = this.props;
-    return (
-      <React.Fragment>
-        <Poster pict={`http://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} />
-        <Descriptions {...movie} />
-      </React.Fragment>
-    );
+    const {film, startFetch, fetched } = movie;
+    
+    if(startFetch && !fetched) {
+      return <div>LOADING...</div>
+    }
+    
+    if(startFetch && fetched && film){
+      return (
+        <React.Fragment>
+          <Poster pict={`${apiUrl}/w500/${film.backdrop_path}`} />
+          <Descriptions {...film} />
+        </React.Fragment>
+      );
+    } else {
+      return <div><Poster pict={`https://cdn-images-1.medium.com/max/1600/1*KOAfAOQ9FwAp9i2muTkGWw.png`} /></div>
+    }
   }
 };
 

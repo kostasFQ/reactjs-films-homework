@@ -9,8 +9,8 @@ const Categories = () => (
     <div className={s.item}>Top Rated</div>
     <div className={s.item}>Coming Soon</div>
     <div className={s.item}>
-      <select className={s.select}>
-        <option value={null}>Genre</option>
+      <select className={s.select} defaultValue='Genre'>
+        <option value={null} disabled>Genre</option>
         {genres.map(item => <option value={item.name} key={item.id}>{item.name}</option>)}
       </select>
     </div>

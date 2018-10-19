@@ -2,6 +2,9 @@
   height: auto;
   width: 100%;
   position: relative;
-  bottom: 60px;
   z-index: -10;
+}
+
+.curtian {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.7) 100%,);
 }

@@ -1,4 +1,6 @@
 @import '../../../../node_modules/normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Fahkwang');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
 
 body {
   padding: 0;
@@ -6,6 +8,7 @@ body {
   min-width: 450px;
   width: 100%;
   box-sizing: border-box;
+  background-color: rgb(245, 245, 245);
 }
 
 #APP {

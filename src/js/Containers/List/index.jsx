@@ -2,18 +2,19 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import s from './list.scss';
 import Categories from '../../Components/Categories';
+import Table from '../../Components/Table';
 
 const List = () => (
   <div className={s.container}>
     <div className={s.inner}>
-      <Categories />
-      <div className={s.displayStyle}>
-        <div className={s.tableStyle} />
-        <div className={s.rowsStyle} />
+      <div className={s.position}>
+        <Categories />
+        <div className={s.displayStyle}>
+          <div className={s.tableStyle} />
+          <div className={s.rowsStyle} />
+        </div>
       </div>
-    </div>
-    <div>
-        table
+      <Table/>
     </div>
   </div>
 );

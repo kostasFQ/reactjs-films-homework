@@ -1,0 +1,42 @@
+.cut {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.container {
+  width: 23%;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: white;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.miniPoster {
+  height: 80%;
+  width: auto;
+}
+
+.title {
+  @extend .cut;
+
+  width: 80%;
+  color: black;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.descBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  color: rgb(59, 179, 223);
+}

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import uiStore from './ui';
+import filmsList from './filmsList';
 import movie from './movie';
 
 const reduser = combineReducers({
-  uiStore,
+  filmsList,
   movie
 });
 
