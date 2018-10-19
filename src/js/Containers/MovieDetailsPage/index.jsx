@@ -5,27 +5,25 @@ import Descriptions from '../../Components/Descriptions';
 import { apiUrl } from '../../../assets';
 
 class MovieDetailsPage extends React.PureComponent {
-
   render() {
     const { movie } = this.props;
-    const {film, startFetch, fetched } = movie;
-    
-    if(startFetch && !fetched) {
-      return <div>LOADING...</div>
+    const { film, startFetch, fetched } = movie;
+
+    if (startFetch && !fetched) {
+      return <div>LOADING...</div>;
     }
-    
-    if(startFetch && fetched && film){
+
+    if (startFetch && fetched && film) {
       return (
         <React.Fragment>
           <Poster pict={`${apiUrl}/w500/${film.backdrop_path}`} />
           <Descriptions {...film} />
         </React.Fragment>
       );
-    } else {
-      return <div><Poster pict={`https://cdn-images-1.medium.com/max/1600/1*KOAfAOQ9FwAp9i2muTkGWw.png`} /></div>
     }
+    return <div><Poster pict="https://cdn-images-1.medium.com/max/1600/1*KOAfAOQ9FwAp9i2muTkGWw.png" /></div>;
   }
-};
+}
 
 export default connect(
   state => ({

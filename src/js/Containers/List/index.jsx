@@ -14,7 +14,7 @@ const List = () => (
           <div className={s.rowsStyle} />
         </div>
       </div>
-      <Table/>
+      <Table />
     </div>
   </div>
 );

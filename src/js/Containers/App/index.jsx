@@ -5,7 +5,7 @@ import Content from '../Content';
 
 const App = () => (
   <React.Fragment>
-    <Content/>
+    <Content />
   </React.Fragment>
 );
 

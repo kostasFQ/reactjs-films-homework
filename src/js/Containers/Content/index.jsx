@@ -5,43 +5,40 @@ import Header from '../Header';
 import MovieDetailsPage from '../MovieDetailsPage';
 import List from '../List';
 
-require('babel-polyfill');
-
 import { asyncGetMovie } from '../../actions/movie';
 
-class Content extends React.PureComponent {
+require('babel-polyfill');
 
+class Content extends React.PureComponent {
   componentDidMount() {
     this.getMovie('predator');
   }
-  
+
   getMovie = (film) => {
     const { onGetMovie } = this.props;
     onGetMovie(film);
   }
-  
+
   render() {
     return (
       <React.Fragment>
-        <Header getMovie={this.getMovie}/>
+        <Header getMovie={this.getMovie} />
         <MovieDetailsPage />
         <List />
       </React.Fragment>
     );
   }
-};
+}
 
 export default connect(
   state => ({
     movie: state.movie,
   }),
-  dispatch => {
-    return {
-      onGetMovie: (movie) => {
-        dispatch(asyncGetMovie(movie))
-      }
-    }
-  }
+  dispatch => ({
+    onGetMovie: (movie) => {
+      dispatch(asyncGetMovie(movie));
+    },
+  }),
 )(Content);
 Content.propTypes = {
   onGetMovie: PropTypes.func.isRequired,

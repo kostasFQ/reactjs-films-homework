@@ -4,7 +4,6 @@ import { genres } from '../../../assets/genres';
 import s from './genres.scss';
 
 const RatingBox = (props) => {
-  console.log(props);
   const { genre_ids } = props;
   const genresTitles = genres.filter(item => genre_ids.includes(item.id));
   return (

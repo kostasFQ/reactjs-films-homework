@@ -12,7 +12,7 @@ const Details = (props) => {
   return (
     <div className={s.container}>
       <h1 className={s.h1}>{original_title.toUpperCase()}</h1>
-      <Genres genre_ids={genre_ids}/>
+      <Genres genre_ids={genre_ids} />
       <Rating rating={vote_average} />
     </div>
   );
@@ -23,4 +23,5 @@ export default Details;
 Details.propTypes = {
   original_title: PropTypes.string.isRequired,
   vote_average: PropTypes.number.isRequired,
+  genre_ids: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
