@@ -12,9 +12,9 @@ class Table extends React.PureComponent {
 
     return (
       <div className={s.container}>
-        { fullResponse && fetched?
-          fullResponse.map(item => <TableItem {...item} key={item.id} />):
-          <Spiner/>
+        { fullResponse && fetched
+          ? fullResponse.map(item => <TableItem {...item} key={item.id} />)
+          : <Spiner />
         }
       </div>
     );

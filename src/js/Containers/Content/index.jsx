@@ -28,7 +28,6 @@ class Content extends React.PureComponent {
         <List />
       </React.Fragment>
     );
-
   }
 }
 
@@ -41,8 +40,8 @@ export default connect(
       dispatch(asyncGetMovie(movie));
     },
     onGetCategoryMovie: (query) => {
-      dispatch(getCategoryMovie(query))
-    }
+      dispatch(getCategoryMovie(query));
+    },
   }),
 )(Content);
 Content.propTypes = {

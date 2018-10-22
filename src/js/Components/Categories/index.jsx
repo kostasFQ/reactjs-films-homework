@@ -1,37 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import s from './categories.scss';
 import { genres } from '../../../assets/genres';
-import { connect } from 'react-redux';
 
 import { getCategoryMovie, getDropdownMovie } from '../../actions/movie';
 
 const Categories = (props) => {
-
   const get = (e) => {
     e.preventDefault();
     const { onGetCategoryMovie } = props;
     onGetCategoryMovie(e.target.value);
   };
 
-  const log =(e) => {
+  const log = (e) => {
     e.preventDefault();
     const { onGetDropdownMovie } = props;
-    onGetDropdownMovie (e.target.value);
-  }
+    onGetDropdownMovie(e.target.value);
+  };
 
   return (
     <div className={s.container}>
-      <button className={s.item} onClick={get} value='popular' type='button'>Trending</button>
-      <button className={s.item} onClick={get} value='top_rated' type='button'>Top Rated</button>
-      <button className={s.item} onClick={get} value='upcoming' type='button'>Coming Soon</button>
+      <button className={s.item} onClick={get} value="popular" type="button">Trending</button>
+      <button className={s.item} onClick={get} value="top_rated" type="button">Top Rated</button>
+      <button className={s.item} onClick={get} value="upcoming" type="button">Coming Soon</button>
       <div className={s.item}>
         <select className={s.select} onChange={log}>
           {genres.map(item => <option value={item.id} key={item.id}>{item.name}</option>)}
         </select>
       </div>
     </div>
-  )
+  );
 };
 
 export default connect(
@@ -40,15 +39,15 @@ export default connect(
   }),
   dispatch => ({
     onGetCategoryMovie: (query) => {
-      dispatch(getCategoryMovie(query))
+      dispatch(getCategoryMovie(query));
     },
     onGetDropdownMovie: (id) => {
-      dispatch(getDropdownMovie(id))
-    }
+      dispatch(getDropdownMovie(id));
+    },
   }),
 )(Categories);
 
 Categories.propTypes = {
   onGetCategoryMovie: PropTypes.func.isRequired,
-  onGetDropdownMovie: PropTypes.func.isRequired
+  onGetDropdownMovie: PropTypes.func.isRequired,
 };

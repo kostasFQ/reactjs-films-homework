@@ -6,12 +6,11 @@ import Spiner from '../../Components/Spiner';
 import { apiUrl } from '../../../assets';
 
 class MovieDetailsPage extends React.PureComponent {
-  
   render() {
     const { movie } = this.props;
     const { film, finishFetch } = movie;
 
-    if(film){
+    if (film) {
       return (
         <React.Fragment>
           <Poster pict={`${apiUrl}/w500/${film.backdrop_path}`} />
@@ -22,11 +21,11 @@ class MovieDetailsPage extends React.PureComponent {
     if (finishFetch && !film) {
       return (
         <React.Fragment>
-          <Poster pict={`http://ctoetotakoe.ru/wp-content/uploads/2016/05/404-not-found.png`} />
+          <Poster pict="http://ctoetotakoe.ru/wp-content/uploads/2016/05/404-not-found.png" />
         </React.Fragment>
-      )
+      );
     }
-    return <Spiner/>
+    return <Spiner />;
   }
 }
 
