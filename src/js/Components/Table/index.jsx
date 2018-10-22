@@ -3,20 +3,21 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import s from './table.scss';
 import TableItem from '../TableItem';
+import Spiner from '../Spiner';
 
 class Table extends React.PureComponent {
   render() {
     const { currentQuery } = this.props;
     const { fullResponse, fetched } = currentQuery;
 
-    if (fullResponse && fetched) {
-      return (
-        <div className={s.container}>
-          { fullResponse.map(item => <TableItem {...item} key={item.id} />) }
-        </div>
-      );
-    }
-    return <div>LOADING...</div>;
+    return (
+      <div className={s.container}>
+        { fullResponse && fetched?
+          fullResponse.map(item => <TableItem {...item} key={item.id} />):
+          <Spiner/>
+        }
+      </div>
+    );
   }
 }
 

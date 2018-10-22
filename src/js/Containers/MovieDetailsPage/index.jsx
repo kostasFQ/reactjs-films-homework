@@ -2,18 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Poster from '../../Components/Poster';
 import Descriptions from '../../Components/Descriptions';
+import Spiner from '../../Components/Spiner';
 import { apiUrl } from '../../../assets';
 
 class MovieDetailsPage extends React.PureComponent {
+  
   render() {
     const { movie } = this.props;
-    const { film, startFetch, fetched } = movie;
+    const { film, finishFetch } = movie;
 
-    if (startFetch && !fetched) {
-      return <div>LOADING...</div>;
-    }
-
-    if (startFetch && fetched && film) {
+    if(film){
       return (
         <React.Fragment>
           <Poster pict={`${apiUrl}/w500/${film.backdrop_path}`} />
@@ -21,7 +19,14 @@ class MovieDetailsPage extends React.PureComponent {
         </React.Fragment>
       );
     }
-    return <div><Poster pict="https://cdn-images-1.medium.com/max/1600/1*KOAfAOQ9FwAp9i2muTkGWw.png" /></div>;
+    if (finishFetch && !film) {
+      return (
+        <React.Fragment>
+          <Poster pict={`http://ctoetotakoe.ru/wp-content/uploads/2016/05/404-not-found.png`} />
+        </React.Fragment>
+      )
+    }
+    return <Spiner/>
   }
 }
 

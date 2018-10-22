@@ -5,13 +5,14 @@ import Header from '../Header';
 import MovieDetailsPage from '../MovieDetailsPage';
 import List from '../List';
 
-import { asyncGetMovie } from '../../actions/movie';
+import { asyncGetMovie, getCategoryMovie } from '../../actions/movie';
 
 require('babel-polyfill');
 
 class Content extends React.PureComponent {
   componentDidMount() {
-    this.getMovie('predator');
+    const { onGetCategoryMovie } = this.props;
+    onGetCategoryMovie('top_rated');
   }
 
   getMovie = (film) => {
@@ -27,6 +28,7 @@ class Content extends React.PureComponent {
         <List />
       </React.Fragment>
     );
+
   }
 }
 
@@ -38,8 +40,12 @@ export default connect(
     onGetMovie: (movie) => {
       dispatch(asyncGetMovie(movie));
     },
+    onGetCategoryMovie: (query) => {
+      dispatch(getCategoryMovie(query))
+    }
   }),
 )(Content);
 Content.propTypes = {
   onGetMovie: PropTypes.func.isRequired,
+  onGetCategoryMovie: PropTypes.func.isRequired,
 };

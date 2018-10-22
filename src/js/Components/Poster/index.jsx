@@ -4,11 +4,11 @@ import s from './poster.scss';
 
 const Poster = (props) => {
   const { pict } = props;
-  return (
-    <div className={s.curtian}>
-      <img src={pict} className={s.poster} alt="pic" />
-    </div>
-  );
+    return (
+      <div className={s.curtian}>
+        <img src={pict} className={s.poster} alt="pic" />
+      </div>
+    );
 };
 export default Poster;
 

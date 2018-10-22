@@ -23,7 +23,6 @@ const TableItem = (props) => {
       <div className={s.description}>
         <div className={s.descBox}>
           <span className={s.title}>{title.toUpperCase()}</span>
-          {' '}
           <RatingBox rating={vote_average} />
         </div>
         <div className={s.cut}>
