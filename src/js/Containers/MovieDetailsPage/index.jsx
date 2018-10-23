@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Poster from '../../Components/Poster';
 import Descriptions from '../../Components/Descriptions';
-import Spiner from '../../Components/Spiner';
 import { apiUrl } from '../../../assets';
 
 class MovieDetailsPage extends React.PureComponent {
@@ -25,7 +24,7 @@ class MovieDetailsPage extends React.PureComponent {
         </React.Fragment>
       );
     }
-    return <Spiner />;
+    return null;
   }
 }
 

@@ -24,11 +24,9 @@ const Categories = (props) => {
       <button className={s.item} onClick={get} value="popular" type="button">Trending</button>
       <button className={s.item} onClick={get} value="top_rated" type="button">Top Rated</button>
       <button className={s.item} onClick={get} value="upcoming" type="button">Coming Soon</button>
-      <div className={s.item}>
-        <select className={s.select} onChange={log}>
-          {genres.map(item => <option value={item.id} key={item.id}>{item.name}</option>)}
-        </select>
-      </div>
+      <select className={s.item} onChange={log}>
+        {genres.map(item => <option value={item.id} key={item.id}>{item.name}</option>)}
+      </select>
     </div>
   );
 };

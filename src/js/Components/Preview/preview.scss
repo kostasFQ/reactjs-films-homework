@@ -1,40 +1,18 @@
 .container {
-  display: flex;
   position: relative;
-  align-items: center;
-  padding-right: 100px;
-}
-
-.buttonsBlock {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 250px;
-
-  @media only screen and (max-width: 600px) {
-    padding: 5%;
-  }
+  width: 100%;
+  text-align: center;
 }
 
 .previewField {
-  margin-left: -7%;
-  display: flex;
-  position: absolute;
-  bottom: 80%;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 0.4em;
+  text-align: left;
+  color: white;
 
   @media only screen and (max-width: 600px) {
     margin-left: 5%;
-    width: 70%;
+    width: 100%;
     display: flex;
     position: absolute;
-    bottom: 25%;
     background-color: rgba(0, 0, 0, 0.6);
   }
-}
-
-.x {
-  display: flex;
-  justify-content: center;
 }
