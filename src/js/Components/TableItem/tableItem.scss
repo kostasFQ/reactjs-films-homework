@@ -111,6 +111,11 @@
 }
 
 .innerDescr {
-  width: 95%;
+  width: 100%;
   font-size: small;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

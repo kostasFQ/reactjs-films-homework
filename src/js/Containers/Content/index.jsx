@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Header from '../Header';
 import MovieDetailsPage from '../MovieDetailsPage';
 import List from '../List';
+import Video from '../Video';
+import s from './content.scss';
 
 import { asyncGetMovie, getCategoryMovie } from '../../actions/movie';
 
@@ -21,12 +23,16 @@ class Content extends React.PureComponent {
   }
 
   render() {
+    const { movie } = this.props;
+    const { trailerWindow } = movie;
+
     return (
-      <React.Fragment>
+      <div className={s.container}>
+        { trailerWindow? <Video/>: null}
         <Header getMovie={this.getMovie} />
         <MovieDetailsPage />
         <List />
-      </React.Fragment>
+      </div>
     );
   }
 }
@@ -47,4 +53,5 @@ export default connect(
 Content.propTypes = {
   onGetMovie: PropTypes.func.isRequired,
   onGetCategoryMovie: PropTypes.func.isRequired,
+  movie: PropTypes.objectOf(PropTypes.any).isRequired,
 };

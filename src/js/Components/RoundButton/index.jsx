@@ -7,7 +7,7 @@ const RoundButton = (props) => {
   return (
     <React.Fragment>
       <button className={s.container} onClick={action} type="button">
-        <div className={s.play}></div>
+        <div className={s.play} />
       </button>
       <div className={s.name}>{name}</div>
     </React.Fragment>

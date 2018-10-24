@@ -6,13 +6,14 @@ import TableItem from '../TableItem';
 import Spiner from '../Spiner';
 
 class Table extends React.PureComponent {
+
   render() {
-    const { currentQuery } = this.props;
-    const { fullResponse, fetched } = currentQuery;
+    const { movie } = this.props;
+    const { fullResponse, finishFetch } = movie;
 
     return (
       <div className={s.container}>
-        { fullResponse && fetched
+        { fullResponse && finishFetch
           ? fullResponse.map(item => <TableItem {...item} key={item.id} />)
           : <Spiner />
         }
@@ -23,11 +24,10 @@ class Table extends React.PureComponent {
 
 export default connect(
   state => ({
-    filmsList: state.filmsList,
-    currentQuery: state.movie,
-  }),
+    movie: state.movie,
+  })
 )(Table);
 
 Table.propTypes = {
-  currentQuery: PropTypes.objectOf(PropTypes.any).isRequired,
+  movie: PropTypes.objectOf(PropTypes.any).isRequired,
 };
