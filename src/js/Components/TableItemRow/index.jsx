@@ -33,7 +33,7 @@ class TableItemRow extends React.PureComponent {
           <div className={s.description}>
             <div className={s.title}>{title.toUpperCase()}</div>
             <div><Genres genre_ids={genre_ids} /></div>
-            <div><Rating rating={vote_average}/></div>
+            <div className={s.rating}><Rating rating={vote_average}/></div>
             <div className={s.overview}>{overview}</div>
           </div>
           <div className={s.button}>

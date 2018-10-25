@@ -27,7 +27,7 @@ class List extends React.PureComponent {
         <div className={s.position}>
           <Categories />
           <div className={s.displayStyle}>
-            <button classNames={ classNames( { [s.conf]: true, [s.active]: !rows } ) } type='button' onClick={this.changeToTiles}><span className={s.char}>&#x271B;</span></button>
+            <button className={ classNames( { [s.conf]: true, [s.active]: !rows } ) } type='button' onClick={this.changeToTiles}><span className={s.char}>+</span></button>
             <button className={ classNames( { [s.conf]: true, [s.active]: rows } ) } type='button' onClick={this.changeToRows}><span className={s.min}>&#x2014;</span></button>
           </div>
         </div>

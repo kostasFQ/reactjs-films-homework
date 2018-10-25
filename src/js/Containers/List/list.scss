@@ -8,6 +8,7 @@
   cursor: pointer;
   border: none;
   overflow: hidden;
+  background-color: gray;
 
   &:hover {
     box-shadow: 0 0 5px 1px;
@@ -47,7 +48,11 @@
 }
 
 .char {
-  background-color: gray;
+  position: relative;
+  color: white;
+  font-size: 4em;
+  bottom: 27px;
+  right: 13px;
 }
 
 .min {
