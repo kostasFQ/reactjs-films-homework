@@ -6,6 +6,16 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
+  border: none;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 0 5px 1px;
+  }
+
+  &:active {
+    box-shadow: 0 0 10px 1px;
+  }
 }
 
 .container {
@@ -14,6 +24,7 @@
   position: relative;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .inner {
@@ -21,15 +32,7 @@
   height: 100%;
 }
 
-.tableStyle {
-  @extend .conf;
-
-  background-color: lightgray;
-}
-
-.rowsStyle {
-  @extend .conf;
-
+.active {
   background-color: rgb(9, 173, 227);
 }
 
@@ -41,4 +44,16 @@
 .position {
   display: flex;
   border-bottom: 1px solid lightgray;
+}
+
+.char {
+  background-color: gray;
+}
+
+.min {
+  position: relative;
+  color: white;
+  font-size: 4em;
+  bottom: 34px;
+  right: 8px;
 }

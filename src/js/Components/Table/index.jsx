@@ -3,9 +3,19 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import s from './table.scss';
 import TableItem from '../TableItem';
+import TableItemRow from '../TableItemRow';
 import Spiner from '../Spiner';
 
 class Table extends React.PureComponent {
+
+  dis = (item) => {
+    const {rows} = this.props;
+    if(rows) {
+      return <TableItemRow {...item} key={item.id} />
+    } else {
+      return <TableItem {...item} key={item.id} />
+    }
+  }
 
   render() {
     const { movie } = this.props;
@@ -15,19 +25,15 @@ class Table extends React.PureComponent {
       <div>
         <div className={s.container}>
           { fullResponse && finishFetch
-            ? fullResponse.map(item => <TableItem {...item} key={item.id} />)
+            ? fullResponse.map(item => this.dis(item) )
             : <Spiner />
           }
           <div className={s.container}>
-          {
-            startAdvanceFetch? 
-            <div>
-              <Spiner/>
-            </div> : null
+            { startAdvanceFetch
+              ? <div> <Spiner /> </div> : null
           }
           </div>
         </div>
-        
       </div>
     );
   }
@@ -36,9 +42,10 @@ class Table extends React.PureComponent {
 export default connect(
   state => ({
     movie: state.movie,
-  })
+  }),
 )(Table);
 
 Table.propTypes = {
   movie: PropTypes.objectOf(PropTypes.any).isRequired,
+  rows: PropTypes.bool.isRequired,
 };

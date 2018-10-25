@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './video.scss';
 import { connect } from 'react-redux';
+import s from './video.scss';
 import { closeTrailerWindow } from '../../actions/movie';
 
 const Video = (props) => {
@@ -10,15 +10,21 @@ const Video = (props) => {
 
   return (
     <div className={s.con}>
-    <div>
-      <button type='button' onClick={onCloseWindow} className={s.button}>&#x2715;</button>
-    </div>
-    {
-      trailer?
-      <iframe width="100.1%" height="100%" title={trailer} className={s.iframe}
-        src={trailer}>
-      </iframe>:
-       <div className={s.noTrailer}>{errorMessage}</div>
+      <div>
+        <button type="button" onClick={onCloseWindow} className={s.button}>&#x2715;</button>
+      </div>
+      {
+      trailer
+        ? (
+          <iframe
+            width="100%"
+            height="100%"
+            title={trailer}
+            src={trailer}
+            className={s.iframe}
+          />
+        )
+        : <div className={s.noTrailer}>{errorMessage}</div>
     }
     </div>
   );
@@ -30,8 +36,8 @@ export default connect(
   }),
   dispatch => ({
     onCloseWindow: () => {
-      dispatch( closeTrailerWindow() );
-    }
+      dispatch(closeTrailerWindow());
+    },
   }),
 )(Video);
 

@@ -13,12 +13,12 @@ import { asyncGetMovie, getCategoryMovie, asyncAddMovies } from '../../actions/m
 require('babel-polyfill');
 
 class Content extends React.PureComponent {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
       pageHeight: 0,
-      height: 500
-    }
+      height: 500,
+    };
   }
 
   componentDidMount() {
@@ -31,24 +31,24 @@ class Content extends React.PureComponent {
     const { onGetMovie } = this.props;
     onGetMovie(film);
   }
-  
+
   addMovies = (url) => {
     const { onAddMovies } = this.props;
     onAddMovies(url);
   }
 
   handleScroll = () => {
-    const {height, pageHeight} = this.state;
+    const { height, pageHeight } = this.state;
     const { movie } = this.props;
     const { currentUrl, startAdvanceFetch } = movie;
     const y = window.scrollY;
     if (y > height) {
       const pageY = document.body.scrollHeight - document.documentElement.clientHeight;
-      this.setState( { pageHeight: pageY } );
+      this.setState({ pageHeight: pageY });
     }
-    if(y === pageHeight && !startAdvanceFetch ) {
+    if (y === pageHeight && !startAdvanceFetch) {
       this.addMovies(currentUrl);
-      this.setState(prev => ({ page: prev.page+1 }))
+      this.setState(prev => ({ page: prev.page + 1 }));
     }
   }
 
@@ -58,11 +58,11 @@ class Content extends React.PureComponent {
 
     return (
       <div className={s.container}>
-        { trailerWindow? <Video/>: null}
+        { trailerWindow ? <Video /> : null}
         <Header getMovie={this.getMovie} />
         <MovieDetailsPage />
         <List />
-        <Footer/>
+        <Footer />
       </div>
     );
   }
@@ -80,8 +80,8 @@ export default connect(
       dispatch(getCategoryMovie(query));
     },
     onAddMovies: (url) => {
-      dispatch(asyncAddMovies(url))
-    }
+      dispatch(asyncAddMovies(url));
+    },
   }),
 )(Content);
 Content.propTypes = {
@@ -89,5 +89,5 @@ Content.propTypes = {
   onAddMovies: PropTypes.func.isRequired,
   onGetCategoryMovie: PropTypes.func.isRequired,
   movie: PropTypes.objectOf(PropTypes.any).isRequired,
-  
+
 };

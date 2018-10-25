@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import s from './tableItem.scss';
 import RatingBox from '../RatingBox';
 import Genres from '../Genres';
@@ -8,7 +9,6 @@ import Button from '../Button';
 import RoundButton from '../RoundButton';
 import { apiUrl } from '../../../assets';
 import { asyncShowTrailer } from '../../actions/movie';
-import { connect } from 'react-redux';
 
 class TableItem extends React.PureComponent {
   constructor(props) {
@@ -28,12 +28,12 @@ class TableItem extends React.PureComponent {
 
   showTrailer = (id) => {
     const { onShowTrailer } = this.props;
-    onShowTrailer(id)
+    onShowTrailer(id);
   }
 
   render() {
     const {
-      poster_path, title, vote_average, genre_ids, overview, id
+      poster_path, title, vote_average, genre_ids, overview, id,
     } = this.props;
     const { visiblePreview } = this.state;
     const miniPoster = `${apiUrl}/w300/${poster_path}`;
@@ -71,9 +71,9 @@ class TableItem extends React.PureComponent {
                 visiblePreview
                   ? (
                     <div className={s.innerDescr}>
-
-                      <button type="button" onClick={this.handler} className={s.button}>&#x2715;</button>
-
+                      <div className={s.up}>
+                        <button type="button" onClick={this.handler} className={s.button}>&#x2715;</button>
+                      </div>
                       <div className={s.descBox}>
                         <span className={s.hoverTitle}>{title.toUpperCase()}</span>
                         <RatingBox rating={vote_average} />
@@ -85,14 +85,14 @@ class TableItem extends React.PureComponent {
 
                       <Preview overview={overview} />
                       <div className={s.w}>
-                      <Button name="Watch Now" action={() => this.showTrailer(id)}/>
+                        <Button name="Watch Now" action={() => this.showTrailer(id)} />
                       </div>
                     </div>
                   )
 
                   : (
                     <div className={s.buttonBlock}>
-                      <RoundButton name="Watch Now" action={() => this.showTrailer(id)}/>
+                      <RoundButton name="Watch Now" action={() => this.showTrailer(id)} />
                       <Button name="View Info" action={this.handler} />
                     </div>
                   )
@@ -109,10 +109,10 @@ export default connect(
   null,
   dispatch => ({
     onShowTrailer: (id) => {
-      dispatch( asyncShowTrailer(id) );
-    }
+      dispatch(asyncShowTrailer(id));
+    },
   }),
-) (TableItem);
+)(TableItem);
 
 TableItem.propTypes = {
   onShowTrailer: PropTypes.func.isRequired,

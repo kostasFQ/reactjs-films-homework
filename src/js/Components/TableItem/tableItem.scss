@@ -17,6 +17,13 @@
   overflow: hidden;
   font-family: 'Work Sans', sans-serif;
   margin: 5px;
+  background-color: white;
+}
+
+.colum {
+  @extend .container;
+
+  flex-direction: column;
 }
 
 .miniPoster {
@@ -32,6 +39,7 @@
   font-size: 1.1em;
   font-weight: bold;
   color: black;
+  text-align: start;
 }
 
 .descBox {
@@ -81,6 +89,7 @@
 }
 
 .button {
+  display: inline-block;
   margin: 5px;
   cursor: pointer;
   font-size: 1.5em;
@@ -124,4 +133,8 @@
   margin: 20px 0 0 -15px;
   display: flex;
   justify-content: center;
+}
+
+.up {
+  text-align: left;
 }
