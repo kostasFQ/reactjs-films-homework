@@ -9,14 +9,25 @@ class Table extends React.PureComponent {
 
   render() {
     const { movie } = this.props;
-    const { fullResponse, finishFetch } = movie;
+    const { fullResponse, finishFetch, startAdvanceFetch } = movie;
 
     return (
-      <div className={s.container}>
-        { fullResponse && finishFetch
-          ? fullResponse.map(item => <TableItem {...item} key={item.id} />)
-          : <Spiner />
-        }
+      <div>
+        <div className={s.container}>
+          { fullResponse && finishFetch
+            ? fullResponse.map(item => <TableItem {...item} key={item.id} />)
+            : <Spiner />
+          }
+          <div className={s.container}>
+          {
+            startAdvanceFetch? 
+            <div>
+              <Spiner/>
+            </div> : null
+          }
+          </div>
+        </div>
+        
       </div>
     );
   }

@@ -6,16 +6,20 @@ import { closeTrailerWindow } from '../../actions/movie';
 
 const Video = (props) => {
   const { onCloseWindow, movie } = props;
-  const { trailer } = movie;
+  const { trailer, errorMessage } = movie;
 
   return (
-    <div className={s.container}>
+    <div className={s.con}>
     <div>
-      <button type='button' onClick={onCloseWindow}>&#x2715;</button>
+      <button type='button' onClick={onCloseWindow} className={s.button}>&#x2715;</button>
     </div>
-      <iframe width="100%" height="100%" title={trailer}
+    {
+      trailer?
+      <iframe width="100.1%" height="100%" title={trailer} className={s.iframe}
         src={trailer}>
-      </iframe>
+      </iframe>:
+       <div className={s.noTrailer}>{errorMessage}</div>
+    }
     </div>
   );
 };

@@ -5,21 +5,51 @@ import Header from '../Header';
 import MovieDetailsPage from '../MovieDetailsPage';
 import List from '../List';
 import Video from '../Video';
+import Footer from '../../Components/Footer';
 import s from './content.scss';
 
-import { asyncGetMovie, getCategoryMovie } from '../../actions/movie';
+import { asyncGetMovie, getCategoryMovie, asyncAddMovies } from '../../actions/movie';
 
 require('babel-polyfill');
 
 class Content extends React.PureComponent {
+  constructor(props){
+    super(props);
+    this.state ={
+      pageHeight: 0,
+      height: 500
+    }
+  }
+
   componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
     const { onGetCategoryMovie } = this.props;
-    onGetCategoryMovie('top_rated');
+    onGetCategoryMovie('now_playing');
   }
 
   getMovie = (film) => {
     const { onGetMovie } = this.props;
     onGetMovie(film);
+  }
+  
+  addMovies = (url) => {
+    const { onAddMovies } = this.props;
+    onAddMovies(url);
+  }
+
+  handleScroll = () => {
+    const {height, pageHeight} = this.state;
+    const { movie } = this.props;
+    const { currentUrl, startAdvanceFetch } = movie;
+    const y = window.scrollY;
+    if (y > height) {
+      const pageY = document.body.scrollHeight - document.documentElement.clientHeight;
+      this.setState( { pageHeight: pageY } );
+    }
+    if(y === pageHeight && !startAdvanceFetch ) {
+      this.addMovies(currentUrl);
+      this.setState(prev => ({ page: prev.page+1 }))
+    }
   }
 
   render() {
@@ -32,6 +62,7 @@ class Content extends React.PureComponent {
         <Header getMovie={this.getMovie} />
         <MovieDetailsPage />
         <List />
+        <Footer/>
       </div>
     );
   }
@@ -48,10 +79,15 @@ export default connect(
     onGetCategoryMovie: (query) => {
       dispatch(getCategoryMovie(query));
     },
+    onAddMovies: (url) => {
+      dispatch(asyncAddMovies(url))
+    }
   }),
 )(Content);
 Content.propTypes = {
   onGetMovie: PropTypes.func.isRequired,
+  onAddMovies: PropTypes.func.isRequired,
   onGetCategoryMovie: PropTypes.func.isRequired,
   movie: PropTypes.objectOf(PropTypes.any).isRequired,
+  
 };

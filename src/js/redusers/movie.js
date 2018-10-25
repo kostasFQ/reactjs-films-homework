@@ -5,7 +5,11 @@ import {
   FINISH_FETCH,
   CLOSE_TRAILER_WINDOW,
   SHOW_ERROR,
-  GET_TRAILER
+  GET_TRAILER,
+  SAVE_URL,
+  ADD_MOVIES,
+  START_ADVANCE_FETCH,
+  FINISH_ADVANCE_FETCH
 } from '../actions/movie';
 
 const _movie = {
@@ -65,6 +69,32 @@ const movie = (state = _movie, action) => {
             ...state,
             trailer: action.payload
           }
+
+        case SAVE_URL:
+          return {
+            ...state,
+            currentUrl: action.payload
+          }
+
+        case ADD_MOVIES:
+          return {
+            ...state,
+            fullResponse: [...state.fullResponse, ...action.payload.results]
+          }
+
+          case START_ADVANCE_FETCH:
+            return {
+              ...state,
+              startAdvanceFetch: true,
+              finishAdvanceFetch: false
+            }
+
+            case FINISH_ADVANCE_FETCH:
+              return {
+                ...state,
+                startAdvanceFetch: false,
+                finishAdvanceFetch: true
+              }
     
     default:
       return state;

@@ -84,7 +84,7 @@ class TableItem extends React.PureComponent {
                       </div>
 
                       <Preview overview={overview} />
-                      <div>
+                      <div className={s.w}>
                       <Button name="Watch Now" action={() => this.showTrailer(id)}/>
                       </div>
                     </div>
@@ -118,8 +118,12 @@ TableItem.propTypes = {
   onShowTrailer: PropTypes.func.isRequired,
   overview: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
-  poster_path: PropTypes.string.isRequired,
+  poster_path: PropTypes.string,
   title: PropTypes.string.isRequired,
   vote_average: PropTypes.number.isRequired,
   genre_ids: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
+
+TableItem.defaultProps = {
+  poster_path: null,
 };
