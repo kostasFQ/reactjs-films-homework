@@ -1,19 +1,12 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import App from '../index';
-import reduser from '../../../redusers';
 
+import { movie } from '../../../../../configs/jest/__mocks__/mockStore';
 
-const store = createStore(reduser);
-test('test component render', () => {
-  const render = renderer.create(
-    <Provider store={store}>
-      <App />
-    </Provider>,
-  );
-  const component = render.toJSON();
-
-  expect(component).toMatchSnapshot();
+test('test APP component render', () => {
+  const renderer = new ShallowRenderer();
+  renderer.render( <App store={ movie }/> );
+  const result = renderer.getRenderOutput();
+  expect(result.type).toBe('div');
 });

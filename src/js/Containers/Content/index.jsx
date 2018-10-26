@@ -5,7 +5,6 @@ import Header from '../Header';
 import MovieDetailsPage from '../MovieDetailsPage';
 import List from '../List';
 import Video from '../Video';
-import Footer from '../../Components/Footer';
 import s from './content.scss';
 
 import { asyncGetMovie, getCategoryMovie, asyncAddMovies } from '../../actions/movie';
@@ -62,7 +61,6 @@ class Content extends React.PureComponent {
         <Header getMovie={this.getMovie} />
         <MovieDetailsPage />
         <List />
-        <Footer />
       </div>
     );
   }

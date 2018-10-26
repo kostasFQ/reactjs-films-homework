@@ -4,6 +4,7 @@ import Categories from '../../Components/Categories';
 import Table from '../../Components/Table';
 import classNames from 'classnames';
 
+
 class List extends React.PureComponent {
   constructor(props){
     super(props);

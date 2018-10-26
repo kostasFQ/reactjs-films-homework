@@ -1,84 +1,54 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import configureStore from 'redux-mock-store';
 import ConnectedMovieDetailsPage from '../index';
+import React from 'react';
+import { Provider } from 'react-redux';
+import TestRenderer from 'react-test-renderer';
+import configureMockStore from 'redux-mock-store';
+import {movie} from '../../../../../configs/jest/__mocks__/mockStore';
+import thunk from 'redux-thunk';
 
+const movie2 = {
+  startFetch: false,
+  finishFetch: true,
+  trailerWindow: false,
+  currentUrl: 'https://api.themoviedb.org/3/search/movie?api_key=3a2531498f834486708efbfa60ac046b&language=en-US&include_adult=false&query=sdfsdfsdf&page=1',
+  fullResponse: []
+}
+const movie3 = {};
 
-const t1 = {
-  startFetch: true,
-  fetched: false,
-  movie: {
-    film: {
-      vote_count: 4424,
-      id: 278927,
-      video: false,
-      vote_average: 6.8,
-      title: 'The Jungle Book',
-      popularity: 12.258,
-      poster_path: '/vOipe2myi26UDwP978hsYOrnUWC.jpg',
-      original_language: 'en',
-      original_title: 'The Jungle Book',
-      genre_ids: [
-        12,
-        18,
-        10751,
-        14,
-        16,
-      ],
-      backdrop_path: '/eIOTsGg9FCVrBc4r2nXaV61JF4F.jpg',
-      adult: false,
-      overview: 'A man-cub named Mowgli fostered by wolves. After a threat from the tiger Shere Khan, Mowgli is forced to flee the jungle, by which he embarks on a journey of self discovery with the help of the panther, Bagheera and the free-spirited bear, Baloo.',
-      release_date: '2016-04-07',
-    },
-  },
-};
-const t2 = {
-  startFetch: true,
-  fetched: true,
-  movie: {
-    film: {
-      vote_count: 4424,
-      id: 278927,
-      video: false,
-      vote_average: 6.8,
-      title: 'The Jungle Book',
-      popularity: 12.258,
-      poster_path: '/vOipe2myi26UDwP978hsYOrnUWC.jpg',
-      original_language: 'en',
-      original_title: 'The Jungle Book',
-      genre_ids: [
-        12,
-        18,
-        10751,
-        14,
-        16,
-      ],
-      backdrop_path: '/eIOTsGg9FCVrBc4r2nXaV61JF4F.jpg',
-      adult: false,
-      overview: 'A man-cub named Mowgli fostered by wolves. After a threat from the tiger Shere Khan, Mowgli is forced to flee the jungle, by which he embarks on a journey of self discovery with the help of the panther, Bagheera and the free-spirited bear, Baloo.',
-      release_date: '2016-04-07',
-    },
-  },
-};
+const mStore = configureMockStore([thunk]);
 
-const mockStore = configureStore();
-const store1 = mockStore(t1);
-const store2 = mockStore(t2);
+const initialState = {movie};
+const initialState2 = {movie:movie2};
+const initialState3 = {movie:movie3};
 
-test('test component 1', () => {
-  const render = renderer.create(
-    <ConnectedMovieDetailsPage store={store1} />,
+const store = mStore(initialState);
+const store2 = mStore(initialState2);
+const store3 = mStore(initialState3);
+
+test('1.test MOVIE DETAILS PAGE component render', () => {
+  const testRenderer = TestRenderer.create(
+    <Provider store={store}><ConnectedMovieDetailsPage /></Provider>
   );
-
-  const component = render.toJSON();
-  expect(component).toMatchSnapshot();
+  const result = testRenderer.toJSON();
+  expect(result.type).toBe('div');
+  expect(result).toMatchSnapshot();
 });
 
-test('test component 2', () => {
-  const render = renderer.create(
-    <ConnectedMovieDetailsPage store={store2} />,
+test('2.test MOVIE DETAILS PAGE component render', () => {
+  const testRenderer = TestRenderer.create(
+    <Provider store={store2}><ConnectedMovieDetailsPage /></Provider>
   );
-
-  const component = render.toJSON();
-  expect(component).toMatchSnapshot();
+  const result = testRenderer.toJSON();
+  expect(result.type).toBe('div');
+  expect(result).toMatchSnapshot();
 });
+
+test('3.test MOVIE DETAILS PAGE component render', () => {
+  const testRenderer = TestRenderer.create(
+    <Provider store={store3}><ConnectedMovieDetailsPage /></Provider>
+  );
+  const result = testRenderer.toJSON();
+  expect(result.type).toBe('div');
+  expect(result).toMatchSnapshot();
+});
+

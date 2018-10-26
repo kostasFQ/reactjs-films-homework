@@ -5,6 +5,8 @@ import s from './table.scss';
 import TableItem from '../TableItem';
 import TableItemRow from '../TableItemRow';
 import Spiner from '../Spiner';
+import Footer from '../../Components/Footer';
+
 
 class Table extends React.PureComponent {
 
@@ -29,10 +31,12 @@ class Table extends React.PureComponent {
             : <Spiner />
           }
           <div className={s.container}>
-            { startAdvanceFetch
-              ? <div> <Spiner /> </div> : null
-          }
+            { startAdvanceFetch && <div> <Spiner /> </div> }
           </div>
+          <div className={s.container}>
+            <Footer/>
+          </div>
+          
         </div>
       </div>
     );

@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`test component 1`] = `
-<img
-  alt="pic"
-  className="poster"
-  src="test-file-stub"
-/>
+exports[`test POSTER component 1`] = `
+<div
+  className="curtian"
+>
+  <img
+    alt="pic"
+    className="poster"
+    src="test-file-stub"
+  />
+</div>
 `;

@@ -7,24 +7,9 @@ exports[`test component render 1`] = `
   <div
     className="buttonsBlock"
   >
-    <button
-      className="container"
-      onClick={null}
-      type="button"
-    >
-      Watch Now
-    </button>
     <div
-      className="x"
-    >
-      <button
-        className="container"
-        onClick={[Function]}
-        type="button"
-      >
-        View Info
-      </button>
-    </div>
+      className="previewField"
+    />
   </div>
 </div>
 `;

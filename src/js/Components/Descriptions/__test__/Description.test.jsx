@@ -1,23 +1,59 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import TestRenderer from 'react-test-renderer';
 import Description from '../index';
+import { Provider } from 'react-redux';
+import configureMockStore from 'redux-mock-store';
+import {movie} from '../../../../../configs/jest/__mocks__/mockStore';
 
-const fakeFilm = {
-  pict: 'sss',
-  duration: '1h 46m',
-  preview: 'There ',
-  original_title: 'title',
-  genre_ids: [12, 16, 18],
-  vote_average: 4.5,
+const film = {
+  vote_count: 1576,
+  id: 335983,
+  video: false,
+  vote_average: 6.6,
+  title: 'Venom',
+  popularity: 371.566,
+  poster_path: '/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg',
+  original_language: 'en',
+  original_title: 'Venom',
+  genre_ids: [
+    878,
+    28,
+    80,
+    28,
+    27
+  ],
+  backdrop_path: '/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg',
+  adult: false,
+  overview: 'When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego "Venom" to save his life.',
+  release_date: '2018-10-03'
 };
 
-test('test component', () => {
-  const render = renderer.create(
-    <Description {...fakeFilm} />,
+const initialState = {movie};
+const mStore = configureMockStore();
+const store = mStore(initialState);
+
+test('test DESCRIPTION component', () => {
+  const testRenderer = TestRenderer.create(
+    <Provider store={store}><Description {...film} /></Provider>
   );
 
-  const component = render.toJSON();
+  const result = testRenderer.toJSON();
+  expect(result.type).toBe('div');
+  expect(result).toMatchSnapshot();
+});
 
-  expect(component).toMatchSnapshot();
-  expect(component.type).toBe('div');
+
+
+test('test DESCRIPTION component click', () => {
+  const testRenderer = TestRenderer.create(
+    <Provider store={store}><Description {...film} /></Provider>
+  );
+  const root = testRenderer.root;
+  const t = root.findByProps({ name: 'View Info' });
+  t.props.action();
+
+  const result = testRenderer.toJSON();
+  expect(result.type).toBe('div');
+  expect(result).toMatchSnapshot();
+
 });

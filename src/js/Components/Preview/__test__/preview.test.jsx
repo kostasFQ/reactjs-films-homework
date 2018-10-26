@@ -11,24 +11,3 @@ test('test component render', () => {
   expect(component).toMatchSnapshot();
   expect(component.type).toBe('div');
 });
-
-test('test component click', () => {
-  const render = renderer.create(
-    <Preview preview="string" />,
-  );
-  const root = render.getInstance();
-  const t = render.root.findByProps({ name: 'View Info' });
-  t.props.action();
-  expect(root.state.visible).toBe(true);
-});
-
-test('test component double click', () => {
-  const render = renderer.create(
-    <Preview preview="string" />,
-  );
-  const root = render.getInstance();
-  const t = render.root.findByProps({ name: 'View Info' });
-  t.props.action();
-  t.props.action();
-  expect(root.state.visible).toBe(false);
-});

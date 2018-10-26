@@ -4,9 +4,9 @@ import './styles.scss';
 import Content from '../Content';
 
 const App = () => (
-  <React.Fragment>
+  <div>
     <Content />
-  </React.Fragment>
+  </div>
 );
 
 export default hot(module)(App);
