@@ -7,7 +7,6 @@ import { genres } from '../../../assets/genres';
 import { getCategoryMovie, getDropdownMovie } from '../../actions/movie';
 
 const Categories = (props) => {
-  
   const get = (e) => {
     e.preventDefault();
     const { onGetCategoryMovie } = props;

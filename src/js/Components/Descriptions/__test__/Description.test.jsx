@@ -1,9 +1,9 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-import Description from '../index';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
-import {movie} from '../../../../../configs/jest/__mocks__/mockStore';
+import Description from '../index';
+import { movie } from '../../../../../configs/jest/__mocks__/mockStore';
 
 const film = {
   vote_count: 1576,
@@ -20,21 +20,21 @@ const film = {
     28,
     80,
     28,
-    27
+    27,
   ],
   backdrop_path: '/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg',
   adult: false,
   overview: 'When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego "Venom" to save his life.',
-  release_date: '2018-10-03'
+  release_date: '2018-10-03',
 };
 
-const initialState = {movie};
+const initialState = { movie };
 const mStore = configureMockStore();
 const store = mStore(initialState);
 
 test('test DESCRIPTION component', () => {
   const testRenderer = TestRenderer.create(
-    <Provider store={store}><Description {...film} /></Provider>
+    <Provider store={store}><Description {...film} /></Provider>,
   );
 
   const result = testRenderer.toJSON();
@@ -43,17 +43,15 @@ test('test DESCRIPTION component', () => {
 });
 
 
-
 test('test DESCRIPTION component click', () => {
   const testRenderer = TestRenderer.create(
-    <Provider store={store}><Description {...film} /></Provider>
+    <Provider store={store}><Description {...film} /></Provider>,
   );
-  const root = testRenderer.root;
+  const { root } = testRenderer;
   const t = root.findByProps({ name: 'View Info' });
   t.props.action();
 
   const result = testRenderer.toJSON();
   expect(result.type).toBe('div');
   expect(result).toMatchSnapshot();
-
 });

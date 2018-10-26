@@ -5,18 +5,16 @@ import s from './table.scss';
 import TableItem from '../TableItem';
 import TableItemRow from '../TableItemRow';
 import Spiner from '../Spiner';
-import Footer from '../../Components/Footer';
+import Footer from '../Footer';
 
 
 class Table extends React.PureComponent {
-
   dis = (item) => {
-    const {rows} = this.props;
-    if(rows) {
-      return <TableItemRow {...item} key={item.id} />
-    } else {
-      return <TableItem {...item} key={item.id} />
+    const { rows } = this.props;
+    if (rows) {
+      return <TableItemRow {...item} key={item.id} />;
     }
+    return <TableItem {...item} key={item.id} />;
   }
 
   render() {
@@ -27,16 +25,22 @@ class Table extends React.PureComponent {
       <div>
         <div className={s.container}>
           { fullResponse && finishFetch
-            ? fullResponse.map(item => this.dis(item) )
+            ? fullResponse.map(item => this.dis(item))
             : <Spiner />
           }
           <div className={s.container}>
-            { startAdvanceFetch && <div> <Spiner /> </div> }
+            { startAdvanceFetch && (
+            <div>
+              {' '}
+              <Spiner />
+              {' '}
+            </div>
+            ) }
           </div>
           <div className={s.container}>
-            <Footer/>
+            <Footer />
           </div>
-          
+
         </div>
       </div>
     );

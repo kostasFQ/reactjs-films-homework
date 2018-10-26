@@ -9,7 +9,6 @@ import { apiUrl } from '../../../assets';
 import { asyncShowTrailer } from '../../actions/movie';
 
 class TableItemRow extends React.PureComponent {
-
   showTrailer = (id) => {
     const { onShowTrailer } = this.props;
     onShowTrailer(id);
@@ -24,21 +23,21 @@ class TableItemRow extends React.PureComponent {
 
     return (
       <div className={s.container}>
-         <div className={s.miniPoster}>
-            { poster_path
-              ? <img src={miniPoster} alt="poster" width="100%" height="100%" />
-              : <img src={noPoster} alt="poster" width="100%" height="100%" />
+        <div className={s.miniPoster}>
+          { poster_path
+            ? <img src={miniPoster} alt="poster" width="100%" height="100%" />
+            : <img src={noPoster} alt="poster" width="100%" height="100%" />
             }
-          </div>
-          <div className={s.description}>
-            <div className={s.title}>{title.toUpperCase()}</div>
-            <div><Genres genre_ids={genre_ids} /></div>
-            <div className={s.rating}><Rating rating={vote_average}/></div>
-            <div className={s.overview}>{overview}</div>
-          </div>
-          <div className={s.button}>
+        </div>
+        <div className={s.description}>
+          <div className={s.title}>{title.toUpperCase()}</div>
+          <div><Genres genre_ids={genre_ids} /></div>
+          <div className={s.rating}><Rating rating={vote_average} /></div>
+          <div className={s.overview}>{overview}</div>
+        </div>
+        <div className={s.button}>
           <RoundButton name="Watch Now" action={() => this.showTrailer(id)} />
-          </div>
+        </div>
       </div>
     );
   }

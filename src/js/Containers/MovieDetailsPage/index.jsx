@@ -25,7 +25,7 @@ class MovieDetailsPage extends React.PureComponent {
         </div>
       );
     }
-    return <Spiner/>;
+    return <Spiner />;
   }
 }
 

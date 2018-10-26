@@ -1,36 +1,36 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import Table from '../index';
 import TestRenderer from 'react-test-renderer';
 import configureMockStore from 'redux-mock-store';
-import {movie} from '../../../../../configs/jest/__mocks__/mockStore';
 import thunk from 'redux-thunk';
+import { movie } from '../../../../../configs/jest/__mocks__/mockStore';
+import Table from '../index';
 
 const falseFields = {
   ...movie,
   fullResponse: false,
-  finishFetch: false
-}
+  finishFetch: false,
+};
 
 const startAdvanceFetch = {
   ...movie,
-  startAdvanceFetch: true
-}
+  startAdvanceFetch: true,
+};
 
 const mockStore = configureMockStore([thunk]);
 
-const initialState = {movie};
+const initialState = { movie };
 const store = mockStore(initialState);
 
-const initialStateFalse = {movie: falseFields};
+const initialStateFalse = { movie: falseFields };
 const storeFalse = mockStore(initialStateFalse);
 
-const initialStateAdvance = {movie: startAdvanceFetch};
+const initialStateAdvance = { movie: startAdvanceFetch };
 const storeFalseAdvance = mockStore(initialStateAdvance);
 
 test('1.test TABLE component render (rows = true)', () => {
   const testRenderer = TestRenderer.create(
-    <Provider store={store}><Table rows={true} /></Provider>
+    <Provider store={store}><Table rows /></Provider>,
   );
   const result = testRenderer.toJSON();
 
@@ -40,7 +40,7 @@ test('1.test TABLE component render (rows = true)', () => {
 
 test('2.test TABLE component render (rows = false)', () => {
   const testRenderer = TestRenderer.create(
-    <Provider store={store}><Table rows={false} /></Provider>
+    <Provider store={store}><Table rows={false} /></Provider>,
   );
   const result = testRenderer.toJSON();
 
@@ -49,9 +49,8 @@ test('2.test TABLE component render (rows = false)', () => {
 });
 
 test('3.test TABLE component render (rows = false)', () => {
-
   const testRenderer = TestRenderer.create(
-    <Provider store={storeFalse}><Table rows={false} /></Provider>
+    <Provider store={storeFalse}><Table rows={false} /></Provider>,
   );
   const result = testRenderer.toJSON();
 
@@ -59,10 +58,9 @@ test('3.test TABLE component render (rows = false)', () => {
   expect(result).toMatchSnapshot();
 });
 
-test('3.test TABLE component render (rows = false)', () => {
-
+test('4.test TABLE component render (rows = false)', () => {
   const testRenderer = TestRenderer.create(
-    <Provider store={storeFalseAdvance}><Table rows={false} /></Provider>
+    <Provider store={storeFalseAdvance}><Table rows={false} /></Provider>,
   );
   const result = testRenderer.toJSON();
 
