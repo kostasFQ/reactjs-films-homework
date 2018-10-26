@@ -31,7 +31,6 @@ test('getCategoryMovie in CONTENT', async () => {
 });
 
 test('getDropdownMovie in CONTENT', async () => {
-  let action;
   await store.dispatch(getDropdownMovie(28));
   expect(store.getActions()[0].type).toBe('START_FETCH');
   expect(store.getActions()[1].type).toBe('SAVE_URL');
