@@ -3,6 +3,7 @@ import TestRenderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import Description from '../index';
+import thunk from 'redux-thunk';
 import { movie } from '../../../../../configs/jest/__mocks__/mockStore';
 
 const film = {
@@ -29,7 +30,7 @@ const film = {
 };
 
 const initialState = { movie };
-const mStore = configureMockStore();
+const mStore = configureMockStore([thunk]);
 const store = mStore(initialState);
 
 test('test DESCRIPTION component', () => {
@@ -43,15 +44,22 @@ test('test DESCRIPTION component', () => {
 });
 
 
-test('test DESCRIPTION component click', () => {
+test('test DESCRIPTION component click "show trailer"', () => {
   const testRenderer = TestRenderer.create(
     <Provider store={store}><Description {...film} /></Provider>,
   );
-  const { root } = testRenderer;
-  const t = root.findByProps({ name: 'View Info' });
-  t.props.action();
+  const testInstance = testRenderer.root;
 
-  const result = testRenderer.toJSON();
-  expect(result.type).toBe('div');
-  expect(result).toMatchSnapshot();
+  const but = testInstance.findByProps({name: "Watch Now"})
+  but.props.action();
+});
+
+test('test DESCRIPTION component click "View Info"', () => {
+  const testRenderer = TestRenderer.create(
+    <Provider store={store}><Description {...film} /></Provider>,
+  );
+  const testInstance = testRenderer.root;
+
+  const but = testInstance.findByProps({name: "View Info"})
+  but.props.action();
 });

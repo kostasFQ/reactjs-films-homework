@@ -26,6 +26,10 @@ class Content extends React.PureComponent {
     onGetCategoryMovie('now_playing');
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   getMovie = (film) => {
     const { onGetMovie } = this.props;
     onGetMovie(film);
@@ -47,7 +51,6 @@ class Content extends React.PureComponent {
     }
     if (y === pageHeight && !startAdvanceFetch) {
       this.addMovies(currentUrl);
-      this.setState(prev => ({ page: prev.page + 1 }));
     }
   }
 

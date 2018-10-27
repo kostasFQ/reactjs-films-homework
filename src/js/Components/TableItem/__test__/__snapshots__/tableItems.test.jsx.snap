@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1.test TABLE_ITEM component render 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="miniPoster"
+  >
+    <img
+      alt="poster"
+      height="100%"
+      src="http://image.tmdb.org/t/p/w300//2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg"
+      width="100%"
+    />
+  </div>
+  <div
+    className="description"
+  >
+    <div
+      className="descBox"
+    >
+      <span
+        className="title"
+      >
+        VENOM
+      </span>
+      <div
+        className="container"
+      >
+        6.6
+      </div>
+    </div>
+    <div
+      className="cut"
+    >
+      <ul
+        className="list"
+      >
+        <li
+          className="item"
+        >
+          Action
+        </li>
+        <li
+          className="item"
+        >
+          Crime
+        </li>
+        <li
+          className="item"
+        >
+          Horror
+        </li>
+        <li
+          className="item"
+        >
+          Science Fiction
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="info"
+    onMouseLeave={[Function]}
+  >
+    <div />
+    <div
+      className="previewField"
+    >
+      <div
+        className="inner"
+      >
+        <div
+          className="buttonBlock"
+        >
+          <button
+            className="container"
+            onClick={[Function]}
+            type="button"
+          >
+            <div
+              className="play"
+            />
+          </button>
+          <div
+            className="name"
+          >
+            Watch Now
+          </div>
+          <button
+            className="container"
+            onClick={[Function]}
+            type="button"
+          >
+            View Info
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`2.test TABLE_ITEM component render 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="miniPoster"
+  >
+    <img
+      alt="poster"
+      height="100%"
+      src="http://wpmovies.scriptburn.com/wp-content/themes/wp_movies/images/noposter.jpg"
+      width="100%"
+    />
+  </div>
+  <div
+    className="description"
+  >
+    <div
+      className="descBox"
+    >
+      <span
+        className="title"
+      >
+        VENOM
+      </span>
+      <div
+        className="container"
+      >
+        6.6
+      </div>
+    </div>
+    <div
+      className="cut"
+    >
+      <ul
+        className="list"
+      >
+        <li
+          className="item"
+        >
+          Action
+        </li>
+        <li
+          className="item"
+        >
+          Crime
+        </li>
+        <li
+          className="item"
+        >
+          Horror
+        </li>
+        <li
+          className="item"
+        >
+          Science Fiction
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="info"
+    onMouseLeave={[Function]}
+  >
+    <div />
+    <div
+      className="previewField"
+    >
+      <div
+        className="inner"
+      >
+        <div
+          className="buttonBlock"
+        >
+          <button
+            className="container"
+            onClick={[Function]}
+            type="button"
+          >
+            <div
+              className="play"
+            />
+          </button>
+          <div
+            className="name"
+          >
+            Watch Now
+          </div>
+          <button
+            className="container"
+            onClick={[Function]}
+            type="button"
+          >
+            View Info
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

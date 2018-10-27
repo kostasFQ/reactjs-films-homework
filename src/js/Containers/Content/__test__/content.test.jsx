@@ -10,10 +10,21 @@ const initialState = { movie };
 const mStore = configureMockStore([thunk]);
 const store = mStore(initialState);
 
-test('test CONTENT component render', () => {
+test('1.test CONTENT component render', () => {
   const testRenderer = TestRenderer.create(
     <Provider store={store}><ConnectedContent /></Provider>,
   );
   const result = testRenderer.toJSON();
   expect(result.type).toBe('div');
+});
+
+test('2.test CONTENT component render', () => {
+  const testRenderer = TestRenderer.create(
+    <Provider store={store}><ConnectedContent /></Provider>,
+  );
+  const testInstance = testRenderer.root;
+  const instance = testRenderer.instance;
+  // const inst = testRenderer.getInstance();
+  // testRenderer.componentDidMount();
+  console.log(instance);
 });
