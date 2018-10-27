@@ -17,12 +17,3 @@ test('1.test CONTENT component render', () => {
   const result = testRenderer.toJSON();
   expect(result.type).toBe('div');
 });
-
-test('2.test CONTENT component render', () => {
-  const testRenderer = TestRenderer.create(
-    <Provider store={store}><ConnectedContent /></Provider>,
-  );
-  // const inst = testRenderer.getInstance();
-  // testRenderer.componentDidMount();
-  console.log(instance);
-});
