@@ -2,8 +2,8 @@ import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
-import Description from '../index';
 import thunk from 'redux-thunk';
+import Description from '../index';
 import { movie } from '../../../../../configs/jest/__mocks__/mockStore';
 
 const film = {
@@ -50,7 +50,7 @@ test('test DESCRIPTION component click "show trailer"', () => {
   );
   const testInstance = testRenderer.root;
 
-  const but = testInstance.findByProps({name: "Watch Now"})
+  const but = testInstance.findByProps({ name: 'Watch Now' });
   but.props.action();
 });
 
@@ -60,6 +60,6 @@ test('test DESCRIPTION component click "View Info"', () => {
   );
   const testInstance = testRenderer.root;
 
-  const but = testInstance.findByProps({name: "View Info"})
+  const but = testInstance.findByProps({ name: 'View Info' });
   but.props.action();
 });
