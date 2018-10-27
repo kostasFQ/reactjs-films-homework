@@ -22,8 +22,6 @@ test('2.test CONTENT component render', () => {
   const testRenderer = TestRenderer.create(
     <Provider store={store}><ConnectedContent /></Provider>,
   );
-  const testInstance = testRenderer.root;
-  const instance = testRenderer.instance;
   // const inst = testRenderer.getInstance();
   // testRenderer.componentDidMount();
   console.log(instance);
