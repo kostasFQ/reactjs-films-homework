@@ -26,7 +26,7 @@ test('2.test LIST component render rows button', () => {
     <Provider store={store}><List /></Provider>,
   );
   const testInstance = testRenderer.root;
-  const button = testInstance.findByProps({className: "conf"});
+  const button = testInstance.findByProps({ className: 'conf' });
   button.props.onClick();
 });
 

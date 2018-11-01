@@ -12,7 +12,7 @@ const mStore = configureMockStore([thunk]);
 test('1.test CONTENT component render', () => {
   const initialState = { movie };
   const store = mStore(initialState);
-  
+
   const testRenderer = TestRenderer.create(
     <Provider store={store}><ConnectedContent /></Provider>,
   );
@@ -71,7 +71,7 @@ test('4.test CONTENT component unmount', () => {
 });
 
 test('5.test CONTENT component', () => {
-  const e = { target: { value: 'x'}, preventDefault: ()=> { console.log('x') } };
+  const e = { target: { value: 'x' }, preventDefault: () => { console.log('x'); } };
   const initialState = { movie };
   const store = mStore(initialState);
 

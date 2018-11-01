@@ -49,7 +49,7 @@ class Content extends React.PureComponent {
     if (y > height) {
       const pageY = document.body.scrollHeight - document.documentElement.clientHeight;
       this.setState({ pageHeight: pageY });
-    };
+    }
 
     if (y === pageHeight && !startAdvanceFetch) {
       this.addMovies(currentUrl);

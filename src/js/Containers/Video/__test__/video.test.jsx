@@ -34,7 +34,7 @@ test('2.test VIDEO component button', () => {
 });
 
 test('3.test VIDEO component trailer', () => {
-  const initialState = { movie : {...movie, trailer: 'qqq'} };
+  const initialState = { movie: { ...movie, trailer: 'qqq' } };
   const store = mockStore(initialState);
 
   const testRenderer = TestRenderer.create(
