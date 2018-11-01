@@ -45,10 +45,12 @@ class Content extends React.PureComponent {
     const { movie } = this.props;
     const { currentUrl, startAdvanceFetch } = movie;
     const y = window.scrollY;
+
     if (y > height) {
       const pageY = document.body.scrollHeight - document.documentElement.clientHeight;
       this.setState({ pageHeight: pageY });
-    }
+    };
+
     if (y === pageHeight && !startAdvanceFetch) {
       this.addMovies(currentUrl);
     }
@@ -85,10 +87,10 @@ export default connect(
     },
   }),
 )(Content);
+
 Content.propTypes = {
   onGetMovie: PropTypes.func.isRequired,
   onAddMovies: PropTypes.func.isRequired,
   onGetCategoryMovie: PropTypes.func.isRequired,
   movie: PropTypes.objectOf(PropTypes.any).isRequired,
-
 };
