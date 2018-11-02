@@ -5,7 +5,6 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { movie } from '../../../../../configs/jest/__mocks__/mockStore';
 import ConnectedContent from '../index';
-import Content from '../index';
 
 const mStore = configureMockStore([thunk]);
 
@@ -101,7 +100,7 @@ test('4.test CONTENT component unmount', () => {
 });
 
 test('5.test CONTENT component search', () => {
-  const e = { target: { value: 'x' }, preventDefault: () => { console.log('x'); } };
+  const e = { target: { value: 'x' }, preventDefault: () => 'x' };
   const initialState = { movie };
   const store = mStore(initialState);
 

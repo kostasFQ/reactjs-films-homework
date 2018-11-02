@@ -22,7 +22,7 @@ test('1.test HEADER component render', () => {
 });
 
 test('2.test HEADER component search', () => {
-  const e = { preventDefault: () => { console.log('x'); } };
+  const e = { preventDefault: () => 'x' };
   const getMovie = film => film;
   const testRenderer = TestRenderer.create(
     <Provider store={store}><Header getMovie={getMovie} /></Provider>,
