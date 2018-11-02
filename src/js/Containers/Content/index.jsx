@@ -48,8 +48,8 @@ class Content extends React.PureComponent {
 
     if (y > height) {
       // const pageY = document.body.scrollHeight - document.documentElement.clientHeight;
-      const {scrollHeight} = document.body;
-      const {clientHeight} = document.documentElement;
+      const { scrollHeight } = document.body;
+      const { clientHeight } = document.documentElement;
       this.setState({ pageHeight: scrollHeight - clientHeight });
     }
 

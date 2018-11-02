@@ -41,11 +41,11 @@ test('3.test CONTENT component scroll', () => {
   window.addEventListener = jest.fn((event, cb) => {
     eventMap[event] = cb;
   });
-  Object.defineProperty( window.document.body, 'scrollHeight', {
+  Object.defineProperty(window.document.body, 'scrollHeight', {
     writable: true,
     value: 500,
   });
-  Object.defineProperty( window.document.documentElement, 'clientHeight', {
+  Object.defineProperty(window.document.documentElement, 'clientHeight', {
     writable: true,
     value: 500,
   });
@@ -70,11 +70,11 @@ test('3.1.test CONTENT component scroll', () => {
   window.addEventListener = jest.fn((event, cb) => {
     eventMap[event] = cb;
   });
-  Object.defineProperty( window.document.body, 'scrollHeight', {
+  Object.defineProperty(window.document.body, 'scrollHeight', {
     writable: true,
     value: 500,
   });
-  Object.defineProperty( window.document.documentElement, 'clientHeight', {
+  Object.defineProperty(window.document.documentElement, 'clientHeight', {
     writable: true,
     value: 500,
   });
