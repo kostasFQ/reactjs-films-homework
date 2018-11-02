@@ -5,6 +5,7 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { movie } from '../../../../../configs/jest/__mocks__/mockStore';
 import ConnectedContent from '../index';
+import Content from '../index';
 
 const mStore = configureMockStore([thunk]);
 
@@ -40,17 +41,46 @@ test('3.test CONTENT component scroll', () => {
   window.addEventListener = jest.fn((event, cb) => {
     eventMap[event] = cb;
   });
-  Object.defineProperty(global.window, 'innerHeight', {
+  Object.defineProperty( window.document.body, 'scrollHeight', {
     writable: true,
-    value: 1000,
+    value: 500,
   });
-  Object.defineProperty(global.window, 'pageYOffset', {
+  Object.defineProperty( window.document.documentElement, 'clientHeight', {
     writable: true,
-    value: 1000,
+    value: 500,
   });
-  Object.defineProperty(global.document.body, 'offsetHeight', {
+  Object.defineProperty(window, 'scrollY', {
     writable: true,
-    value: 1,
+    value: 600,
+  });
+  TestRenderer.create(
+    <Provider store={store}>
+      <ConnectedContent />
+    </Provider>,
+  );
+  eventMap.scroll();
+});
+
+test('3.1.test CONTENT component scroll', () => {
+  const initialState = { movie };
+  const store = mStore(initialState);
+
+  const eventMap = {};
+
+  window.addEventListener = jest.fn((event, cb) => {
+    eventMap[event] = cb;
+  });
+  Object.defineProperty( window.document.body, 'scrollHeight', {
+    writable: true,
+    value: 500,
+  });
+  Object.defineProperty( window.document.documentElement, 'clientHeight', {
+    writable: true,
+    value: 500,
+  });
+  Object.defineProperty(window, 'scrollY', {
+    writable: true,
+    value: 0,
   });
   TestRenderer.create(
     <Provider store={store}>
@@ -70,7 +100,7 @@ test('4.test CONTENT component unmount', () => {
   testRenderer.unmount();
 });
 
-test('5.test CONTENT component', () => {
+test('5.test CONTENT component search', () => {
   const e = { target: { value: 'x' }, preventDefault: () => { console.log('x'); } };
   const initialState = { movie };
   const store = mStore(initialState);

@@ -47,8 +47,10 @@ class Content extends React.PureComponent {
     const y = window.scrollY;
 
     if (y > height) {
-      const pageY = document.body.scrollHeight - document.documentElement.clientHeight;
-      this.setState({ pageHeight: pageY });
+      // const pageY = document.body.scrollHeight - document.documentElement.clientHeight;
+      const {scrollHeight} = document.body;
+      const {clientHeight} = document.documentElement;
+      this.setState({ pageHeight: scrollHeight - clientHeight });
     }
 
     if (y === pageHeight && !startAdvanceFetch) {

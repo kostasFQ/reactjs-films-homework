@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-
 import movie from './movie';
 
 const reduser = combineReducers({

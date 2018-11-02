@@ -8,6 +8,7 @@ module.exports = {
     "<rootDir>/src/js/**/*.{js,jsx}",
     "!**/node_modules/**",
     "!**/vendor/**",
+    "!<rootDir>/src/js/redusers/index.js"
   ],
   rootDir: '../../',
 

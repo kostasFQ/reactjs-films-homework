@@ -16,16 +16,16 @@ export const FINISH_ADVANCE_FETCH = `FINISH_ADVANCE_FETCH`;
 
 export const asyncGetMovie = (movie, page = 1) => async dispatch => {
   try{
+    if(!movie) {throw new Error('err')}
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&include_adult=false&query=${movie}&page=${page}`
     dispatch( { type: START_FETCH } )
     const response = await axios(url);
     const data = response.data;
-    console.log('-------', url);
     dispatch( {type: SAVE_URL, payload: url } );
     dispatch( {type: GET_MOVIE, payload: data } );
     dispatch( {type: FINISH_FETCH } );
   } 
-  catch (err) { throw new Error('karamba!') }
+  catch (err) { dispatch({ type: SHOW_ERROR, payload: 'fail' }) }
 }
 
 export const getCategoryMovie = (query, page = 1) => async dispatch => {
@@ -38,12 +38,12 @@ export const getCategoryMovie = (query, page = 1) => async dispatch => {
     dispatch( {type: GET_TRADING, payload: data } );
     dispatch( {type: FINISH_FETCH } );
   } 
-  catch (err) { throw new Error('karamba!') }
-
+  catch (err) { dispatch({ type: SHOW_ERROR, payload: 'fail' }) }
 }
 
 export const getDropdownMovie = (id, page = 1) => async dispatch => {
   try{
+    if(!id) {throw new Error('err')}
     const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${id}&page=${page}`;
     dispatch( { type: START_FETCH } )
     const response = await axios(`https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${id}&page=${page}`);
@@ -52,7 +52,7 @@ export const getDropdownMovie = (id, page = 1) => async dispatch => {
     dispatch( {type: GET_TRADING, payload: data } );
     dispatch( {type: FINISH_FETCH } );
   } 
-  catch (err) { throw new Error('karamba!') }
+  catch (err) { dispatch({ type: SHOW_ERROR, payload: 'fail' }) }
 }
 
 export const asyncShowTrailer = (id) => async dispatch => {
@@ -60,8 +60,6 @@ export const asyncShowTrailer = (id) => async dispatch => {
     dispatch({ type: SHOW_ERROR, payload: null })
     dispatch( { type: OPEN_TRAILER_WINDOW } );
     const videoKey = await axios(`https://api.themoviedb.org/3/movie/${id}/videos?language=en-US&api_key=${apiKey}`);
-    if(videoKey.data.results.length > 0) {
-    }
     const trailerUrl = `https://www.youtube.com/embed/${videoKey.data.results[0].key}?autoplay=1`;
     
     dispatch({ type: GET_TRAILER, payload: trailerUrl });
@@ -84,10 +82,8 @@ export const asyncAddMovies = (url) => async dispatch => {
     const response = await axios(newUrl);
     const data = response.data;
     dispatch( {type: SAVE_URL, payload: newUrl } );
-    setTimeout( () => {
-      dispatch( {type: ADD_MOVIES, payload: data } );
-      dispatch( { type: FINISH_ADVANCE_FETCH } )
-    }, 1000 )
+    dispatch( {type: ADD_MOVIES, payload: data } );
+    dispatch( { type: FINISH_ADVANCE_FETCH } )
   }
   catch(err) {  dispatch({ type: SHOW_ERROR, payload: 'fail' }) }
 }

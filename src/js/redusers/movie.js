@@ -18,8 +18,6 @@ const _movie = {
   trailerWindow: false
 }
 
-const random = (arr) =>  Math.floor( Math.random() * arr.length ); 
-
 const movie = (state = _movie, action) => {
   switch (action.type) {
     case START_FETCH:
@@ -51,50 +49,50 @@ const movie = (state = _movie, action) => {
         ...state,
         trailerWindow: true
       }
-      
-      case CLOSE_TRAILER_WINDOW:
+    
+    case CLOSE_TRAILER_WINDOW:
+      return {
+        ...state,
+        trailerWindow: false
+      }
+    
+      case SHOW_ERROR:
         return {
           ...state,
-          trailerWindow: false
+          errorMessage: action.payload
         }
-      
-        case SHOW_ERROR:
-          return {
-            ...state,
-            errorMessage: action.payload
-          }
 
-        case GET_TRAILER:
-          return {
-            ...state,
-            trailer: action.payload
-          }
+      case GET_TRAILER:
+        return {
+          ...state,
+          trailer: action.payload
+        }
 
-        case SAVE_URL:
-          return {
-            ...state,
-            currentUrl: action.payload
-          }
+      case SAVE_URL:
+        return {
+          ...state,
+          currentUrl: action.payload
+        }
 
-        case ADD_MOVIES:
-          return {
-            ...state,
-            fullResponse: [...state.fullResponse, ...action.payload.results]
-          }
+      case ADD_MOVIES:
+        return {
+          ...state,
+          fullResponse: [...state.fullResponse, ...action.payload.results]
+        }
 
-          case START_ADVANCE_FETCH:
-            return {
-              ...state,
-              startAdvanceFetch: true,
-              finishAdvanceFetch: false
-            }
+      case START_ADVANCE_FETCH:
+        return {
+          ...state,
+          startAdvanceFetch: true,
+          finishAdvanceFetch: false
+        }
 
-            case FINISH_ADVANCE_FETCH:
-              return {
-                ...state,
-                startAdvanceFetch: false,
-                finishAdvanceFetch: true
-              }
+      case FINISH_ADVANCE_FETCH:
+        return {
+          ...state,
+          startAdvanceFetch: false,
+          finishAdvanceFetch: true
+        }
     
     default:
       return state;
