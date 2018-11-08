@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import s from './header.scss';
+import { withRouter } from "react-router-dom";
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      str: '',
+      str: ''
     };
   }
 
@@ -15,11 +16,12 @@ class Header extends React.Component {
   }
 
   send = (e) => {
-    const { getMovie } = this.props;
+    const { getMovie, history } = this.props;
     const { str } = this.state;
     e.preventDefault();
+    history.push(`/search/${str}`)
     getMovie(str);
-    this.setState({ str: '' });
+    this.setState({ str: ''});
   }
 
   render() {
@@ -34,8 +36,9 @@ class Header extends React.Component {
     );
   }
 }
-export default Header;
+export default withRouter(Header);
 
 Header.propTypes = {
   getMovie: PropTypes.func.isRequired,
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
 };

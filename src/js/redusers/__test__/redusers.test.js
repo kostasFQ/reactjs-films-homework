@@ -3,7 +3,8 @@ import movie from '../movie';
 const state = {
   startFetch: false,
   finishFetch: false,
-  trailerWindow: false
+  trailerWindow: false,
+  page: 1
 };
 
 describe('reduser', () => {
@@ -19,18 +20,20 @@ describe('reduser', () => {
   })
   
   it('GET_MOVIE', () => {
-    expect( movie( state,{ type: 'GET_MOVIE', payload: { results: [{i:1},{i:2}] } })).toEqual({
+    expect( movie( state,{ type: 'GET_MOVIE', payload: { page: 1, results: [{i:1},{i:2}] } })).toEqual({
       ...state,
       film: {i:1},
-      fullResponse: [{i:1},{i:2}]
+      fullResponse: [{i:1},{i:2}],
+      page: 1
     });
   })
   
   it('GET_TRADING', () => {
-    expect( movie( state,{ type: 'GET_TRADING', payload: { results: [{i:3},{i:4}] } })).toEqual({
+    expect( movie( state,{ type: 'GET_TRADING', payload: { page: 1, results: [{i:3},{i:4}] } })).toEqual({
       ...state,
       film: {i:3},
-      fullResponse: [{i:3},{i:4}]
+      fullResponse: [{i:3},{i:4}],
+      page: 1
     });
   })
   
@@ -89,11 +92,12 @@ describe('reduser', () => {
       startFetch: false,
       finishFetch: false,
       trailerWindow: false,
-      fullResponse: [{i:3},{i:4}]
+      fullResponse: [{i:3},{i:4}],
     };
-    expect( movie( state,{ type: 'ADD_MOVIES', payload: { results: [{i:1},{i:2}] } } ) ).toEqual({
+    expect( movie( state,{ type: 'ADD_MOVIES', payload: { page: 1, results: [{i:1},{i:2}] } } ) ).toEqual({
       ...state,
-      fullResponse: [{i:3},{i:4},{i:1},{i:2}]
+      fullResponse: [{i:3},{i:4},{i:1},{i:2}],
+      page: 1
     });
   })
 

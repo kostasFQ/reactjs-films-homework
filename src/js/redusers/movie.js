@@ -15,7 +15,8 @@ import {
 const _movie = {
   startFetch: false,
   finishFetch: false,
-  trailerWindow: false
+  trailerWindow: false,
+  page: 1
 }
 
 const movie = (state = _movie, action) => {
@@ -27,14 +28,16 @@ const movie = (state = _movie, action) => {
       return { 
         ...state, 
         film: action.payload.results[0],
-        fullResponse: action.payload.results
+        fullResponse: action.payload.results,
+        page: action.payload.page
       };
 
     case GET_TRADING:
       return { 
         ...state, 
         film: action.payload.results[0],
-        fullResponse: action.payload.results
+        fullResponse: action.payload.results,
+        page: action.payload.page
       };
       
     case FINISH_FETCH:
@@ -77,7 +80,8 @@ const movie = (state = _movie, action) => {
       case ADD_MOVIES:
         return {
           ...state,
-          fullResponse: [...state.fullResponse, ...action.payload.results]
+          fullResponse: [...state.fullResponse, ...action.payload.results],
+          page: action.payload.page
         }
 
       case START_ADVANCE_FETCH:
@@ -91,7 +95,7 @@ const movie = (state = _movie, action) => {
         return {
           ...state,
           startAdvanceFetch: false,
-          finishAdvanceFetch: true
+          finishAdvanceFetch: true,
         }
     
     default:

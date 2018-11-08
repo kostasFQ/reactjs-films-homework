@@ -19,23 +19,21 @@ class Table extends React.PureComponent {
 
   render() {
     const { movie } = this.props;
-    const { fullResponse, finishFetch, startAdvanceFetch } = movie;
+    const { fullResponse, finishFetch, startAdvanceFetch, page } = movie;
 
     return (
       <div>
         <div className={s.container}>
           { fullResponse && finishFetch
             ? fullResponse.map(item => this.dis(item))
-            : <Spiner />
+            : page
           }
           <div className={s.container}>
-            { startAdvanceFetch && (
-            <div>
-              {' '}
-              <Spiner />
-              {' '}
-            </div>
-            ) }
+            { startAdvanceFetch &&
+              <div>
+                <Spiner />
+              </div>
+            }
           </div>
           <div className={s.container}>
             <Footer />

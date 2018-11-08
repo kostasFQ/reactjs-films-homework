@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from "react-router-dom";
+import { genres } from '../../../assets/genres';
 import PropTypes from 'prop-types';
 import Header from '../Header';
 import MovieDetailsPage from '../MovieDetailsPage';
@@ -7,7 +9,7 @@ import List from '../List';
 import Video from '../Video';
 import s from './content.scss';
 
-import { asyncGetMovie, getCategoryMovie, asyncAddMovies } from '../../actions/movie';
+import { asyncGetMovie, getCategoryMovie, asyncAddMovies, getDropdownMovie } from '../../actions/movie';
 
 require('babel-polyfill');
 
@@ -22,8 +24,24 @@ class Content extends React.PureComponent {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    const { onGetCategoryMovie } = this.props;
-    onGetCategoryMovie('now_playing');
+    const { onGetMovie, onGetCategoryMovie, onGetDropdownMovie, location } = this.props;
+    const prefix = location.pathname.split('/')[1];
+    const query = location.pathname.split('/')[2]
+    if(prefix === 'search') {
+      onGetMovie(query);
+    }
+    if(prefix === 'genre'){
+      const genreId = genres.filter( item => { 
+        if(item.name.toLowerCase() === query.replace('_', ' ') ){
+          return item;
+        }
+        return null;
+      });
+      onGetDropdownMovie(genreId[0].id);
+    }
+    if(prefix === 'categories'){
+      onGetCategoryMovie(query);
+    }
   }
 
   componentWillUnmount() {
@@ -47,7 +65,6 @@ class Content extends React.PureComponent {
     const y = window.scrollY;
 
     if (y > height) {
-      // const pageY = document.body.scrollHeight - document.documentElement.clientHeight;
       const { scrollHeight } = document.body;
       const { clientHeight } = document.documentElement;
       this.setState({ pageHeight: scrollHeight - clientHeight });
@@ -64,16 +81,16 @@ class Content extends React.PureComponent {
 
     return (
       <div className={s.container}>
-        { trailerWindow ? <Video /> : null}
-        <Header getMovie={this.getMovie} />
-        <MovieDetailsPage />
-        <List />
+          { trailerWindow ? <Video /> : null}
+          <Header getMovie={this.getMovie} />
+          <MovieDetailsPage />
+          <List />
       </div>
     );
   }
 }
 
-export default connect(
+export default withRouter(connect(
   state => ({
     movie: state.movie,
   }),
@@ -87,12 +104,17 @@ export default connect(
     onAddMovies: (url) => {
       dispatch(asyncAddMovies(url));
     },
+    onGetDropdownMovie: (id) => {
+      dispatch(getDropdownMovie(id));
+    },
   }),
-)(Content);
+)(Content));
 
 Content.propTypes = {
   onGetMovie: PropTypes.func.isRequired,
   onAddMovies: PropTypes.func.isRequired,
   onGetCategoryMovie: PropTypes.func.isRequired,
+  onGetDropdownMovie: PropTypes.func.isRequired,
   movie: PropTypes.objectOf(PropTypes.any).isRequired,
+  location: PropTypes.objectOf(PropTypes.any).isRequired,
 };
