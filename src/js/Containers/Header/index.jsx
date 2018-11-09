@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import s from './header.scss';
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
+import icon from '../../../imgs/icons/search-3-32.png'
 
 class Header extends React.Component {
   constructor(props) {
@@ -19,18 +20,28 @@ class Header extends React.Component {
     const { getMovie, history } = this.props;
     const { str } = this.state;
     e.preventDefault();
-    history.push(`/search/${str}`)
-    getMovie(str);
-    this.setState({ str: ''});
+    if(str.length > 0) {
+      history.push(`/search?movie=${str}`)
+      getMovie(str);
+      this.setState({ str: ''});
+    }
+  }
+
+  linkToMain = (e) => {
+    e.preventDefault();
+    const { toMain, history } = this.props;
+    history.push(`/main`);
+    toMain();
   }
 
   render() {
     const { str } = this.state;
     return (
       <div className={s.container}>
-        <h1 className={s.title}>FILMS</h1>
-        <form onSubmit={this.send}>
+        <Link to={'/main'} className={s.title} onClick={this.linkToMain}>FILMS</Link>
+        <form onSubmit={this.send} className={s.form}>
           <input className={s.input} value={str} type="text" placeholder="search" onChange={this.toState} />
+          <button type='submit' className={s.button}><img src={icon} width='16px' alt="search"/></button>
         </form>
       </div>
     );
@@ -40,5 +51,6 @@ export default withRouter(Header);
 
 Header.propTypes = {
   getMovie: PropTypes.func.isRequired,
+  toMain: PropTypes.func.isRequired,
   history: PropTypes.objectOf(PropTypes.any).isRequired,
 };

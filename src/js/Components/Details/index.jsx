@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './details.scss';
+import styles from './details.scss';
 import Rating from '../Rating';
 import Genres from '../Genres';
 
@@ -10,8 +10,8 @@ const Details = (props) => {
   } = props;
 
   return (
-    <div className={s.container}>
-      <h1 className={s.h1}>{original_title.toUpperCase()}</h1>
+    <div className={styles.container}>
+      <h1 className={styles.h1}>{original_title.toUpperCase()}</h1>
       <Genres genre_ids={genre_ids} />
       <Rating rating={vote_average} />
     </div>

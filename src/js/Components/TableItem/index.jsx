@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import s from './tableItem.scss';
+import styles from './tableItem.scss';
 import RatingBox from '../RatingBox';
 import Genres from '../Genres';
 import Preview from '../Preview';
@@ -40,8 +40,8 @@ class TableItem extends React.PureComponent {
     const noPoster = 'http://wpmovies.scriptburn.com/wp-content/themes/wp_movies/images/noposter.jpg';
 
     return (
-      <div className={s.container}>
-        <div className={s.miniPoster}>
+      <div className={styles.container}>
+        <div className={styles.miniPoster}>
           { poster_path
             ? <img src={miniPoster} alt="poster" width="100%" height="100%" />
             : <img src={noPoster} alt="poster" width="100%" height="100%" />
@@ -51,47 +51,47 @@ class TableItem extends React.PureComponent {
         {
           !visiblePreview
             ? (
-              <div className={s.description}>
-                <div className={s.descBox}>
-                  <span className={s.title}>{title.toUpperCase()}</span>
+              <div className={styles.description}>
+                <div className={styles.descBox}>
+                  <span className={styles.title}>{title.toUpperCase()}</span>
                   <RatingBox rating={vote_average} />
                 </div>
-                <div className={s.cut}>
+                <div className={styles.cut}>
                   <Genres genre_ids={genre_ids} />
                 </div>
               </div>
             ) : null
         }
 
-        <div className={s.info} onMouseLeave={this.leave}>
+        <div className={styles.info} onMouseLeave={this.leave}>
           <div />
-          <div className={s.previewField}>
-            <div className={s.inner}>
+          <div className={styles.previewField}>
+            <div className={styles.inner}>
               {
                 visiblePreview
                   ? (
-                    <div className={s.innerDescr}>
-                      <div className={s.up}>
-                        <button type="button" onClick={this.handler} className={s.button}>&#x2715;</button>
+                    <div className={styles.innerDescr}>
+                      <div className={styles.up}>
+                        <button type="button" onClick={this.handler} className={styles.button}>&#x2715;</button>
                       </div>
-                      <div className={s.descBox}>
-                        <span className={s.hoverTitle}>{title.toUpperCase()}</span>
+                      <div className={styles.descBox}>
+                        <span className={styles.hoverTitle}>{title.toUpperCase()}</span>
                         <RatingBox rating={vote_average} />
                       </div>
 
-                      <div className={s.cut}>
+                      <div className={styles.cut}>
                         <Genres genre_ids={genre_ids} />
                       </div>
 
                       <Preview overview={overview} />
-                      <div className={s.w}>
+                      <div className={styles.w}>
                         <Button name="Watch Now" action={() => this.showTrailer(id)} />
                       </div>
                     </div>
                   )
 
                   : (
-                    <div className={s.buttonBlock}>
+                    <div className={styles.buttonBlock}>
                       <RoundButton name="Watch Now" action={() => this.showTrailer(id)} />
                       <Button name="View Info" action={this.handler} />
                     </div>

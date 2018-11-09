@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './rating.scss';
+import styles from './rating.scss';
 import RatingBox from '../RatingBox';
 
 const Rating = (props) => {
   const { rating } = props;
   if (rating <= 10 && rating > 0) {
     return (
-      <div className={s.container}>
-        <div className={s.whiteStars} />
-        <div className={s.fillStars} style={{ width: `${rating * 20}px` }} />
+      <div className={styles.container}>
+        <div className={styles.whiteStars} />
+        <div className={styles.fillStars} style={{ width: `${rating * 20}px` }} />
         <RatingBox rating={rating} />
       </div>
     );

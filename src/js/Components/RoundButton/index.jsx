@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './roundButton.scss';
+import styles from './roundButton.scss';
 
 const RoundButton = (props) => {
   const { name, action } = props;
   return (
     <React.Fragment>
-      <button className={s.container} onClick={action} type="button">
-        <div className={s.play} />
+      <button className={styles.container} onClick={action} type="button">
+        <div className={styles.play} />
       </button>
-      <div className={s.name}>{name}</div>
+      <div className={styles.name}>{name}</div>
     </React.Fragment>
   );
 };

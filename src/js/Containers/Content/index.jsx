@@ -8,9 +8,7 @@ import MovieDetailsPage from '../MovieDetailsPage';
 import List from '../List';
 import Video from '../Video';
 import s from './content.scss';
-
 import { asyncGetMovie, getCategoryMovie, asyncAddMovies, getDropdownMovie } from '../../actions/movie';
-
 require('babel-polyfill');
 
 class Content extends React.PureComponent {
@@ -27,8 +25,10 @@ class Content extends React.PureComponent {
     const { onGetMovie, onGetCategoryMovie, onGetDropdownMovie, location } = this.props;
     const prefix = location.pathname.split('/')[1];
     const query = location.pathname.split('/')[2]
-    if(prefix === 'search') {
-      onGetMovie(query);
+
+    if(location.search){
+      const movie = location.search.slice( location.search.indexOf('movie=')+6 );
+      onGetMovie(movie);
     }
     if(prefix === 'genre'){
       const genreId = genres.filter( item => { 
@@ -42,6 +42,9 @@ class Content extends React.PureComponent {
     if(prefix === 'categories'){
       onGetCategoryMovie(query);
     }
+    if(prefix === 'main'){
+      onGetCategoryMovie('popular');
+    }
   }
 
   componentWillUnmount() {
@@ -51,6 +54,11 @@ class Content extends React.PureComponent {
   getMovie = (film) => {
     const { onGetMovie } = this.props;
     onGetMovie(film);
+  }
+
+  toMain = () => {
+    const { onGetCategoryMovie } = this.props;
+    onGetCategoryMovie('now_playing')
   }
 
   addMovies = (url) => {
@@ -82,7 +90,7 @@ class Content extends React.PureComponent {
     return (
       <div className={s.container}>
           { trailerWindow ? <Video /> : null}
-          <Header getMovie={this.getMovie} />
+          <Header getMovie={this.getMovie} toMain={this.toMain} />
           <MovieDetailsPage />
           <List />
       </div>

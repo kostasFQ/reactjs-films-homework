@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './preview.scss';
+import styles from './preview.scss';
 
 const Preview = (props) => {
   const { overview } = props;
   return (
-    <div className={s.container}>
-      <div className={s.buttonsBlock}>
-        <div className={s.previewField}>{overview}</div>
+    <div className={styles.container}>
+      <div className={styles.buttonsBlock}>
+        <div className={styles.previewField}>{overview}</div>
       </div>
     </div>
   );

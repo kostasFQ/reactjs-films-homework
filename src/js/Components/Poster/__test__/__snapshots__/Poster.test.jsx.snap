@@ -5,7 +5,7 @@ exports[`test POSTER component 1`] = `
   className="curtian"
 >
   <img
-    alt="pic"
+    alt="no poster"
     className="poster"
     src="test-file-stub"
   />

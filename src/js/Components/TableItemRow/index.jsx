@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import s from './tableItemRow.scss';
+import styles from './tableItemRow.scss';
 import Rating from '../Rating';
 import Genres from '../Genres';
 import RoundButton from '../RoundButton';
@@ -22,20 +22,20 @@ class TableItemRow extends React.PureComponent {
     const noPoster = 'http://wpmovies.scriptburn.com/wp-content/themes/wp_movies/images/noposter.jpg';
 
     return (
-      <div className={s.container}>
-        <div className={s.miniPoster}>
+      <div className={styles.container}>
+        <div className={styles.miniPoster}>
           { poster_path
             ? <img src={miniPoster} alt="poster" width="100%" height="100%" />
             : <img src={noPoster} alt="poster" width="100%" height="100%" />
             }
         </div>
-        <div className={s.description}>
-          <div className={s.title}>{title.toUpperCase()}</div>
+        <div className={styles.description}>
+          <div className={styles.title}>{title.toUpperCase()}</div>
           <div><Genres genre_ids={genre_ids} /></div>
-          <div className={s.rating}><Rating rating={vote_average} /></div>
-          <div className={s.overview}>{overview}</div>
+          <div className={styles.rating}><Rating rating={vote_average} /></div>
+          <div className={styles.overview}>{overview}</div>
         </div>
-        <div className={s.button}>
+        <div className={styles.button}>
           <RoundButton name="Watch Now" action={() => this.showTrailer(id)} />
         </div>
       </div>

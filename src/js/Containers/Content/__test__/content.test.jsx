@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import TestRenderer from 'react-test-renderer';
 import configureMockStore from 'redux-mock-store';
+import { StaticRouter } from 'react-router-dom';
 import thunk from 'redux-thunk';
 import { movie } from '../../../../../configs/jest/__mocks__/mockStore';
 import ConnectedContent from '../index';
@@ -14,7 +15,11 @@ test('1.test CONTENT component render', () => {
   const store = mStore(initialState);
 
   const testRenderer = TestRenderer.create(
-    <Provider store={store}><ConnectedContent /></Provider>,
+    <Provider store={store}>
+      <StaticRouter location='/main' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
   );
   const result = testRenderer.toJSON();
   expect(result.type).toBe('div');
@@ -25,7 +30,11 @@ test('2.test CONTENT component render', () => {
   const store = mStore(initialState);
 
   const testRenderer = TestRenderer.create(
-    <Provider store={store}><ConnectedContent /></Provider>,
+    <Provider store={store}>
+      <StaticRouter location='/main' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
   );
   const result = testRenderer.toJSON();
   expect(result.type).toBe('div');
@@ -54,7 +63,9 @@ test('3.test CONTENT component scroll', () => {
   });
   TestRenderer.create(
     <Provider store={store}>
-      <ConnectedContent />
+      <StaticRouter location='/main' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
     </Provider>,
   );
   eventMap.scroll();
@@ -83,7 +94,9 @@ test('3.1.test CONTENT component scroll', () => {
   });
   TestRenderer.create(
     <Provider store={store}>
-      <ConnectedContent />
+      <StaticRouter location='/main' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
     </Provider>,
   );
   eventMap.scroll();
@@ -94,7 +107,11 @@ test('4.test CONTENT component unmount', () => {
   const store = mStore(initialState);
 
   const testRenderer = TestRenderer.create(
-    <Provider store={store}><ConnectedContent /></Provider>,
+    <Provider store={store}>
+      <StaticRouter location='/main' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
   );
   testRenderer.unmount();
 });
@@ -105,7 +122,11 @@ test('5.test CONTENT component search', () => {
   const store = mStore(initialState);
 
   const testRenderer = TestRenderer.create(
-    <Provider store={store}><ConnectedContent /></Provider>,
+    <Provider store={store}>
+      <StaticRouter location='/main' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
   );
   const testInstance = testRenderer.root;
 

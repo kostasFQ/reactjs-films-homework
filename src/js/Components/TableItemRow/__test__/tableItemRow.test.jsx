@@ -53,4 +53,6 @@ test('2.test TABLE_ITEM_ROW component render', () => {
 
   const but = testInstance.findByProps({ name: 'Watch Now' });
   but.props.action();
+  const result = testRenderer.toJSON();
+  expect(result).toMatchSnapshot();
 });

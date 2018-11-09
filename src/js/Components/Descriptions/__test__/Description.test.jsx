@@ -5,6 +5,7 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import Description from '../index';
 import { movie } from '../../../../../configs/jest/__mocks__/mockStore';
+import { asyncShowTrailer } from '../../../actions/movie';
 
 const film = {
   vote_count: 1576,
@@ -33,33 +34,50 @@ const initialState = { movie };
 const mStore = configureMockStore([thunk]);
 const store = mStore(initialState);
 
-test('test DESCRIPTION component', () => {
-  const testRenderer = TestRenderer.create(
-    <Provider store={store}><Description {...film} /></Provider>,
-  );
+jest.mock('../../../actions/movie', () => ({
+  asyncShowTrailer: jest.fn(() => {return {type: 'GET_MOVIE', payload: 1} })
+}) );
 
-  const result = testRenderer.toJSON();
-  expect(result.type).toBe('div');
-  expect(result).toMatchSnapshot();
-});
+describe('DESCRIPTION', () => {
 
+  afterAll(() => {
+    jest.resetAllMocks();
+  });
+  
+  it('test DESCRIPTION component', () => {
+    const testRenderer = TestRenderer.create(
+      <Provider store={store}><Description {...film} /></Provider>,
+    );
+  
+    const result = testRenderer.toJSON();
+    expect(result.type).toBe('div');
+    expect(result).toMatchSnapshot();
+  });
+  
+  
+  it('test DESCRIPTION component click "show trailer"', () => {
+    const testRenderer = TestRenderer.create(
+      <Provider store={store}><Description {...film} /></Provider>,
+    );
+    const testInstance = testRenderer.root;
+  
+    const but = testInstance.findByProps({ name: 'Watch Now' });
+    but.props.action();
+    expect(asyncShowTrailer).toHaveBeenCalled();
+  });
+  
+  it('test DESCRIPTION component click "View Info"', () => {
+    const testRenderer = TestRenderer.create(
+      <Provider store={store}><Description {...film} /></Provider>,
+    );
+    const testInstance = testRenderer.root;
+  
+    const but = testInstance.findByProps({ name: 'View Info' });
+    but.props.action();
 
-test('test DESCRIPTION component click "show trailer"', () => {
-  const testRenderer = TestRenderer.create(
-    <Provider store={store}><Description {...film} /></Provider>,
-  );
-  const testInstance = testRenderer.root;
+    const result = testRenderer.toJSON();
+    expect(result).toMatchSnapshot();
+  });
 
-  const but = testInstance.findByProps({ name: 'Watch Now' });
-  but.props.action();
-});
+})
 
-test('test DESCRIPTION component click "View Info"', () => {
-  const testRenderer = TestRenderer.create(
-    <Provider store={store}><Description {...film} /></Provider>,
-  );
-  const testInstance = testRenderer.root;
-
-  const but = testInstance.findByProps({ name: 'View Info' });
-  but.props.action();
-});

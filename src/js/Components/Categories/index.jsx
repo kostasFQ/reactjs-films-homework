@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import s from './categories.scss';
+import styles from './categories.scss';
 import { genres } from '../../../assets/genres';
 import { Link } from 'react-router-dom';
 
@@ -28,18 +28,18 @@ class Categories extends React.Component {
   render() {
     const { genre } = this.state;
     return (
-      <div className={s.container}>
+      <div className={styles.container}>
         <Link to={'/categories/popular'}>
-          <button className={s.item} onClick={this.get} value="popular" type="button">Trending</button>
+          <button className={styles.item} onClick={this.get} value="popular" type="button">Trending</button>
         </Link>
         <Link to={'/categories/top_rated'}>
-          <button className={s.item} onClick={this.get} value="top_rated" type="button">Top Rated</button>
+          <button className={styles.item} onClick={this.get} value="top_rated" type="button">Top Rated</button>
         </Link>
         <Link to={'/categories/upcoming'}>
-          <button className={s.item} onClick={this.get} value="upcoming" type="button">Coming Soon</button>
+          <button className={styles.item} onClick={this.get} value="upcoming" type="button">Coming Soon</button>
         </Link>
         <Link to={`/genre/${genre.replace(' ', '_')}`}>
-          <select className={s.item} onChange={this.log}>
+          <select className={styles.item} onChange={this.log}>
             {genres.map(item =>
               <option value={item.id} key={item.id} data-name={item.name}>
                 {item.name}

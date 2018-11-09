@@ -32,7 +32,6 @@ const ITEM = {
   release_date: '2018-10-03',
 };
 
-// const testInstance = testRenderer.root;
 
 test('1.test TABLE_ITEM component render', () => {
   const item = { ...ITEM };
@@ -55,6 +54,8 @@ test('6.test TABLE_ITEM component render', () => {
   infoBut.props.action();
   const but = testInstance.findByProps({ name: 'Watch Now' });
   but.props.action();
+  const result = testRenderer.toJSON();
+  expect(result).toMatchSnapshot();
 });
 
 test('2.test TABLE_ITEM component render', () => {
@@ -76,6 +77,8 @@ test('3.test TABLE_ITEM component render', () => {
   const but = testInstance.findAllByType('button');
   but[0].props.onClick();
   but[1].props.onClick();
+  const result = testRenderer.toJSON();
+  expect(result).toMatchSnapshot();
 });
 
 test('4.test TABLE_ITEM component render', () => {
@@ -86,6 +89,8 @@ test('4.test TABLE_ITEM component render', () => {
   const testInstance = testRenderer.root;
   const but = testInstance.findByProps({ name: 'Watch Now' });
   but.props.action();
+  const result = testRenderer.toJSON();
+  expect(result).toMatchSnapshot();
 });
 
 test('5.test TABLE_ITEM component render', () => {
@@ -96,4 +101,6 @@ test('5.test TABLE_ITEM component render', () => {
   const testInstance = testRenderer.root;
   const div = testInstance.find(el => el.type === 'div' && el.props.className === 'info');
   div.props.onMouseLeave();
+  const result = testRenderer.toJSON();
+  expect(result).toMatchSnapshot();
 });
