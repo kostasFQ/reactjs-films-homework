@@ -22,7 +22,7 @@ const _movie = {
 const movie = (state = _movie, action) => {
   switch (action.type) {
     case START_FETCH:
-    return { ...state, startFetch: true, finishFetch: false };
+    return { ...state, startFetch: true, finishFetch: false, errorMessage: null };
 
     case GET_MOVIE:
       return { 

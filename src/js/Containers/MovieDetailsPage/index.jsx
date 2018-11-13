@@ -2,13 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Poster from '../../Components/Poster';
 import Descriptions from '../../Components/Descriptions';
-import Spiner from '../../Components/Spiner';
 import { apiUrl } from '../../../assets';
 
 class MovieDetailsPage extends React.PureComponent {
+
+
   render() {
     const { movie } = this.props;
-    const { finishFetch, film } = movie;
+    const { film, finishFetch } = movie;
 
     if (film) {
       return (
@@ -18,14 +19,14 @@ class MovieDetailsPage extends React.PureComponent {
         </div>
       );
     }
-    if (finishFetch && !film) {
+    if (!film && finishFetch) {
       return (
         <div>
           <Poster pict="http://ctoetotakoe.ru/wp-content/uploads/2016/05/404-not-found.png" />
         </div>
       );
     }
-    return <Spiner />;
+    return <div style={{height: '500px'}}></div>;
   }
 }
 

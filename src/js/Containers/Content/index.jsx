@@ -22,22 +22,25 @@ class Content extends React.PureComponent {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    const { onGetMovie, onGetCategoryMovie, onGetDropdownMovie, location } = this.props;
+    const { onGetMovie, onGetCategoryMovie, onGetDropdownMovie, location, history } = this.props;
     const prefix = location.pathname.split('/')[1];
-    const query = location.pathname.split('/')[2]
+    const query = location.pathname.split('/')[2];
+    if(!prefix) {
+      history.push('/main');
+      onGetCategoryMovie('popular');
+    }
 
     if(location.search){
       const movie = location.search.slice( location.search.indexOf('movie=')+6 );
       onGetMovie(movie);
     }
-    if(prefix === 'genre'){
-      const genreId = genres.filter( item => { 
+    if(prefix === `genre`){
+      genres.map( item => { 
         if(item.name.toLowerCase() === query.replace('_', ' ') ){
-          return item;
-        }
+          onGetDropdownMovie(item.id);
+        } 
         return null;
       });
-      onGetDropdownMovie(genreId[0].id);
     }
     if(prefix === 'categories'){
       onGetCategoryMovie(query);
@@ -45,6 +48,33 @@ class Content extends React.PureComponent {
     if(prefix === 'main'){
       onGetCategoryMovie('popular');
     }
+  }
+
+  componentDidUpdate(prevProps) {
+    const {location, onGetCategoryMovie, onGetDropdownMovie, onGetMovie } = this.props;
+    const prevLocation = prevProps.location;
+    const prefix = location.pathname.split('/')[1];
+    const query = location.pathname.split('/')[2];
+
+    if(prefix === 'main' && location.pathname !== prevLocation.pathname ){
+      onGetCategoryMovie('popular');
+    }
+    if(prefix === 'categories' && location.pathname !== prevLocation.pathname){
+      onGetCategoryMovie(query);
+    }
+    if(prefix === 'genre' && query && location.pathname !== prevLocation.pathname){
+      genres.map( item => { 
+        if(item.name.toLowerCase() === query.replace('_', ' ') ){
+          onGetDropdownMovie(item.id);
+        } 
+        return null;
+      });
+    }
+    if(location.search && location.search !== prevLocation.search){
+      const movie = location.search.slice( location.search.indexOf('movie=')+6 );
+      onGetMovie(movie);
+    }
+
   }
 
   componentWillUnmount() {
@@ -125,4 +155,5 @@ Content.propTypes = {
   onGetDropdownMovie: PropTypes.func.isRequired,
   movie: PropTypes.objectOf(PropTypes.any).isRequired,
   location: PropTypes.objectOf(PropTypes.any).isRequired,
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
 };

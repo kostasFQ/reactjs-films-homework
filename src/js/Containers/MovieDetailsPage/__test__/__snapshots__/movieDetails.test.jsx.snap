@@ -105,8 +105,10 @@ exports[`2.test MOVIE DETAILS PAGE component render 1`] = `
 
 exports[`3.test MOVIE DETAILS PAGE component render 1`] = `
 <div
-  className="loader"
->
-  Spiner
-</div>
+  style={
+    Object {
+      "height": "500px",
+    }
+  }
+/>
 `;

@@ -21,7 +21,7 @@ class Header extends React.Component {
     const { str } = this.state;
     e.preventDefault();
     if(str.length > 0) {
-      history.push(`/search?movie=${str}`)
+      history.push(`/search?movie=${str.replace(' ', '+')}`)
       getMovie(str);
       this.setState({ str: ''});
     }
