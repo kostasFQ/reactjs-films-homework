@@ -155,7 +155,7 @@ test('6.test CONTENT component toMain', () => {
   b.props.toMain();
 });
 
-test('7.test CONTENT component getMovie', () => {
+test('7.test CONTENT component route={/main}', () => {
   const initialState = { movie };
   const store = mStore(initialState);
 
@@ -172,7 +172,24 @@ test('7.test CONTENT component getMovie', () => {
   b.props.getMovie();
 });
 
-test('8.test CONTENT component categories url', () => {
+test('7.1.test CONTENT component route={/}', () => {
+  const initialState = { movie };
+  const store = mStore(initialState);
+
+  const testRenderer = TestRenderer.create(
+    <Provider store={store}>
+      <StaticRouter location='/' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
+  );
+  const testInstance = testRenderer.root;
+
+  const b = testInstance.findByType(Header);
+  b.props.getMovie();
+});
+
+test('8.test CONTENT component route={/categories/popular}', () => {
   const initialState = { movie };
   const store = mStore(initialState);
 
@@ -189,7 +206,7 @@ test('8.test CONTENT component categories url', () => {
   expect(result).toMatchSnapshot();
 });
 
-test('8.test CONTENT component genre url', () => {
+test('8.test CONTENT component route={/genre/romance}', () => {
   const initialState = { movie };
   const store = mStore(initialState);
 
@@ -206,7 +223,7 @@ test('8.test CONTENT component genre url', () => {
   expect(result).toMatchSnapshot();
 });
 
-test('9.test CONTENT component search url', () => {
+test('9.test CONTENT component route={/search?movie=alien}', () => {
   const initialState = { movie };
   const store = mStore(initialState);
 
@@ -223,19 +240,94 @@ test('9.test CONTENT component search url', () => {
   expect(result).toMatchSnapshot();
 });
 
-test('10.test CONTENT component search url (update)', () => {
+test('10.test CONTENT component update genre', () => {
   const initialState = { movie };
   const store = mStore(initialState);
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/genre/romance' prevLocation='/genre/action' context={{}}>
+      <StaticRouter location='/genre/action' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
+  );
+  
+  testRenderer.update(
+    <Provider store={store}>
+      <StaticRouter location='/genre/horror' context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
   );
   const result = testRenderer.toJSON();
+  expect(result).toMatchSnapshot();
+});
 
-  expect(result.type).toBe('div');
+test('11.test CONTENT component update categories', () => {
+  const initialState = { movie };
+  const store = mStore(initialState);
+
+  const testRenderer = TestRenderer.create(
+    <Provider store={store}>
+      <StaticRouter location='/categories/popular' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
+  );
+  
+  testRenderer.update(
+    <Provider store={store}>
+      <StaticRouter location='/categories/top_rated' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
+  );
+  const result = testRenderer.toJSON();
+  expect(result).toMatchSnapshot();
+});
+
+test('12.test CONTENT component update to main', () => {
+  const initialState = { movie };
+  const store = mStore(initialState);
+
+  const testRenderer = TestRenderer.create(
+    <Provider store={store}>
+      <StaticRouter location='/categories/popular' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
+  );
+  
+  testRenderer.update(
+    <Provider store={store}>
+      <StaticRouter location='/main' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
+  );
+  const result = testRenderer.toJSON();
+  expect(result).toMatchSnapshot();
+});
+
+test('13.test CONTENT component update search=', () => {
+  const initialState = { movie };
+  const store = mStore(initialState);
+
+  const testRenderer = TestRenderer.create(
+    <Provider store={store}>
+      <StaticRouter location='/categories/popular' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
+  );
+  
+  testRenderer.update(
+    <Provider store={store}>
+      <StaticRouter location='/search?movie=alien' context={{}}>
+        <ConnectedContent />
+      </StaticRouter>
+    </Provider>,
+  );
+  const result = testRenderer.toJSON();
   expect(result).toMatchSnapshot();
 });

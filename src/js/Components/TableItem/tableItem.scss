@@ -11,8 +11,8 @@
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  width: 23%;
-  height: 100%;
+  width: 220px;
+  height: 325px;
   border-radius: 5px;
   overflow: hidden;
   font-family: 'Work Sans', sans-serif;
@@ -122,19 +122,24 @@
 .innerDescr {
   width: 100%;
   font-size: small;
-  overflow-y: scroll;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 .w {
-  margin: 20px 0 0 -15px;
+  width: 90%;
   display: flex;
+  margin: -3px auto;
   justify-content: center;
 }
 
 .up {
   text-align: left;
+}
+
+.overview {
+  height: 190px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

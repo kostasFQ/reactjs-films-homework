@@ -14,16 +14,24 @@ const movie2 = {
   fullResponse: [],
 };
 const movie3 = {};
+const movie4 = {
+  startFetch: false,
+  finishFetch: false,
+  trailerWindow: false,
+  errorMessage: null
+};
 
 const mStore = configureMockStore([thunk]);
 
 const initialState = { movie };
 const initialState2 = { movie: movie2 };
 const initialState3 = { movie: movie3 };
+const initialState4 = { movie: movie4 };
 
 const store = mStore(initialState);
 const store2 = mStore(initialState2);
 const store3 = mStore(initialState3);
+const store4 = mStore(initialState4);
 
 test('1.test MOVIE DETAILS PAGE component render', () => {
   const testRenderer = TestRenderer.create(
@@ -46,6 +54,15 @@ test('2.test MOVIE DETAILS PAGE component render', () => {
 test('3.test MOVIE DETAILS PAGE component render', () => {
   const testRenderer = TestRenderer.create(
     <Provider store={store3}><ConnectedMovieDetailsPage /></Provider>,
+  );
+  const result = testRenderer.toJSON();
+  expect(result.type).toBe('div');
+  expect(result).toMatchSnapshot();
+});
+
+test('4.test MOVIE DETAILS PAGE component render', () => {
+  const testRenderer = TestRenderer.create(
+    <Provider store={store4}><ConnectedMovieDetailsPage /></Provider>,
   );
   const result = testRenderer.toJSON();
   expect(result.type).toBe('div');

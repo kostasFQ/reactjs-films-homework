@@ -6,11 +6,9 @@ import { apiUrl } from '../../../assets';
 
 class MovieDetailsPage extends React.PureComponent {
 
-
-  render() {
+  preRender = () => {
     const { movie } = this.props;
-    const { film, finishFetch } = movie;
-
+    const { film, finishFetch, errorMessage } = movie;
     if (film) {
       return (
         <div>
@@ -26,7 +24,19 @@ class MovieDetailsPage extends React.PureComponent {
         </div>
       );
     }
-    return <div style={{height: '500px'}}></div>;
+    if (errorMessage !== null) {
+      return (
+        <div>
+          <Poster pict="http://ctoetotakoe.ru/wp-content/uploads/2016/05/404-not-found.png" />
+        </div>
+      );
+    } else {
+      return <div style={{height: '500px'}}></div>;
+    }
+  }
+
+  render() {
+    return this.preRender()
   }
 }
 

@@ -104,6 +104,20 @@ exports[`2.test MOVIE DETAILS PAGE component render 1`] = `
 `;
 
 exports[`3.test MOVIE DETAILS PAGE component render 1`] = `
+<div>
+  <div
+    className="curtian"
+  >
+    <img
+      alt="no poster"
+      className="poster"
+      src="http://ctoetotakoe.ru/wp-content/uploads/2016/05/404-not-found.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`4.test MOVIE DETAILS PAGE component render 1`] = `
 <div
   style={
     Object {
