@@ -48,7 +48,6 @@ test('3.test CATEGORIES component render select onChange', () => {
       selectedIndex: 0,
     },
   };
-  console.log(e.target.options[e.target.selectedIndex].dataset.name.toLowerCase());
   const but = testInstance.findByType('select');
   but.props.onChange(e);
   expect(getDropdownMovie).toHaveBeenCalled();
