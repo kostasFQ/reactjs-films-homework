@@ -85,8 +85,8 @@ class TableItem extends React.PureComponent {
                       <div className={styles.overview}>
                         <Preview overview={overview} />
                       </div>
-                      <div style={{width:'200%', marginLeft: '-50px'}}>
-                        <hr/>
+                      <div style={{ width: '200%', marginLeft: '-50px' }}>
+                        <hr />
                       </div>
                       <div className={styles.w}>
                         <Button name="Watch Now" action={() => this.showTrailer(id)} />

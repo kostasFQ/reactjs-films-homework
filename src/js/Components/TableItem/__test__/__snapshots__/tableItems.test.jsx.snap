@@ -286,17 +286,31 @@ exports[`3.test TABLE_ITEM component render 1`] = `
             </ul>
           </div>
           <div
-            className="container"
+            className="overview"
           >
             <div
-              className="buttonsBlock"
+              className="container"
             >
               <div
-                className="previewField"
+                className="buttonsBlock"
               >
-                When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego "Venom" to save his life.
+                <div
+                  className="previewField"
+                >
+                  When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego "Venom" to save his life.
+                </div>
               </div>
             </div>
+          </div>
+          <div
+            style={
+              Object {
+                "marginLeft": "-50px",
+                "width": "200%",
+              }
+            }
+          >
+            <hr />
           </div>
           <div
             className="w"
@@ -602,17 +616,31 @@ exports[`6.test TABLE_ITEM component render 1`] = `
             </ul>
           </div>
           <div
-            className="container"
+            className="overview"
           >
             <div
-              className="buttonsBlock"
+              className="container"
             >
               <div
-                className="previewField"
+                className="buttonsBlock"
               >
-                When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego "Venom" to save his life.
+                <div
+                  className="previewField"
+                >
+                  When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego "Venom" to save his life.
+                </div>
               </div>
             </div>
+          </div>
+          <div
+            style={
+              Object {
+                "marginLeft": "-50px",
+                "width": "200%",
+              }
+            }
+          >
+            <hr />
           </div>
           <div
             className="w"

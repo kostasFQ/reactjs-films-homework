@@ -29,10 +29,12 @@ class Table extends React.PureComponent {
             : null
           }
           <div className={styles.container}>
-            { startAdvanceFetch &&
+            { startAdvanceFetch
+              && (
               <div>
                 <Spiner />
               </div>
+              )
             }
           </div>
           <div className={styles.container}>

@@ -17,7 +17,7 @@ test('1.test CONTENT component render', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -34,7 +34,7 @@ test('2.test CONTENT component render', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -66,7 +66,7 @@ test('3.test CONTENT component scroll', () => {
   });
   TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -97,7 +97,7 @@ test('3.1.test CONTENT component scroll', () => {
   });
   TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -111,7 +111,7 @@ test('4.test CONTENT component unmount', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -126,7 +126,7 @@ test('5.test CONTENT component search', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -138,13 +138,12 @@ test('5.test CONTENT component search', () => {
 });
 
 test('6.test CONTENT component toMain', () => {
-  const e = { target: { value: 'x' }, preventDefault: () => 'x' };
   const initialState = { movie };
   const store = mStore(initialState);
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -161,7 +160,7 @@ test('7.test CONTENT component route={/main}', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -178,7 +177,7 @@ test('7.1.test CONTENT component route={/}', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/' context={{}}>
+      <StaticRouter location="/" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -195,7 +194,7 @@ test('8.test CONTENT component route={/categories/popular}', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/categories/popular' context={{}}>
+      <StaticRouter location="/categories/popular" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -212,7 +211,7 @@ test('8.test CONTENT component route={/genre/romance}', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/genre/romance' context={{}}>
+      <StaticRouter location="/genre/romance" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -229,7 +228,7 @@ test('9.test CONTENT component route={/search?movie=alien}', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/search?movie=alien' context={{}}>
+      <StaticRouter location="/search?movie=alien" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -246,15 +245,15 @@ test('10.test CONTENT component update genre', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/genre/action' context={{}}>
+      <StaticRouter location="/genre/action" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
   );
-  
+
   testRenderer.update(
     <Provider store={store}>
-      <StaticRouter location='/genre/horror' context={{}}>
+      <StaticRouter location="/genre/horror" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -269,15 +268,15 @@ test('11.test CONTENT component update categories', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/categories/popular' context={{}}>
+      <StaticRouter location="/categories/popular" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
   );
-  
+
   testRenderer.update(
     <Provider store={store}>
-      <StaticRouter location='/categories/top_rated' context={{}}>
+      <StaticRouter location="/categories/top_rated" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -292,15 +291,15 @@ test('12.test CONTENT component update to main', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/categories/popular' context={{}}>
+      <StaticRouter location="/categories/popular" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
   );
-  
+
   testRenderer.update(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
@@ -315,15 +314,15 @@ test('13.test CONTENT component update search=', () => {
 
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/categories/popular' context={{}}>
+      <StaticRouter location="/categories/popular" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,
   );
-  
+
   testRenderer.update(
     <Provider store={store}>
-      <StaticRouter location='/search?movie=alien' context={{}}>
+      <StaticRouter location="/search?movie=alien" context={{}}>
         <ConnectedContent />
       </StaticRouter>
     </Provider>,

@@ -1,14 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from "react-router-dom";
-import { genres } from '../../../assets/genres';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { genres } from '../../../assets/genres';
 import Header from '../Header';
 import MovieDetailsPage from '../MovieDetailsPage';
 import List from '../List';
 import Video from '../Video';
 import s from './content.scss';
-import { asyncGetMovie, getCategoryMovie, asyncAddMovies, getDropdownMovie } from '../../actions/movie';
+import {
+  asyncGetMovie, getCategoryMovie, asyncAddMovies, getDropdownMovie,
+} from '../../actions/movie';
+
 require('babel-polyfill');
 
 class Content extends React.PureComponent {
@@ -22,59 +25,62 @@ class Content extends React.PureComponent {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    const { onGetMovie, onGetCategoryMovie, onGetDropdownMovie, location, history } = this.props;
+    const {
+      onGetMovie, onGetCategoryMovie, onGetDropdownMovie, location, history,
+    } = this.props;
     const prefix = location.pathname.split('/')[1];
     const query = location.pathname.split('/')[2];
-    if(!prefix) {
+    if (!prefix) {
       history.push('/main');
       onGetCategoryMovie('popular');
     }
 
-    if(location.search){
-      const movie = location.search.slice( location.search.indexOf('movie=')+6 );
+    if (location.search) {
+      const movie = location.search.slice(location.search.indexOf('movie=') + 6);
       onGetMovie(movie);
     }
-    if(prefix === `genre`){
-      genres.map( item => { 
-        if(item.name.toLowerCase() === query.replace('_', ' ') ){
+    if (prefix === 'genre') {
+      genres.map((item) => {
+        if (item.name.toLowerCase() === query.replace('_', ' ')) {
           onGetDropdownMovie(item.id);
-        } 
+        }
         return null;
       });
     }
-    if(prefix === 'categories'){
+    if (prefix === 'categories') {
       onGetCategoryMovie(query);
     }
-    if(prefix === 'main'){
+    if (prefix === 'main') {
       onGetCategoryMovie('popular');
     }
   }
 
   componentDidUpdate(prevProps) {
-    const {location, onGetCategoryMovie, onGetDropdownMovie, onGetMovie } = this.props;
+    const {
+      location, onGetCategoryMovie, onGetDropdownMovie, onGetMovie,
+    } = this.props;
     const prevLocation = prevProps.location;
     const prefix = location.pathname.split('/')[1];
     const query = location.pathname.split('/')[2];
 
-    if(prefix === 'main' && location.pathname !== prevLocation.pathname ){
+    if (prefix === 'main' && location.pathname !== prevLocation.pathname) {
       onGetCategoryMovie('popular');
     }
-    if(prefix === 'categories' && location.pathname !== prevLocation.pathname){
+    if (prefix === 'categories' && location.pathname !== prevLocation.pathname) {
       onGetCategoryMovie(query);
     }
-    if(prefix === 'genre' && query && location.pathname !== prevLocation.pathname){
-      genres.map( item => { 
-        if(item.name.toLowerCase() === query.replace('_', ' ') ){
+    if (prefix === 'genre' && query && location.pathname !== prevLocation.pathname) {
+      genres.map((item) => {
+        if (item.name.toLowerCase() === query.replace('_', ' ')) {
           onGetDropdownMovie(item.id);
-        } 
+        }
         return null;
       });
     }
-    if(location.search && location.search !== prevLocation.search){
-      const movie = location.search.slice( location.search.indexOf('movie=')+6 );
+    if (location.search && location.search !== prevLocation.search) {
+      const movie = location.search.slice(location.search.indexOf('movie=') + 6);
       onGetMovie(movie);
     }
-
   }
 
   componentWillUnmount() {
@@ -88,7 +94,7 @@ class Content extends React.PureComponent {
 
   toMain = () => {
     const { onGetCategoryMovie } = this.props;
-    onGetCategoryMovie('now_playing')
+    onGetCategoryMovie('now_playing');
   }
 
   addMovies = (url) => {
@@ -119,10 +125,10 @@ class Content extends React.PureComponent {
 
     return (
       <div className={s.container}>
-          { trailerWindow ? <Video /> : null}
-          <Header getMovie={this.getMovie} toMain={this.toMain} />
-          <MovieDetailsPage />
-          <List />
+        { trailerWindow ? <Video /> : null}
+        <Header getMovie={this.getMovie} toMain={this.toMain} />
+        <MovieDetailsPage />
+        <List />
       </div>
     );
   }

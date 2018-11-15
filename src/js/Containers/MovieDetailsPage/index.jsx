@@ -5,7 +5,6 @@ import Descriptions from '../../Components/Descriptions';
 import { apiUrl } from '../../../assets';
 
 class MovieDetailsPage extends React.PureComponent {
-
   preRender = () => {
     const { movie } = this.props;
     const { film, finishFetch, errorMessage } = movie;
@@ -30,13 +29,12 @@ class MovieDetailsPage extends React.PureComponent {
           <Poster pict="http://ctoetotakoe.ru/wp-content/uploads/2016/05/404-not-found.png" />
         </div>
       );
-    } else {
-      return <div style={{height: '500px'}}></div>;
     }
+    return <div style={{ height: '500px' }} />;
   }
 
   render() {
-    return this.preRender()
+    return this.preRender();
   }
 }
 

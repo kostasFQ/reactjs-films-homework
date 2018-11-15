@@ -17,7 +17,7 @@ const toMain = film => film;
 test('1.test HEADER component render', () => {
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <Header getMovie={getMovie} toMain={toMain} />
       </StaticRouter>
     </Provider>,
@@ -30,11 +30,11 @@ test('1.test HEADER component render', () => {
 
 test('2.test HEADER component search', () => {
   const e = { preventDefault: () => 'x' };
-  
+
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
-      <Header getMovie={getMovie} toMain={toMain} />
+      <StaticRouter location="/main" context={{}}>
+        <Header getMovie={getMovie} toMain={toMain} />
       </StaticRouter>
     </Provider>,
   );
@@ -48,8 +48,8 @@ test('2.1.test HEADER component search', () => {
   const e = { target: { value: 'test value' }, preventDefault: () => {} };
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
-        <Header getMovie={getMovie} toMain={toMain}/>
+      <StaticRouter location="/main" context={{}}>
+        <Header getMovie={getMovie} toMain={toMain} />
       </StaticRouter>
     </Provider>,
   );
@@ -66,8 +66,8 @@ test('3.test HEADER component input', () => {
   const e = { target: { value: '' } };
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
-        <Header getMovie={getMovie} toMain={toMain}/>
+      <StaticRouter location="/main" context={{}}>
+        <Header getMovie={getMovie} toMain={toMain} />
       </StaticRouter>
     </Provider>,
   );
@@ -81,7 +81,7 @@ test('4.test HEADER component title', () => {
   const e = { preventDefault: () => {} };
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <Header getMovie={getMovie} toMain={toMain} />
       </StaticRouter>
     </Provider>,

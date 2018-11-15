@@ -18,7 +18,7 @@ const movie4 = {
   startFetch: false,
   finishFetch: false,
   trailerWindow: false,
-  errorMessage: null
+  errorMessage: null,
 };
 
 const mStore = configureMockStore([thunk]);

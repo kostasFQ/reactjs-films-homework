@@ -35,49 +35,46 @@ const mStore = configureMockStore([thunk]);
 const store = mStore(initialState);
 
 jest.mock('../../../actions/movie', () => ({
-  asyncShowTrailer: jest.fn(() => {return {type: 'GET_MOVIE', payload: 1} })
-}) );
+  asyncShowTrailer: jest.fn(() => ({ type: 'GET_MOVIE', payload: 1 })),
+}));
 
 describe('DESCRIPTION', () => {
-
   afterAll(() => {
     jest.resetAllMocks();
   });
-  
+
   it('test DESCRIPTION component', () => {
     const testRenderer = TestRenderer.create(
       <Provider store={store}><Description {...film} /></Provider>,
     );
-  
+
     const result = testRenderer.toJSON();
     expect(result.type).toBe('div');
     expect(result).toMatchSnapshot();
   });
-  
-  
+
+
   it('test DESCRIPTION component click "show trailer"', () => {
     const testRenderer = TestRenderer.create(
       <Provider store={store}><Description {...film} /></Provider>,
     );
     const testInstance = testRenderer.root;
-  
+
     const but = testInstance.findByProps({ name: 'Watch Now' });
     but.props.action();
     expect(asyncShowTrailer).toHaveBeenCalled();
   });
-  
+
   it('test DESCRIPTION component click "View Info"', () => {
     const testRenderer = TestRenderer.create(
       <Provider store={store}><Description {...film} /></Provider>,
     );
     const testInstance = testRenderer.root;
-  
+
     const but = testInstance.findByProps({ name: 'View Info' });
     but.props.action();
 
     const result = testRenderer.toJSON();
     expect(result).toMatchSnapshot();
   });
-
-})
-
+});

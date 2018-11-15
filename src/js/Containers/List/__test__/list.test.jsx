@@ -15,7 +15,7 @@ const store = mockStore(initialState);
 test('1.test LIST component render', () => {
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <List />
       </StaticRouter>
     </Provider>,
@@ -29,7 +29,7 @@ test('1.test LIST component render', () => {
 test('2.test LIST component render rows button', () => {
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <List />
       </StaticRouter>
     </Provider>,
@@ -42,7 +42,7 @@ test('2.test LIST component render rows button', () => {
 test('3.test LIST component render colums button', () => {
   const testRenderer = TestRenderer.create(
     <Provider store={store}>
-      <StaticRouter location='/main' context={{}}>
+      <StaticRouter location="/main" context={{}}>
         <List />
       </StaticRouter>
     </Provider>,
