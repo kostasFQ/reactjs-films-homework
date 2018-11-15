@@ -18,6 +18,7 @@ module.exports = merge(common, {
       new OptimizeCSSAssetsPlugin({})
     ]
   },
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -36,9 +37,14 @@ module.exports = merge(common, {
             query: {
               modules: true,
               localIdentName: '[local]___[hash:base64:5]',
-            },
+              sourceMap: true
+            }
           },
-          'sass-loader',
+          {
+            loader: "sass-loader", options: {
+                sourceMap: true
+            }
+          }
         ],
       },
     ]
