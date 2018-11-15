@@ -14,6 +14,9 @@ const HTML_FILE = path.join(DIST_DIR, 'index.html');
 
 if(process.env.NODE_ENV === 'prod') {
   app.use(express.static(DIST_DIR));
+  app.use('*',  function(req, resp) {
+    resp.sendFile(HTML_FILE);
+  });
 } else {
   const compiler = webpack(config);
   app.use(webpackDevMiddleware(compiler, { publicPath: config.output.publicPath, }));
