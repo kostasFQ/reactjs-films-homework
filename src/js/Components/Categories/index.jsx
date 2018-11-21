@@ -58,8 +58,8 @@ export default withRouter(connect(
       dispatch(getDropdownMovie(id));
     },
     onSetQueryString: (value) => {
-      dispatch(setQueryString(value))
-    }
+      dispatch(setQueryString(value));
+    },
   }),
 )(Categories));
 

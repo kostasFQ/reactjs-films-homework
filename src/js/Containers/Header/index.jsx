@@ -7,10 +7,9 @@ import icon from '../../../imgs/icons/search-3-32.png';
 import { setQueryString } from '../../actions/movie';
 
 class Header extends React.Component {
-
   toState = (e) => {
     const { onSetQueryString } = this.props;
-    onSetQueryString(e.target.value)
+    onSetQueryString(e.target.value);
   }
 
   send = (e) => {
@@ -31,7 +30,7 @@ class Header extends React.Component {
   }
 
   render() {
-    const {  movie } = this.props;
+    const { movie } = this.props;
     const { queryString } = movie;
     return (
       <div className={s.container}>
@@ -44,14 +43,14 @@ class Header extends React.Component {
     );
   }
 }
-export default withRouter( connect(
+export default withRouter(connect(
   state => ({
     movie: state.movie,
   }),
   dispatch => ({
     onSetQueryString: (value) => {
-      dispatch(setQueryString(value))
-    }
+      dispatch(setQueryString(value));
+    },
   }),
 )(Header));
 

@@ -16,7 +16,7 @@ const movie2 = {
   currentUrl: 'https://api.themoviedb.org/3/search/movie?api_key=3a2531498f834486708efbfa60ac046b&language=en-US&include_adult=false&query=sdfsdfsdf&page=1',
   fullResponse: [],
   queryString: 'xxx',
-}
+};
 
 const initialState = { movie };
 const initialState2 = { movie: movie2 };

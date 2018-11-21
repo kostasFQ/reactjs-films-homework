@@ -10,12 +10,12 @@ const Video = (props) => {
 
   return (
     <div>
-      <div className={styles.back} onClick={onCloseWindow} role="presentation"></div>
-        <div className={styles.con}>
-          <div>
-            <button type="button" onClick={onCloseWindow} className={styles.button}>&#x2715;</button>
-          </div>
-          {
+      <div className={styles.back} onClick={onCloseWindow} role="presentation" />
+      <div className={styles.con}>
+        <div>
+          <button type="button" onClick={onCloseWindow} className={styles.button}>&#x2715;</button>
+        </div>
+        {
           trailer
             ? (
               <iframe
@@ -24,9 +24,9 @@ const Video = (props) => {
                 title={trailer}
                 src={trailer}
                 className={styles.iframe}
-                allow='autoplay; encrypted-media'
+                allow="autoplay; encrypted-media"
                 allowFullScreen
-                frameBorder='0'
+                frameBorder="0"
               />
             )
             : <div className={styles.noTrailer}>{errorMessage}</div>
