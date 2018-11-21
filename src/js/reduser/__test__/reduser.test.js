@@ -4,7 +4,8 @@ const state = {
   startFetch: false,
   finishFetch: false,
   trailerWindow: false,
-  page: 1
+  page: 1,
+  queryString: ""
 };
 
 describe('reduser', () => {
@@ -114,6 +115,13 @@ describe('reduser', () => {
       ...state,
       startAdvanceFetch: false,
       finishAdvanceFetch: true
+    });
+  })
+
+  it('QUERY_STRING', () => {
+    expect( movie( state, { type: 'QUERY_STRING', payload: 'str' }) ).toEqual({
+      ...state,
+      queryString: 'str'
     });
   })
 })

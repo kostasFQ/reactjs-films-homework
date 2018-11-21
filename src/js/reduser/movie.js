@@ -9,14 +9,16 @@ import {
   SAVE_URL,
   ADD_MOVIES,
   START_ADVANCE_FETCH,
-  FINISH_ADVANCE_FETCH
+  FINISH_ADVANCE_FETCH,
+  QUERY_STRING
 } from '../actions/movie';
 
 const _movie = {
   startFetch: false,
   finishFetch: false,
   trailerWindow: false,
-  page: 1
+  page: 1,
+  queryString: ''
 }
 
 const movie = (state = _movie, action) => {
@@ -96,6 +98,11 @@ const movie = (state = _movie, action) => {
           ...state,
           startAdvanceFetch: false,
           finishAdvanceFetch: true,
+        }
+      case QUERY_STRING:
+        return {
+          ...state,
+          queryString: action.payload
         }
     
     default:

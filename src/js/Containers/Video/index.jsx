@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import s from './video.scss';
+import styles from './video.scss';
 import { closeTrailerWindow } from '../../actions/movie';
 
 const Video = (props) => {
@@ -9,23 +9,29 @@ const Video = (props) => {
   const { trailer, errorMessage } = movie;
 
   return (
-    <div className={s.con}>
-      <div>
-        <button type="button" onClick={onCloseWindow} className={s.button}>&#x2715;</button>
+    <div>
+      <div className={styles.back} onClick={onCloseWindow} role="presentation"></div>
+        <div className={styles.con}>
+          <div>
+            <button type="button" onClick={onCloseWindow} className={styles.button}>&#x2715;</button>
+          </div>
+          {
+          trailer
+            ? (
+              <iframe
+                width="100%"
+                height="100%"
+                title={trailer}
+                src={trailer}
+                className={styles.iframe}
+                allow='autoplay; encrypted-media'
+                allowFullScreen
+                frameBorder='0'
+              />
+            )
+            : <div className={styles.noTrailer}>{errorMessage}</div>
+        }
       </div>
-      {
-      trailer
-        ? (
-          <iframe
-            width="100%"
-            height="100%"
-            title={trailer}
-            src={trailer}
-            className={s.iframe}
-          />
-        )
-        : <div className={s.noTrailer}>{errorMessage}</div>
-    }
     </div>
   );
 };

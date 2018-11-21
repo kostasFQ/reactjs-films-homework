@@ -13,6 +13,7 @@ export const SAVE_URL = `SAVE_URL`;
 export const ADD_MOVIES = `ADD_MOVIES`;
 export const START_ADVANCE_FETCH = `START_ADVANCE_FETCH`;
 export const FINISH_ADVANCE_FETCH = `FINISH_ADVANCE_FETCH`;
+export const QUERY_STRING = `QUERY_STRING`
 
 export const asyncGetMovie = (movie, page = 1) => async dispatch => {
   try{
@@ -60,7 +61,7 @@ export const asyncShowTrailer = (id) => async dispatch => {
     dispatch({ type: SHOW_ERROR, payload: null })
     dispatch( { type: OPEN_TRAILER_WINDOW } );
     const videoKey = await axios(`https://api.themoviedb.org/3/movie/${id}/videos?language=en-US&api_key=${apiKey}`);
-    const trailerUrl = `https://www.youtube.com/embed/${videoKey.data.results[0].key}?autoplay=1`;
+    const trailerUrl = `https://www.youtube.com/embed/${videoKey.data.results[0].key}?autoplay=1&modestbranding=1&showinfo=0&rel=0`;
     
     dispatch({ type: GET_TRAILER, payload: trailerUrl });
   }
@@ -86,4 +87,8 @@ export const asyncAddMovies = (url) => async dispatch => {
     dispatch( { type: FINISH_ADVANCE_FETCH } )
   }
   catch(err) {  dispatch({ type: SHOW_ERROR, payload: 'fail' }) }
+}
+
+export const setQueryString = (value) => dispatch => {
+  dispatch( { type: QUERY_STRING, payload: value } )
 }

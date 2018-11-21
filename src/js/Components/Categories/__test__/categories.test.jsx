@@ -16,6 +16,7 @@ const store = mStore(initialState);
 jest.mock('../../../actions/movie', () => ({
   getCategoryMovie: jest.fn(() => ({ type: 'GET_MOVIE', payload: 1 })),
   getDropdownMovie: jest.fn(() => ({ type: 'GET', payload: 1 })),
+  setQueryString: jest.fn(() => ({ type: 'QUERY_STRING', payload: 'test string' })),
 }));
 
 const testRenderer = TestRenderer.create(

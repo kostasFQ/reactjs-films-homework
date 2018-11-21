@@ -9,7 +9,7 @@ import List from '../List';
 import Video from '../Video';
 import s from './content.scss';
 import {
-  asyncGetMovie, getCategoryMovie, asyncAddMovies, getDropdownMovie,
+  asyncGetMovie, getCategoryMovie, asyncAddMovies, getDropdownMovie
 } from '../../actions/movie';
 
 require('babel-polyfill');
@@ -126,7 +126,7 @@ class Content extends React.PureComponent {
     return (
       <div className={s.container}>
         { trailerWindow ? <Video /> : null}
-        <Header getMovie={this.getMovie} toMain={this.toMain} />
+        <Header getMovie={this.getMovie} toMain={this.toMain}/>
         <MovieDetailsPage />
         <List />
       </div>

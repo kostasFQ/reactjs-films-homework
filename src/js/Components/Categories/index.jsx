@@ -5,19 +5,21 @@ import { Link, withRouter } from 'react-router-dom';
 import styles from './categories.scss';
 import { genres } from '../../../assets/genres';
 
-import { getCategoryMovie, getDropdownMovie } from '../../actions/movie';
+import { getCategoryMovie, getDropdownMovie, setQueryString } from '../../actions/movie';
 
 class Categories extends React.Component {
   get = (e) => {
-    const { onGetCategoryMovie } = this.props;
+    const { onGetCategoryMovie, onSetQueryString } = this.props;
     onGetCategoryMovie(e.target.value);
+    onSetQueryString('');
   };
 
   log = (e) => {
     const { history } = this.props;
-    const { onGetDropdownMovie } = this.props;
+    const { onGetDropdownMovie, onSetQueryString } = this.props;
     onGetDropdownMovie(e.target.value);
     history.push(`/genre/${e.target.options[e.target.selectedIndex].dataset.name.toLowerCase().replace(' ', '_')}`);
+    onSetQueryString('');
   };
 
   render() {
@@ -55,11 +57,15 @@ export default withRouter(connect(
     onGetDropdownMovie: (id) => {
       dispatch(getDropdownMovie(id));
     },
+    onSetQueryString: (value) => {
+      dispatch(setQueryString(value))
+    }
   }),
 )(Categories));
 
 Categories.propTypes = {
   onGetCategoryMovie: PropTypes.func.isRequired,
   onGetDropdownMovie: PropTypes.func.isRequired,
+  onSetQueryString: PropTypes.func.isRequired,
   history: PropTypes.objectOf(PropTypes.any).isRequired,
 };
