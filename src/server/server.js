@@ -22,6 +22,10 @@ if(process.env.NODE_ENV === 'prod') {
   app.use(webpackDevMiddleware(compiler, { publicPath: config.output.publicPath, }));
   app.use(webpackHotMiddleware(compiler));
 
+  app.get('/', (req, res) => {
+    res.redirect('/main');
+ });
+
   app.get('*', (req, res, next) => {
     compiler.outputFileSystem.readFile(HTML_FILE, (err, result) => {
       if (err) {
