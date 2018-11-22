@@ -35,7 +35,7 @@ if(process.env.NODE_ENV === 'prod') {
   });
 }
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`App listening to ${PORT}....`); // eslint-disable-line no-console
+const port = 5000;
+app.listen(process.env.PORT || port, () => {
+  console.log(`App listening to ${port}....`); // eslint-disable-line no-console
 });
