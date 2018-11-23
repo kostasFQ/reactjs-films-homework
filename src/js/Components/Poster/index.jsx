@@ -5,8 +5,10 @@ import styles from './poster.scss';
 const Poster = (props) => {
   const { pict } = props;
   return (
-    <div className={styles.curtian}>
-      <img src={pict} className={styles.poster} alt="no poster" />
+    <div>
+      <div className={styles.curtian}>
+        <img src={pict} className={styles.poster} alt="no poster" />
+      </div>
     </div>
   );
 };

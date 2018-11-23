@@ -45,6 +45,10 @@
 .position {
   display: flex;
   border-bottom: 1px solid lightgray;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 }
 
 .char {

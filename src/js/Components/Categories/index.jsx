@@ -25,16 +25,16 @@ class Categories extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <Link to="/categories/popular">
-          <button className={styles.item} onClick={this.get} value="popular" type="button">Trending</button>
+        <Link to="/categories/popular" className={styles.xxx} onClick={this.get} value="popular">
+          Trending
         </Link>
-        <Link to="/categories/top_rated">
-          <button className={styles.item} onClick={this.get} value="top_rated" type="button">Top Rated</button>
+        <Link to="/categories/top_rated" className={styles.xxx} onClick={this.get} value="top_rated">
+          Top Rated
         </Link>
-        <Link to="/categories/upcoming">
-          <button className={styles.item} onClick={this.get} value="upcoming" type="button">Coming Soon</button>
+        <Link to="/categories/upcoming" className={styles.xxx} onClick={this.get} value="upcoming">
+          Coming Soon
         </Link>
-        <select className={styles.item} onChange={this.log}>
+        <select className={styles.select} onChange={this.log}>
           {genres.map(item => (
             <option value={item.id} key={item.id} data-name={item.name}>
               {item.name}

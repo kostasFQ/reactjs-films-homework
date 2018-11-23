@@ -7,7 +7,7 @@ const Preview = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.buttonsBlock}>
-        <div className={styles.previewField}>{overview}</div>
+        <div>{overview}</div>
       </div>
     </div>
   );

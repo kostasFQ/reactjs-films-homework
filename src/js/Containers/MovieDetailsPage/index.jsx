@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Poster from '../../Components/Poster';
 import Descriptions from '../../Components/Descriptions';
 import { apiUrl } from '../../../assets';
+import styles from './movieDetails.scss';
 
 class MovieDetailsPage extends React.PureComponent {
   preRender = () => {
@@ -10,7 +11,7 @@ class MovieDetailsPage extends React.PureComponent {
     const { film, finishFetch, errorMessage } = movie;
     if (film) {
       return (
-        <div>
+        <div className={styles.container}>
           <Poster pict={`${apiUrl}/w500/${film.backdrop_path}`} />
           <Descriptions {...film} />
         </div>

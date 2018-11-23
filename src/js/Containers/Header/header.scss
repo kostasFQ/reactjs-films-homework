@@ -1,35 +1,38 @@
 .container {
-  height: 150px;
   display: flex;
+  height: 90px;
   flex-direction: row;
   justify-content: space-between;
   font-family: 'Fahkwang', sans-serif;
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 
 .title {
   text-decoration: none;
-  margin: 20px;
-  font-size: 2.5em;
+  margin: auto 2%;
+  font-size: 50px;
   font-weight: bolder;
   display: flex;
   color: white;
   text-shadow: 0 0 10px black;
+
+  @media only screen and (max-width: 600px) {
+    margin: 0;
+    font-size: 40px;
+  }
 }
 
 input[type=text] {
-  padding-left: 10px;
+  width: 100%;
   border: none;
+  padding-left: 10px;
   background: none;
   color: white;
 
   &::placeholder {
     color: white;
-  }
-
-  @media only screen and (max-width: 600px) {
-    width: 60%;
   }
 }
 
@@ -37,13 +40,16 @@ input[type=text] {
   border: 2px solid white;
   border-radius: 5px;
   height: 2em;
-  margin-top: 20px;
+  margin: auto 2%;
   display: flex;
-  margin-right: 2%;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 600px) {
+    margin: 1% auto;
+  }
 }
 
 .button {
-  margin-right: 10px;
   cursor: pointer;
   border: none;
   background: none;

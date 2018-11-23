@@ -18,7 +18,7 @@ const Rating = (props) => {
   if (rating <= 10 && rating > 0) {
     return (
       <div className={styles.container}>
-        <div>
+        <div className={styles.ratingBox}>
           { stars(whiteStar).map(item => <img src={item} alt="star" className={styles.star} key={shorid.generate()} />)
             }
         </div>

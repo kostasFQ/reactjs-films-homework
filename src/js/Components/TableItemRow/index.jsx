@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styles from './tableItemRow.scss';
-import Rating from '../Rating';
+import RatingBox from '../RatingBox';
 import Genres from '../Genres';
 import RoundButton from '../RoundButton';
 import { apiUrl } from '../../../assets';
 import { asyncShowTrailer } from '../../actions/movie';
+import star from '../../../imgs/icons/halfStar.png';
 
 class TableItemRow extends React.PureComponent {
   showTrailer = (id) => {
@@ -25,14 +26,20 @@ class TableItemRow extends React.PureComponent {
       <div className={styles.container}>
         <div className={styles.miniPoster}>
           { poster_path
-            ? <img src={miniPoster} alt="poster" width="100%" height="100%" />
+            ? <img src={miniPoster} alt="poster" />
             : <img src={noPoster} alt="poster" width="100%" height="100%" />
             }
         </div>
-        <div className={styles.description}>
+        <div className={styles.str}>
           <div className={styles.title}>{title.toUpperCase()}</div>
-          <div><Genres genre_ids={genre_ids} /></div>
-          <div className={styles.rating}><Rating rating={vote_average} /></div>
+          <div className={styles.description}>
+            <div className={styles.txt} >
+              <Genres genre_ids={genre_ids} />
+            </div>
+            <div className={styles.rating}>
+               <img src={star} alt="star" height='20px' width='20px'/> <RatingBox rating={vote_average} />
+            </div>
+          </div>
           <div className={styles.overview}>{overview}</div>
         </div>
         <div className={styles.button}>

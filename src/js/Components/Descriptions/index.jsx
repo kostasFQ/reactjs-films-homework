@@ -29,6 +29,10 @@ class Descriptions extends React.PureComponent {
     return (
       <div className={styles.container}>
         <Details {...this.props} />
+        <div className={styles.buttonsBlock}>
+          <Button name="Watch Now" action={() => this.showTrailer(id)} />
+          <Button name="View Info" action={this.handler} />
+        </div>
         {visible
           ? (
             <div className={styles.prevField}>
@@ -37,10 +41,6 @@ class Descriptions extends React.PureComponent {
           )
           : null
             }
-        <div className={styles.buttonsBlock}>
-          <Button name="Watch Now" action={() => this.showTrailer(id)} />
-          <Button name="View Info" action={this.handler} />
-        </div>
       </div>
     );
   }
