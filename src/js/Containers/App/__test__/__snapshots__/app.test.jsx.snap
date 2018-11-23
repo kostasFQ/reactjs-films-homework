@@ -38,15 +38,19 @@ exports[`1.test APP component render 1`] = `
         </button>
       </form>
     </div>
-    <div>
-      <div
-        className="curtian"
-      >
-        <img
-          alt="no poster"
-          className="poster"
-          src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
-        />
+    <div
+      className="container"
+    >
+      <div>
+        <div
+          className="curtian"
+        >
+          <img
+            alt="no poster"
+            className="poster"
+            src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
+          />
+        </div>
       </div>
       <div
         className="container"
@@ -86,7 +90,9 @@ exports[`1.test APP component render 1`] = `
           <div
             className="container"
           >
-            <div>
+            <div
+              className="ratingBox"
+            >
               <img
                 alt="star"
                 className="star"
@@ -237,46 +243,31 @@ exports[`1.test APP component render 1`] = `
             className="container"
           >
             <a
+              className="xxx"
               href="/categories/popular"
               onClick={[Function]}
+              value="popular"
             >
-              <button
-                className="item"
-                onClick={[Function]}
-                type="button"
-                value="popular"
-              >
-                Trending
-              </button>
+              Trending
             </a>
             <a
+              className="xxx"
               href="/categories/top_rated"
               onClick={[Function]}
+              value="top_rated"
             >
-              <button
-                className="item"
-                onClick={[Function]}
-                type="button"
-                value="top_rated"
-              >
-                Top Rated
-              </button>
+              Top Rated
             </a>
             <a
+              className="xxx"
               href="/categories/upcoming"
               onClick={[Function]}
+              value="upcoming"
             >
-              <button
-                className="item"
-                onClick={[Function]}
-                type="button"
-                value="upcoming"
-              >
-                Coming Soon
-              </button>
+              Coming Soon
             </a>
             <select
-              className="item"
+              className="select"
               onChange={[Function]}
             >
               <option

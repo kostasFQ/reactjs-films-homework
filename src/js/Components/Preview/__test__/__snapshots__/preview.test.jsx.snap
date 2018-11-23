@@ -7,9 +7,7 @@ exports[`test component render 1`] = `
   <div
     className="buttonsBlock"
   >
-    <div
-      className="previewField"
-    />
+    <div />
   </div>
 </div>
 `;

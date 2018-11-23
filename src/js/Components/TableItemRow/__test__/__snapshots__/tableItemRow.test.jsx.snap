@@ -9,162 +9,58 @@ exports[`1.test TABLE_ITEM_ROW component render 1`] = `
   >
     <img
       alt="poster"
-      height="100%"
       src="http://image.tmdb.org/t/p/w300//2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg"
-      width="100%"
     />
   </div>
   <div
-    className="description"
+    className="str"
   >
     <div
       className="title"
     >
       VENOM
     </div>
-    <div>
-      <ul
-        className="list"
-      >
-        <li
-          className="item"
-        >
-          Action
-        </li>
-        <li
-          className="item"
-        >
-          Crime
-        </li>
-        <li
-          className="item"
-        >
-          Horror
-        </li>
-        <li
-          className="item"
-        >
-          Science Fiction
-        </li>
-      </ul>
-    </div>
     <div
-      className="rating"
+      className="description"
     >
       <div
-        className="container"
+        className="txt"
       >
-        <div>
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-        </div>
-        <div
-          className="x"
-          style={
-            Object {
-              "width": "132px",
-            }
-          }
+        <ul
+          className="list"
         >
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-        </div>
+          <li
+            className="item"
+          >
+            Action
+          </li>
+          <li
+            className="item"
+          >
+            Crime
+          </li>
+          <li
+            className="item"
+          >
+            Horror
+          </li>
+          <li
+            className="item"
+          >
+            Science Fiction
+          </li>
+        </ul>
+      </div>
+      <div
+        className="rating"
+      >
+        <img
+          alt="star"
+          height="20px"
+          src="test-file-stub"
+          width="20px"
+        />
+         
         <div
           className="container"
         >
@@ -214,156 +110,54 @@ exports[`2.test TABLE_ITEM_ROW component render 1`] = `
     />
   </div>
   <div
-    className="description"
+    className="str"
   >
     <div
       className="title"
     >
       VENOM
     </div>
-    <div>
-      <ul
-        className="list"
-      >
-        <li
-          className="item"
-        >
-          Action
-        </li>
-        <li
-          className="item"
-        >
-          Crime
-        </li>
-        <li
-          className="item"
-        >
-          Horror
-        </li>
-        <li
-          className="item"
-        >
-          Science Fiction
-        </li>
-      </ul>
-    </div>
     <div
-      className="rating"
+      className="description"
     >
       <div
-        className="container"
+        className="txt"
       >
-        <div>
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-        </div>
-        <div
-          className="x"
-          style={
-            Object {
-              "width": "132px",
-            }
-          }
+        <ul
+          className="list"
         >
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-          <img
-            alt="star"
-            className="star"
-            src="test-file-stub"
-          />
-        </div>
+          <li
+            className="item"
+          >
+            Action
+          </li>
+          <li
+            className="item"
+          >
+            Crime
+          </li>
+          <li
+            className="item"
+          >
+            Horror
+          </li>
+          <li
+            className="item"
+          >
+            Science Fiction
+          </li>
+        </ul>
+      </div>
+      <div
+        className="rating"
+      >
+        <img
+          alt="star"
+          height="20px"
+          src="test-file-stub"
+          width="20px"
+        />
+         
         <div
           className="container"
         >

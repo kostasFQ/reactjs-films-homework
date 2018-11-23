@@ -294,9 +294,7 @@ exports[`3.test TABLE_ITEM component render 1`] = `
               <div
                 className="buttonsBlock"
               >
-                <div
-                  className="previewField"
-                >
+                <div>
                   When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego "Venom" to save his life.
                 </div>
               </div>
@@ -309,9 +307,7 @@ exports[`3.test TABLE_ITEM component render 1`] = `
                 "width": "200%",
               }
             }
-          >
-            <hr />
-          </div>
+          />
           <div
             className="w"
           >
@@ -624,9 +620,7 @@ exports[`6.test TABLE_ITEM component render 1`] = `
               <div
                 className="buttonsBlock"
               >
-                <div
-                  className="previewField"
-                >
+                <div>
                   When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego "Venom" to save his life.
                 </div>
               </div>
@@ -639,9 +633,7 @@ exports[`6.test TABLE_ITEM component render 1`] = `
                 "width": "200%",
               }
             }
-          >
-            <hr />
-          </div>
+          />
           <div
             className="w"
           >

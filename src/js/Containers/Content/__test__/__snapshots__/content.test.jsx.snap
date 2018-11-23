@@ -37,15 +37,19 @@ exports[`1.test CONTENT component render 1`] = `
       </button>
     </form>
   </div>
-  <div>
-    <div
-      className="curtian"
-    >
-      <img
-        alt="no poster"
-        className="poster"
-        src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
-      />
+  <div
+    className="container"
+  >
+    <div>
+      <div
+        className="curtian"
+      >
+        <img
+          alt="no poster"
+          className="poster"
+          src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
+        />
+      </div>
     </div>
     <div
       className="container"
@@ -85,7 +89,9 @@ exports[`1.test CONTENT component render 1`] = `
         <div
           className="container"
         >
-          <div>
+          <div
+            className="ratingBox"
+          >
             <img
               alt="star"
               className="star"
@@ -236,46 +242,31 @@ exports[`1.test CONTENT component render 1`] = `
           className="container"
         >
           <a
+            className="xxx"
             href="/categories/popular"
             onClick={[Function]}
+            value="popular"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="popular"
-            >
-              Trending
-            </button>
+            Trending
           </a>
           <a
+            className="xxx"
             href="/categories/top_rated"
             onClick={[Function]}
+            value="top_rated"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="top_rated"
-            >
-              Top Rated
-            </button>
+            Top Rated
           </a>
           <a
+            className="xxx"
             href="/categories/upcoming"
             onClick={[Function]}
+            value="upcoming"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="upcoming"
-            >
-              Coming Soon
-            </button>
+            Coming Soon
           </a>
           <select
-            className="item"
+            className="select"
             onChange={[Function]}
           >
             <option
@@ -2361,15 +2352,19 @@ exports[`8.test CONTENT component route={/categories/popular} 1`] = `
       </button>
     </form>
   </div>
-  <div>
-    <div
-      className="curtian"
-    >
-      <img
-        alt="no poster"
-        className="poster"
-        src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
-      />
+  <div
+    className="container"
+  >
+    <div>
+      <div
+        className="curtian"
+      >
+        <img
+          alt="no poster"
+          className="poster"
+          src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
+        />
+      </div>
     </div>
     <div
       className="container"
@@ -2409,7 +2404,9 @@ exports[`8.test CONTENT component route={/categories/popular} 1`] = `
         <div
           className="container"
         >
-          <div>
+          <div
+            className="ratingBox"
+          >
             <img
               alt="star"
               className="star"
@@ -2560,46 +2557,31 @@ exports[`8.test CONTENT component route={/categories/popular} 1`] = `
           className="container"
         >
           <a
+            className="xxx"
             href="/categories/popular"
             onClick={[Function]}
+            value="popular"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="popular"
-            >
-              Trending
-            </button>
+            Trending
           </a>
           <a
+            className="xxx"
             href="/categories/top_rated"
             onClick={[Function]}
+            value="top_rated"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="top_rated"
-            >
-              Top Rated
-            </button>
+            Top Rated
           </a>
           <a
+            className="xxx"
             href="/categories/upcoming"
             onClick={[Function]}
+            value="upcoming"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="upcoming"
-            >
-              Coming Soon
-            </button>
+            Coming Soon
           </a>
           <select
-            className="item"
+            className="select"
             onChange={[Function]}
           >
             <option
@@ -4685,15 +4667,19 @@ exports[`8.test CONTENT component route={/genre/romance} 1`] = `
       </button>
     </form>
   </div>
-  <div>
-    <div
-      className="curtian"
-    >
-      <img
-        alt="no poster"
-        className="poster"
-        src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
-      />
+  <div
+    className="container"
+  >
+    <div>
+      <div
+        className="curtian"
+      >
+        <img
+          alt="no poster"
+          className="poster"
+          src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
+        />
+      </div>
     </div>
     <div
       className="container"
@@ -4733,7 +4719,9 @@ exports[`8.test CONTENT component route={/genre/romance} 1`] = `
         <div
           className="container"
         >
-          <div>
+          <div
+            className="ratingBox"
+          >
             <img
               alt="star"
               className="star"
@@ -4884,46 +4872,31 @@ exports[`8.test CONTENT component route={/genre/romance} 1`] = `
           className="container"
         >
           <a
+            className="xxx"
             href="/categories/popular"
             onClick={[Function]}
+            value="popular"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="popular"
-            >
-              Trending
-            </button>
+            Trending
           </a>
           <a
+            className="xxx"
             href="/categories/top_rated"
             onClick={[Function]}
+            value="top_rated"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="top_rated"
-            >
-              Top Rated
-            </button>
+            Top Rated
           </a>
           <a
+            className="xxx"
             href="/categories/upcoming"
             onClick={[Function]}
+            value="upcoming"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="upcoming"
-            >
-              Coming Soon
-            </button>
+            Coming Soon
           </a>
           <select
-            className="item"
+            className="select"
             onChange={[Function]}
           >
             <option
@@ -7009,15 +6982,19 @@ exports[`9.test CONTENT component route={/search?movie=alien} 1`] = `
       </button>
     </form>
   </div>
-  <div>
-    <div
-      className="curtian"
-    >
-      <img
-        alt="no poster"
-        className="poster"
-        src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
-      />
+  <div
+    className="container"
+  >
+    <div>
+      <div
+        className="curtian"
+      >
+        <img
+          alt="no poster"
+          className="poster"
+          src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
+        />
+      </div>
     </div>
     <div
       className="container"
@@ -7057,7 +7034,9 @@ exports[`9.test CONTENT component route={/search?movie=alien} 1`] = `
         <div
           className="container"
         >
-          <div>
+          <div
+            className="ratingBox"
+          >
             <img
               alt="star"
               className="star"
@@ -7208,46 +7187,31 @@ exports[`9.test CONTENT component route={/search?movie=alien} 1`] = `
           className="container"
         >
           <a
+            className="xxx"
             href="/categories/popular"
             onClick={[Function]}
+            value="popular"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="popular"
-            >
-              Trending
-            </button>
+            Trending
           </a>
           <a
+            className="xxx"
             href="/categories/top_rated"
             onClick={[Function]}
+            value="top_rated"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="top_rated"
-            >
-              Top Rated
-            </button>
+            Top Rated
           </a>
           <a
+            className="xxx"
             href="/categories/upcoming"
             onClick={[Function]}
+            value="upcoming"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="upcoming"
-            >
-              Coming Soon
-            </button>
+            Coming Soon
           </a>
           <select
-            className="item"
+            className="select"
             onChange={[Function]}
           >
             <option
@@ -9333,15 +9297,19 @@ exports[`10.test CONTENT component update genre 1`] = `
       </button>
     </form>
   </div>
-  <div>
-    <div
-      className="curtian"
-    >
-      <img
-        alt="no poster"
-        className="poster"
-        src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
-      />
+  <div
+    className="container"
+  >
+    <div>
+      <div
+        className="curtian"
+      >
+        <img
+          alt="no poster"
+          className="poster"
+          src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
+        />
+      </div>
     </div>
     <div
       className="container"
@@ -9381,7 +9349,9 @@ exports[`10.test CONTENT component update genre 1`] = `
         <div
           className="container"
         >
-          <div>
+          <div
+            className="ratingBox"
+          >
             <img
               alt="star"
               className="star"
@@ -9532,46 +9502,31 @@ exports[`10.test CONTENT component update genre 1`] = `
           className="container"
         >
           <a
+            className="xxx"
             href="/categories/popular"
             onClick={[Function]}
+            value="popular"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="popular"
-            >
-              Trending
-            </button>
+            Trending
           </a>
           <a
+            className="xxx"
             href="/categories/top_rated"
             onClick={[Function]}
+            value="top_rated"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="top_rated"
-            >
-              Top Rated
-            </button>
+            Top Rated
           </a>
           <a
+            className="xxx"
             href="/categories/upcoming"
             onClick={[Function]}
+            value="upcoming"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="upcoming"
-            >
-              Coming Soon
-            </button>
+            Coming Soon
           </a>
           <select
-            className="item"
+            className="select"
             onChange={[Function]}
           >
             <option
@@ -11657,15 +11612,19 @@ exports[`11.test CONTENT component update categories 1`] = `
       </button>
     </form>
   </div>
-  <div>
-    <div
-      className="curtian"
-    >
-      <img
-        alt="no poster"
-        className="poster"
-        src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
-      />
+  <div
+    className="container"
+  >
+    <div>
+      <div
+        className="curtian"
+      >
+        <img
+          alt="no poster"
+          className="poster"
+          src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
+        />
+      </div>
     </div>
     <div
       className="container"
@@ -11705,7 +11664,9 @@ exports[`11.test CONTENT component update categories 1`] = `
         <div
           className="container"
         >
-          <div>
+          <div
+            className="ratingBox"
+          >
             <img
               alt="star"
               className="star"
@@ -11856,46 +11817,31 @@ exports[`11.test CONTENT component update categories 1`] = `
           className="container"
         >
           <a
+            className="xxx"
             href="/categories/popular"
             onClick={[Function]}
+            value="popular"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="popular"
-            >
-              Trending
-            </button>
+            Trending
           </a>
           <a
+            className="xxx"
             href="/categories/top_rated"
             onClick={[Function]}
+            value="top_rated"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="top_rated"
-            >
-              Top Rated
-            </button>
+            Top Rated
           </a>
           <a
+            className="xxx"
             href="/categories/upcoming"
             onClick={[Function]}
+            value="upcoming"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="upcoming"
-            >
-              Coming Soon
-            </button>
+            Coming Soon
           </a>
           <select
-            className="item"
+            className="select"
             onChange={[Function]}
           >
             <option
@@ -13981,15 +13927,19 @@ exports[`12.test CONTENT component update to main 1`] = `
       </button>
     </form>
   </div>
-  <div>
-    <div
-      className="curtian"
-    >
-      <img
-        alt="no poster"
-        className="poster"
-        src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
-      />
+  <div
+    className="container"
+  >
+    <div>
+      <div
+        className="curtian"
+      >
+        <img
+          alt="no poster"
+          className="poster"
+          src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
+        />
+      </div>
     </div>
     <div
       className="container"
@@ -14029,7 +13979,9 @@ exports[`12.test CONTENT component update to main 1`] = `
         <div
           className="container"
         >
-          <div>
+          <div
+            className="ratingBox"
+          >
             <img
               alt="star"
               className="star"
@@ -14180,46 +14132,31 @@ exports[`12.test CONTENT component update to main 1`] = `
           className="container"
         >
           <a
+            className="xxx"
             href="/categories/popular"
             onClick={[Function]}
+            value="popular"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="popular"
-            >
-              Trending
-            </button>
+            Trending
           </a>
           <a
+            className="xxx"
             href="/categories/top_rated"
             onClick={[Function]}
+            value="top_rated"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="top_rated"
-            >
-              Top Rated
-            </button>
+            Top Rated
           </a>
           <a
+            className="xxx"
             href="/categories/upcoming"
             onClick={[Function]}
+            value="upcoming"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="upcoming"
-            >
-              Coming Soon
-            </button>
+            Coming Soon
           </a>
           <select
-            className="item"
+            className="select"
             onChange={[Function]}
           >
             <option
@@ -16305,15 +16242,19 @@ exports[`13.test CONTENT component update search= 1`] = `
       </button>
     </form>
   </div>
-  <div>
-    <div
-      className="curtian"
-    >
-      <img
-        alt="no poster"
-        className="poster"
-        src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
-      />
+  <div
+    className="container"
+  >
+    <div>
+      <div
+        className="curtian"
+      >
+        <img
+          alt="no poster"
+          className="poster"
+          src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
+        />
+      </div>
     </div>
     <div
       className="container"
@@ -16353,7 +16294,9 @@ exports[`13.test CONTENT component update search= 1`] = `
         <div
           className="container"
         >
-          <div>
+          <div
+            className="ratingBox"
+          >
             <img
               alt="star"
               className="star"
@@ -16504,46 +16447,31 @@ exports[`13.test CONTENT component update search= 1`] = `
           className="container"
         >
           <a
+            className="xxx"
             href="/categories/popular"
             onClick={[Function]}
+            value="popular"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="popular"
-            >
-              Trending
-            </button>
+            Trending
           </a>
           <a
+            className="xxx"
             href="/categories/top_rated"
             onClick={[Function]}
+            value="top_rated"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="top_rated"
-            >
-              Top Rated
-            </button>
+            Top Rated
           </a>
           <a
+            className="xxx"
             href="/categories/upcoming"
             onClick={[Function]}
+            value="upcoming"
           >
-            <button
-              className="item"
-              onClick={[Function]}
-              type="button"
-              value="upcoming"
-            >
-              Coming Soon
-            </button>
+            Coming Soon
           </a>
           <select
-            className="item"
+            className="select"
             onChange={[Function]}
           >
             <option

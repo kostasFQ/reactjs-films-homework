@@ -33,11 +33,13 @@ class TableItemRow extends React.PureComponent {
         <div className={styles.str}>
           <div className={styles.title}>{title.toUpperCase()}</div>
           <div className={styles.description}>
-            <div className={styles.txt} >
+            <div className={styles.txt}>
               <Genres genre_ids={genre_ids} />
             </div>
             <div className={styles.rating}>
-               <img src={star} alt="star" height='20px' width='20px'/> <RatingBox rating={vote_average} />
+              <img src={star} alt="star" height="20px" width="20px" />
+              {' '}
+              <RatingBox rating={vote_average} />
             </div>
           </div>
           <div className={styles.overview}>{overview}</div>

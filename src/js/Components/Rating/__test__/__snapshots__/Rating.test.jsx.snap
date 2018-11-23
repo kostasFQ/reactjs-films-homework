@@ -4,7 +4,9 @@ exports[`test component render (rating is correct) 1`] = `
 <div
   className="container"
 >
-  <div>
+  <div
+    className="ratingBox"
+  >
     <img
       alt="star"
       className="star"

@@ -1,15 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`1.test MOVIE DETAILS PAGE component render 1`] = `
-<div>
-  <div
-    className="curtian"
-  >
-    <img
-      alt="no poster"
-      className="poster"
-      src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
-    />
+<div
+  className="container"
+>
+  <div>
+    <div
+      className="curtian"
+    >
+      <img
+        alt="no poster"
+        className="poster"
+        src="http://image.tmdb.org/t/p/w500//VuukZLgaCrho2Ar8Scl9HtV3yD.jpg"
+      />
+    </div>
   </div>
   <div
     className="container"
@@ -49,7 +53,9 @@ exports[`1.test MOVIE DETAILS PAGE component render 1`] = `
       <div
         className="container"
       >
-        <div>
+        <div
+          className="ratingBox"
+        >
           <img
             alt="star"
             className="star"
@@ -191,28 +197,32 @@ exports[`1.test MOVIE DETAILS PAGE component render 1`] = `
 
 exports[`2.test MOVIE DETAILS PAGE component render 1`] = `
 <div>
-  <div
-    className="curtian"
-  >
-    <img
-      alt="no poster"
-      className="poster"
-      src="http://ctoetotakoe.ru/wp-content/uploads/2016/05/404-not-found.png"
-    />
+  <div>
+    <div
+      className="curtian"
+    >
+      <img
+        alt="no poster"
+        className="poster"
+        src="http://ctoetotakoe.ru/wp-content/uploads/2016/05/404-not-found.png"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`3.test MOVIE DETAILS PAGE component render 1`] = `
 <div>
-  <div
-    className="curtian"
-  >
-    <img
-      alt="no poster"
-      className="poster"
-      src="http://ctoetotakoe.ru/wp-content/uploads/2016/05/404-not-found.png"
-    />
+  <div>
+    <div
+      className="curtian"
+    >
+      <img
+        alt="no poster"
+        className="poster"
+        src="http://ctoetotakoe.ru/wp-content/uploads/2016/05/404-not-found.png"
+      />
+    </div>
   </div>
 </div>
 `;
