@@ -165,22 +165,57 @@ exports[`1.test LIST component render 1`] = `
           onClick={[Function]}
           type="button"
         >
-          <span
-            className="char"
+          <div
+            style={
+              Object {
+                "position": "relative",
+                "top": "-2px",
+              }
+            }
           >
-            +
-          </span>
+            <div
+              className="square"
+            />
+            <div
+              className="square"
+            />
+          </div>
+          <div
+            style={
+              Object {
+                "position": "relative",
+                "top": "-2px",
+              }
+            }
+          >
+            <div
+              className="square"
+            />
+            <div
+              className="square"
+            />
+          </div>
         </button>
         <button
           className="conf"
           onClick={[Function]}
           type="button"
         >
-          <span
-            className="min"
+          <div
+            style={
+              Object {
+                "position": "relative",
+                "top": "-2px",
+              }
+            }
           >
-            —
-          </span>
+            <div
+              className="line"
+            />
+            <div
+              className="line"
+            />
+          </div>
         </button>
       </div>
     </div>

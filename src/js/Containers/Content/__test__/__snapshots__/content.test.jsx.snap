@@ -393,22 +393,57 @@ exports[`1.test CONTENT component render 1`] = `
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="char"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              +
-            </span>
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
+            >
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
           </button>
           <button
             className="conf"
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="min"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              —
-            </span>
+              <div
+                className="line"
+              />
+              <div
+                className="line"
+              />
+            </div>
           </button>
         </div>
       </div>
@@ -2708,22 +2743,57 @@ exports[`8.test CONTENT component route={/categories/popular} 1`] = `
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="char"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              +
-            </span>
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
+            >
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
           </button>
           <button
             className="conf"
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="min"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              —
-            </span>
+              <div
+                className="line"
+              />
+              <div
+                className="line"
+              />
+            </div>
           </button>
         </div>
       </div>
@@ -5023,22 +5093,57 @@ exports[`8.test CONTENT component route={/genre/romance} 1`] = `
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="char"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              +
-            </span>
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
+            >
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
           </button>
           <button
             className="conf"
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="min"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              —
-            </span>
+              <div
+                className="line"
+              />
+              <div
+                className="line"
+              />
+            </div>
           </button>
         </div>
       </div>
@@ -7338,22 +7443,57 @@ exports[`9.test CONTENT component route={/search?movie=alien} 1`] = `
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="char"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              +
-            </span>
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
+            >
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
           </button>
           <button
             className="conf"
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="min"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              —
-            </span>
+              <div
+                className="line"
+              />
+              <div
+                className="line"
+              />
+            </div>
           </button>
         </div>
       </div>
@@ -9653,22 +9793,57 @@ exports[`10.test CONTENT component update genre 1`] = `
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="char"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              +
-            </span>
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
+            >
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
           </button>
           <button
             className="conf"
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="min"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              —
-            </span>
+              <div
+                className="line"
+              />
+              <div
+                className="line"
+              />
+            </div>
           </button>
         </div>
       </div>
@@ -11968,22 +12143,57 @@ exports[`11.test CONTENT component update categories 1`] = `
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="char"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              +
-            </span>
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
+            >
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
           </button>
           <button
             className="conf"
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="min"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              —
-            </span>
+              <div
+                className="line"
+              />
+              <div
+                className="line"
+              />
+            </div>
           </button>
         </div>
       </div>
@@ -14283,22 +14493,57 @@ exports[`12.test CONTENT component update to main 1`] = `
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="char"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              +
-            </span>
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
+            >
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
           </button>
           <button
             className="conf"
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="min"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              —
-            </span>
+              <div
+                className="line"
+              />
+              <div
+                className="line"
+              />
+            </div>
           </button>
         </div>
       </div>
@@ -16598,22 +16843,57 @@ exports[`13.test CONTENT component update search= 1`] = `
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="char"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              +
-            </span>
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
+            >
+              <div
+                className="square"
+              />
+              <div
+                className="square"
+              />
+            </div>
           </button>
           <button
             className="conf"
             onClick={[Function]}
             type="button"
           >
-            <span
-              className="min"
+            <div
+              style={
+                Object {
+                  "position": "relative",
+                  "top": "-2px",
+                }
+              }
             >
-              —
-            </span>
+              <div
+                className="line"
+              />
+              <div
+                className="line"
+              />
+            </div>
           </button>
         </div>
       </div>

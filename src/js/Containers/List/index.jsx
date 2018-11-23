@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import s from './list.scss';
+import styles from './list.scss';
 import Categories from '../../Components/Categories';
 import Table from '../../Components/Table';
 
@@ -24,13 +24,28 @@ class List extends React.PureComponent {
   render() {
     const { rows } = this.state;
     return (
-      <div className={s.container}>
-        <div className={s.inner}>
-          <div className={s.position}>
+      <div className={styles.container}>
+        <div className={styles.inner}>
+          <div className={styles.position}>
             <Categories />
-            <div className={s.displayStyle}>
-              <button className={classNames({ [s.conf]: true, [s.active]: !rows })} type="button" onClick={this.changeToTiles}><span className={s.char}>+</span></button>
-              <button className={classNames({ [s.conf]: true, [s.active]: rows })} type="button" onClick={this.changeToRows}><span className={s.min}>&#x2014;</span></button>
+            <div className={styles.displayStyle}>
+              <button className={classNames({ [styles.conf]: true, [styles.active]: !rows })} type="button" onClick={this.changeToTiles}>
+              <div style={{ position: 'relative', top: '-2px' }}>
+                <div className={styles.square}></div>
+                <div className={styles.square}></div>
+              </div>
+              <div style={{ position: 'relative', top: '-2px' }}>
+                <div className={styles.square}></div>
+                <div className={styles.square}></div>
+              </div>
+              </button>
+              <button className={classNames({ [styles.conf]: true, [styles.active]: rows })} type="button" onClick={this.changeToRows}>
+                {/* <span className={styles.min}>&#x2014;</span> */}
+                <div style={{ position: 'relative', top: '-2px' }}>
+                <div className={styles.line}></div>
+                <div className={styles.line}></div>
+              </div>
+              </button>
             </div>
           </div>
           <Table rows={rows} />
