@@ -30,21 +30,21 @@ class List extends React.PureComponent {
             <Categories />
             <div className={styles.displayStyle}>
               <button className={classNames({ [styles.conf]: true, [styles.active]: !rows })} type="button" onClick={this.changeToTiles}>
-              <div style={{ position: 'relative', top: '-2px' }}>
-                <div className={styles.square}></div>
-                <div className={styles.square}></div>
-              </div>
-              <div style={{ position: 'relative', top: '-2px' }}>
-                <div className={styles.square}></div>
-                <div className={styles.square}></div>
-              </div>
+                <div style={{ position: 'relative', top: '-2px' }}>
+                  <div className={styles.square} />
+                  <div className={styles.square} />
+                </div>
+                <div style={{ position: 'relative', top: '-2px' }}>
+                  <div className={styles.square} />
+                  <div className={styles.square} />
+                </div>
               </button>
               <button className={classNames({ [styles.conf]: true, [styles.active]: rows })} type="button" onClick={this.changeToRows}>
                 {/* <span className={styles.min}>&#x2014;</span> */}
                 <div style={{ position: 'relative', top: '-2px' }}>
-                <div className={styles.line}></div>
-                <div className={styles.line}></div>
-              </div>
+                  <div className={styles.line} />
+                  <div className={styles.line} />
+                </div>
               </button>
             </div>
           </div>
