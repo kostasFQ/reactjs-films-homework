@@ -8,7 +8,6 @@ import { genres } from '../../../assets/genres';
 import { getCategoryMovie, getDropdownMovie, setQueryString } from '../../actions/movie';
 
 class Categories extends React.Component {
-
   getFromCategories = (e) => {
     const { onGetCategoryMovie, onSetQueryString } = this.props;
     onGetCategoryMovie(e.target.value);
