@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test component render (rating is correct) 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="ratingBox"
+  >
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+  </div>
+  <div
+    className="x"
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+  >
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+  </div>
+  <div
+    className="container"
+  >
+    5
+  </div>
+</div>
+`;
+
+exports[`test component render (rating is incorrect) 1`] = `
+<div>
+  Sorry, no rating
+</div>
+`;

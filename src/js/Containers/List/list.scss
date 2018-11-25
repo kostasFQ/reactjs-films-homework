@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=K2D');
+
+.conf {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+  background-color: rgb(165, 162, 162);
+
+  &:hover {
+    box-shadow: 0 0 5px 1px;
+  }
+
+  &:active {
+    box-shadow: 0 0 10px 1px;
+  }
+}
+
+.square {
+  margin: 0;
+  border: 1px solid white;
+  height: 10px;
+  width: 10px;
+}
+
+.line {
+  margin: 0;
+  border: 1px solid white;
+  height: 10px;
+  width: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+}
+
+.active {
+  background-color: rgb(9, 173, 227);
+}
+
+.displayStyle {
+  margin: auto;
+  display: flex;
+}
+
+.position {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.char {
+  position: relative;
+  color: white;
+  font-size: 4em;
+  bottom: 27px;
+  right: 14px;
+}
+
+.min {
+  position: relative;
+  color: white;
+  font-size: 4em;
+  bottom: 34px;
+  right: 8px;
+}

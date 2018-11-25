@@ -1,0 +1,16 @@
+@import '../../../../node_modules/normalize.css/normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Fahkwang');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+
+body {
+  display: block;
+  margin: 0 auto;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+  text-align: center;
+  background-color: rgb(231, 231, 231);
+}
+
+*:focus {
+  outline: 0;
+}

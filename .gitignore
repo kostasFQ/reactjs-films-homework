@@ -328,3 +328,12 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+build
+
+coverage
+lerna-debug.log
+npm-debug.log
+npm-debug.log*
+yarn-error.log*
+junit.xml

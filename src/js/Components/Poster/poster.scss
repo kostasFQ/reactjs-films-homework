@@ -1,0 +1,12 @@
+.poster {
+  display: flex;
+  height: auto;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.curtian {
+  min-width: 320px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 60%, rgba(0, 0, 0, 0.7) 100%,);
+}

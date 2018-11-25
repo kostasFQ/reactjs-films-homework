@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.previewField {
+  text-align: left;
+  color: white;
+
+  @media only screen and (max-width: 600px) {
+    margin-left: 5%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}

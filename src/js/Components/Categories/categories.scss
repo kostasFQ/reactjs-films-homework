@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.select {
+  background: none;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  color: rgb(9, 173, 227);
+  font-size: 20px;
+  font-family: 'K2D', sans-serif;
+  height: 35px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align-last: center;
+
+  &:hover {
+    border-bottom: 2px solid rgb(9, 173, 227);
+  }
+}
+
+.xxx {
+  padding-top: 5px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  color: rgb(9, 173, 227);
+  font-size: 20px;
+  font-family: 'K2D', sans-serif;
+  height: 35px;
+  box-sizing: border-box;
+  text-align-last: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 2px solid rgb(9, 173, 227);
+  }
+}

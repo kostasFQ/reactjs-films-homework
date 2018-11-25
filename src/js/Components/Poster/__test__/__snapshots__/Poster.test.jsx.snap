@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test POSTER component 1`] = `
+<div>
+  <div
+    className="curtian"
+  >
+    <img
+      alt="no poster"
+      className="poster"
+      src="test-file-stub"
+    />
+  </div>
+</div>
+`;

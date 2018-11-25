@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1.test HEADER component render 1`] = `
+<div
+  className="container"
+>
+  <a
+    className="title"
+    href="/main"
+    onClick={[Function]}
+  >
+    FILMS
+  </a>
+  <form
+    className="form"
+    onSubmit={[Function]}
+  >
+    <input
+      className="input"
+      onChange={[Function]}
+      placeholder="search"
+      type="text"
+      value=""
+    />
+    <button
+      className="button"
+      type="submit"
+    >
+      <img
+        alt="search"
+        src="test-file-stub"
+        width="16px"
+      />
+    </button>
+  </form>
+</div>
+`;
