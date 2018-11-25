@@ -18,7 +18,7 @@ class TableItem extends React.PureComponent {
     };
   }
 
-  handler = () => {
+  toggleInfoVisible = () => {
     this.setState(prev => ({ visiblePreview: !prev.visiblePreview }));
   }
 
@@ -49,56 +49,55 @@ class TableItem extends React.PureComponent {
         </div>
 
         {
-          !visiblePreview
-            ? (
-              <div className={styles.description}>
+          !visiblePreview?
+          (
+            <div className={styles.description}>
+              <div className={styles.descBox}>
+                <span className={styles.title}>{title.toUpperCase()}</span>
+                <RatingBox rating={vote_average} />
+              </div>
+              <div className={styles.cut}>
+                <Genres genre_ids={genre_ids} />
+              </div>
+            </div>
+          ) : null
+        }
+        
+        <div className={styles.info} onMouseLeave={this.leave}>&nbsp;
+          <div className={styles.previewField}>
+            <div className={styles.inner}>
+            {
+              visiblePreview? (
+              <div className={styles.innerDescr}>
+                <div className={styles.up}>
+                  <button type="button" onClick={this.toggleInfoVisible} className={styles.button}>&#x2715;</button>
+                </div>
+
                 <div className={styles.descBox}>
-                  <span className={styles.title}>{title.toUpperCase()}</span>
+                  <span className={styles.hoverTitle}>{title.toUpperCase()}</span>
                   <RatingBox rating={vote_average} />
                 </div>
+
                 <div className={styles.cut}>
                   <Genres genre_ids={genre_ids} />
                 </div>
-              </div>
-            ) : null
-        }
 
-        <div className={styles.info} onMouseLeave={this.leave}>
-          <div />
-          <div className={styles.previewField}>
-            <div className={styles.inner}>
-              {
-                visiblePreview
-                  ? (
-                    <div className={styles.innerDescr}>
-                      <div className={styles.up}>
-                        <button type="button" onClick={this.handler} className={styles.button}>&#x2715;</button>
-                      </div>
-                      <div className={styles.descBox}>
-                        <span className={styles.hoverTitle}>{title.toUpperCase()}</span>
-                        <RatingBox rating={vote_average} />
-                      </div>
-
-                      <div className={styles.cut}>
-                        <Genres genre_ids={genre_ids} />
-                      </div>
-                      <div className={styles.overview}>
-                        <Preview overview={overview} />
-                      </div>
-                      <div style={{ width: '200%', marginLeft: '-50px' }} />
-                      <div className={styles.w}>
-                        <Button name="Watch Now" action={() => this.showTrailer(id)} />
-                      </div>
-                    </div>
+                <div className={styles.overview}>
+                  <Preview overview={overview} />
+                </div>
+                    
+                <div style={{ width: '200%', marginLeft: '-50px' }} />
+                  <div className={styles.w}>
+                    <Button name="Watch Now" action={() => this.showTrailer(id)} />
+                  </div>
+                </div>) : (
+                  
+                <div className={styles.buttonBlock}>
+                  <RoundButton name="Watch Now" action={() => this.showTrailer(id)} />
+                  <Button name="View Info" action={this.toggleInfoVisible} />
+                </div>
                   )
-
-                  : (
-                    <div className={styles.buttonBlock}>
-                      <RoundButton name="Watch Now" action={() => this.showTrailer(id)} />
-                      <Button name="View Info" action={this.handler} />
-                    </div>
-                  )
-              }
+            }
             </div>
           </div>
         </div>

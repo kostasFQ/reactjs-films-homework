@@ -29,15 +29,6 @@ describe('reduser', () => {
     });
   })
   
-  it('GET_TRADING', () => {
-    expect( movie( state,{ type: 'GET_TRADING', payload: { page: 1, results: [{i:3},{i:4}] } })).toEqual({
-      ...state,
-      film: {i:3},
-      fullResponse: [{i:3},{i:4}],
-      page: 1
-    });
-  })
-  
   it('FINISH_FETCH', () => {
     expect( movie( state, { type: 'FINISH_FETCH' }) ).toEqual({
       ...state,

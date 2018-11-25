@@ -8,15 +8,15 @@ import { genres } from '../../../assets/genres';
 import { getCategoryMovie, getDropdownMovie, setQueryString } from '../../actions/movie';
 
 class Categories extends React.Component {
-  get = (e) => {
+
+  getFromCategories = (e) => {
     const { onGetCategoryMovie, onSetQueryString } = this.props;
     onGetCategoryMovie(e.target.value);
     onSetQueryString('');
   };
 
-  log = (e) => {
-    const { history } = this.props;
-    const { onGetDropdownMovie, onSetQueryString } = this.props;
+  getFromGenres = (e) => {
+    const { onGetDropdownMovie, onSetQueryString, history } = this.props;
     onGetDropdownMovie(e.target.value);
     history.push(`/genre/${e.target.options[e.target.selectedIndex].dataset.name.toLowerCase().replace(' ', '_')}`);
     onSetQueryString('');
@@ -25,16 +25,16 @@ class Categories extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <Link to="/categories/popular" className={styles.xxx} onClick={this.get} value="popular">
+        <Link to="/categories/popular" className={styles.xxx} onClick={this.getFromCategories} value="popular">
           Trending
         </Link>
-        <Link to="/categories/top_rated" className={styles.xxx} onClick={this.get} value="top_rated">
+        <Link to="/categories/top_rated" className={styles.xxx} onClick={this.getFromCategories} value="top_rated">
           Top Rated
         </Link>
-        <Link to="/categories/upcoming" className={styles.xxx} onClick={this.get} value="upcoming">
+        <Link to="/categories/upcoming" className={styles.xxx} onClick={this.getFromCategories} value="upcoming">
           Coming Soon
         </Link>
-        <select className={styles.select} onChange={this.log}>
+        <select className={styles.select} onChange={this.getFromGenres}>
           {genres.map(item => (
             <option value={item.id} key={item.id} data-name={item.name}>
               {item.name}

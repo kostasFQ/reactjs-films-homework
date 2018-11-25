@@ -14,7 +14,7 @@ class Descriptions extends React.PureComponent {
     };
   }
 
-  handler = () => {
+  toggleInfoVisible = () => {
     this.setState(prev => ({ visible: !prev.visible }));
   }
 
@@ -31,7 +31,7 @@ class Descriptions extends React.PureComponent {
         <Details {...this.props} />
         <div className={styles.buttonsBlock}>
           <Button name="Watch Now" action={() => this.showTrailer(id)} />
-          <Button name="View Info" action={this.handler} />
+          <Button name="View Info" action={this.toggleInfoVisible} />
         </div>
         {visible
           ? (

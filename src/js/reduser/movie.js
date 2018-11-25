@@ -1,7 +1,7 @@
 import { 
   GET_MOVIE,
   OPEN_TRAILER_WINDOW,
-  START_FETCH, GET_TRADING,
+  START_FETCH,
   FINISH_FETCH,
   CLOSE_TRAILER_WINDOW,
   SHOW_ERROR,
@@ -27,14 +27,6 @@ const movie = (state = _movie, action) => {
     return { ...state, startFetch: true, finishFetch: false, errorMessage: null };
 
     case GET_MOVIE:
-      return { 
-        ...state, 
-        film: action.payload.results[0],
-        fullResponse: action.payload.results,
-        page: action.payload.page
-      };
-
-    case GET_TRADING:
       return { 
         ...state, 
         film: action.payload.results[0],
