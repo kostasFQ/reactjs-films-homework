@@ -14,6 +14,5 @@ test('test component', () => {
   );
 
   const component = render.toJSON();
-
   expect(component).toMatchSnapshot();
 });

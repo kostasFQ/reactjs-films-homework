@@ -84,4 +84,11 @@ describe( 'actions', () => {
     expect(store.getActions()[0].type).toEqual('START_ADVANCE_FETCH');
     expect(store.getActions()[1].type).toEqual('SHOW_ERROR');
   })
+  it('setQueryString', async () => {
+    const query = 'alien';
+    const store = mockStore({ movie });
+    await store.dispatch( actions.setQueryString(query) );
+    expect(store.getActions()[0].type).toEqual('QUERY_STRING');
+    expect(store.getActions()[0].payload).toEqual(query);
+  })
 })

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import s from './table.scss';
+import styles from './table.scss';
 import TableItem from '../TableItem';
 import TableItemRow from '../TableItemRow';
 import Spiner from '../Spiner';
@@ -23,21 +23,21 @@ class Table extends React.PureComponent {
 
     return (
       <div>
-        <div className={s.container}>
+        <div className={styles.container}>
           { fullResponse && finishFetch
             ? fullResponse.map(item => this.dis(item))
-            : <Spiner />
+            : null
           }
-          <div className={s.container}>
-            { startAdvanceFetch && (
-            <div>
-              {' '}
-              <Spiner />
-              {' '}
-            </div>
-            ) }
+          <div className={styles.container}>
+            { startAdvanceFetch
+              && (
+              <div>
+                <Spiner />
+              </div>
+              )
+            }
           </div>
-          <div className={s.container}>
+          <div className={styles.container}>
             <Footer />
           </div>
 

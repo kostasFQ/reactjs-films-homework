@@ -4,22 +4,23 @@
   flex-direction: row;
 }
 
-.stars {
-  display: flex;
+.star {
   height: 20px;
-  background-size: 20px 20px;
+  width: 20px;
+  display: inline-block;
 }
 
-.whiteStars {
-  @extend .stars;
-
-  width: 200px;
-  background-image: url('../../../imgs/icons/whiteStar.png');
-}
-
-.fillStars {
-  @extend .stars;
-
+.x {
+  z-index: 1;
   position: absolute;
-  background-image: url('../../../imgs/icons/Star.png');
+  display: flex;
+  overflow: hidden;
+
+  img {
+    flex-shrink: 0;
+  }
+}
+
+.ratingBox {
+  min-width: 200px;
 }

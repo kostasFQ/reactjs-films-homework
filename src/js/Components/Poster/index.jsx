@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './poster.scss';
+import styles from './poster.scss';
 
 const Poster = (props) => {
   const { pict } = props;
   return (
-    <div className={s.curtian}>
-      <img src={pict} className={s.poster} alt="pic" />
+    <div>
+      <div className={styles.curtian}>
+        <img src={pict} className={styles.poster} alt="no poster" />
+      </div>
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './ratingBox.scss';
+import styles from './ratingBox.scss';
 
 const RatingBox = (props) => {
   const { rating } = props;
   return (
-    <div className={s.container}>
+    <div className={styles.container}>
       {rating}
     </div>
   );

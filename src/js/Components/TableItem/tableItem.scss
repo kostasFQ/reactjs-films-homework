@@ -10,14 +10,19 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
   position: relative;
-  width: 23%;
-  height: 100%;
+  width: 220px;
+  height: 325px;
   border-radius: 5px;
   overflow: hidden;
   font-family: 'Work Sans', sans-serif;
   margin: 5px;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  @media only screen and (max-width: 475px) {
+    width: 100%;
+  }
 }
 
 .colum {
@@ -29,7 +34,7 @@
 .miniPoster {
   display: block;
   height: 100%;
-  width: auto;
+  width: 220px;
 }
 
 .title {
@@ -62,6 +67,7 @@
 
 .info {
   display: flex;
+  text-align: left;
   justify-content: space-between;
   position: absolute;
   width: 200%;
@@ -122,19 +128,24 @@
 .innerDescr {
   width: 100%;
   font-size: small;
-  overflow-y: scroll;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 .w {
-  margin: 20px 0 0 -15px;
+  width: 90%;
   display: flex;
+  margin: -3px auto;
   justify-content: center;
 }
 
 .up {
   text-align: left;
+}
+
+.overview {
+  height: 190px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

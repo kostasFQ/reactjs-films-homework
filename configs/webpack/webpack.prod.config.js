@@ -3,9 +3,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const common = require('./webpack.common.config.js');
+const ASSET_PATH = process.env.ASSET_PATH || '../';
+
 module.exports = merge(common, {
   entry: {
     main: './src/index.jsx'
+  },
+  output: {
+    publicPath: ASSET_PATH
   },
   mode: 'production',
   optimization: {
@@ -18,6 +23,7 @@ module.exports = merge(common, {
       new OptimizeCSSAssetsPlugin({})
     ]
   },
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -36,9 +42,19 @@ module.exports = merge(common, {
             query: {
               modules: true,
               localIdentName: '[local]___[hash:base64:5]',
-            },
+              sourcemap: true
+            }
           },
-          'sass-loader',
+          {
+            loader: 'resolve-url-loader',
+          },
+          {
+            loader: "sass-loader", 
+            options: {
+              sourceMap: true,
+              sourceMapContents: false
+            }
+          }
         ],
       },
     ]

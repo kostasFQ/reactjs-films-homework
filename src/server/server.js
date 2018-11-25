@@ -14,10 +14,17 @@ const HTML_FILE = path.join(DIST_DIR, 'index.html');
 
 if(process.env.NODE_ENV === 'prod') {
   app.use(express.static(DIST_DIR));
+  app.use('*',  function(req, resp) {
+    resp.sendFile(HTML_FILE);
+  });
 } else {
   const compiler = webpack(config);
   app.use(webpackDevMiddleware(compiler, { publicPath: config.output.publicPath, }));
   app.use(webpackHotMiddleware(compiler));
+
+  app.get('/', (req, res) => {
+    res.redirect('/main');
+ });
 
   app.get('*', (req, res, next) => {
     compiler.outputFileSystem.readFile(HTML_FILE, (err, result) => {
@@ -32,7 +39,7 @@ if(process.env.NODE_ENV === 'prod') {
   });
 }
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`App listening to ${PORT}....`); // eslint-disable-line no-console
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`App listening to ${port}....`); // eslint-disable-line no-console
 });

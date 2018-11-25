@@ -9,62 +9,155 @@ exports[`1.test TABLE_ITEM_ROW component render 1`] = `
   >
     <img
       alt="poster"
-      height="100%"
       src="http://image.tmdb.org/t/p/w300//2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg"
-      width="100%"
     />
   </div>
   <div
-    className="description"
+    className="str"
   >
     <div
       className="title"
     >
       VENOM
     </div>
-    <div>
-      <ul
-        className="list"
-      >
-        <li
-          className="item"
-        >
-          Action
-        </li>
-        <li
-          className="item"
-        >
-          Crime
-        </li>
-        <li
-          className="item"
-        >
-          Horror
-        </li>
-        <li
-          className="item"
-        >
-          Science Fiction
-        </li>
-      </ul>
-    </div>
     <div
-      className="rating"
+      className="description"
     >
       <div
-        className="container"
+        className="txt"
       >
-        <div
-          className="whiteStars"
+        <ul
+          className="list"
+        >
+          <li
+            className="item"
+          >
+            Action
+          </li>
+          <li
+            className="item"
+          >
+            Crime
+          </li>
+          <li
+            className="item"
+          >
+            Horror
+          </li>
+          <li
+            className="item"
+          >
+            Science Fiction
+          </li>
+        </ul>
+      </div>
+      <div
+        className="rating"
+      >
+        <img
+          alt="star"
+          height="20px"
+          src="test-file-stub"
+          width="20px"
         />
+         
         <div
-          className="fillStars"
-          style={
-            Object {
-              "width": "132px",
-            }
-          }
+          className="container"
+        >
+          6.6
+        </div>
+      </div>
+    </div>
+    <div
+      className="overview"
+    >
+      When Eddie Brock acquires the powers of a symbiote, he will have to release his alter-ego "Venom" to save his life.
+    </div>
+  </div>
+  <div
+    className="button"
+  >
+    <button
+      className="container"
+      onClick={[Function]}
+      type="button"
+    >
+      <div
+        className="play"
+      />
+    </button>
+    <div
+      className="name"
+    >
+      Watch Now
+    </div>
+  </div>
+</div>
+`;
+
+exports[`2.test TABLE_ITEM_ROW component render 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="miniPoster"
+  >
+    <img
+      alt="poster"
+      height="100%"
+      src="http://wpmovies.scriptburn.com/wp-content/themes/wp_movies/images/noposter.jpg"
+      width="100%"
+    />
+  </div>
+  <div
+    className="str"
+  >
+    <div
+      className="title"
+    >
+      VENOM
+    </div>
+    <div
+      className="description"
+    >
+      <div
+        className="txt"
+      >
+        <ul
+          className="list"
+        >
+          <li
+            className="item"
+          >
+            Action
+          </li>
+          <li
+            className="item"
+          >
+            Crime
+          </li>
+          <li
+            className="item"
+          >
+            Horror
+          </li>
+          <li
+            className="item"
+          >
+            Science Fiction
+          </li>
+        </ul>
+      </div>
+      <div
+        className="rating"
+      >
+        <img
+          alt="star"
+          height="20px"
+          src="test-file-stub"
+          width="20px"
         />
+         
         <div
           className="container"
         >

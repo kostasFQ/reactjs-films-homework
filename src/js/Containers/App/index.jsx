@@ -1,7 +1,7 @@
 import { hot } from 'react-hot-loader';
 import React from 'react';
-import './styles.scss';
 import Content from '../Content';
+import './styles.scss';
 
 const App = () => (
   <div>

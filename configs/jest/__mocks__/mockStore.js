@@ -1,4 +1,5 @@
 export const movie = {
+  queryString: '',
   startFetch: false,
   finishFetch: true,
   trailerWindow: false,

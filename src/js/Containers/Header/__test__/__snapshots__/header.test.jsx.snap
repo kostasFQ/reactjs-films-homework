@@ -4,12 +4,15 @@ exports[`1.test HEADER component render 1`] = `
 <div
   className="container"
 >
-  <h1
+  <a
     className="title"
+    href="/main"
+    onClick={[Function]}
   >
     FILMS
-  </h1>
+  </a>
   <form
+    className="form"
     onSubmit={[Function]}
   >
     <input
@@ -19,6 +22,16 @@ exports[`1.test HEADER component render 1`] = `
       type="text"
       value=""
     />
+    <button
+      className="button"
+      type="submit"
+    >
+      <img
+        alt="search"
+        src="test-file-stub"
+        width="16px"
+      />
+    </button>
   </form>
 </div>
 `;

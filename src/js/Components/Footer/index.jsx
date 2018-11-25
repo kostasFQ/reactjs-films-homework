@@ -1,8 +1,8 @@
 import React from 'react';
-import s from './footer.scss';
+import styles from './footer.scss';
 
 const Footer = () => (
-  <div className={s.container}>
+  <div className={styles.container}>
     Powered by KST
   </div>
 );

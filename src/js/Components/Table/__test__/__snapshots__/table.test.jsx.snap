@@ -13,62 +13,58 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           VENOM
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Action
-            </li>
-            <li
-              className="item"
-            >
-              Crime
-            </li>
-            <li
-              className="item"
-            >
-              Horror
-            </li>
-            <li
-              className="item"
-            >
-              Science Fiction
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Action
+              </li>
+              <li
+                className="item"
+              >
+                Crime
+              </li>
+              <li
+                className="item"
+              >
+                Horror
+              </li>
+              <li
+                className="item"
+              >
+                Science Fiction
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "132px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -109,47 +105,43 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//lNkDYKmrVem1J0aAfCnQlJOCKnT.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           HALLOWEEN
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Horror
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Horror
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "134px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -190,57 +182,53 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//wrFpXMNBRj2PBiN4Z5kix51XaIZ.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           A STAR IS BORN
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Drama
-            </li>
-            <li
-              className="item"
-            >
-              Music
-            </li>
-            <li
-              className="item"
-            >
-              Romance
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Drama
+              </li>
+              <li
+                className="item"
+              >
+                Music
+              </li>
+              <li
+                className="item"
+              >
+                Romance
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "150px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -281,62 +269,58 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//x1txcDXkcM65gl7w20PwYSxAYah.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           INCREDIBLES 2
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Action
-            </li>
-            <li
-              className="item"
-            >
-              Adventure
-            </li>
-            <li
-              className="item"
-            >
-              Animation
-            </li>
-            <li
-              className="item"
-            >
-              Family
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Action
+              </li>
+              <li
+                className="item"
+              >
+                Adventure
+              </li>
+              <li
+                className="item"
+              >
+                Animation
+              </li>
+              <li
+                className="item"
+              >
+                Family
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "152px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -377,47 +361,43 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//ptSrT1JwZFWGhjSpYUtJaasQrh.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           MILE 22
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Action
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Action
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "114px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -458,52 +438,48 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//i91mfvFcPPlaegcbOyjGgiWfZzh.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           FIRST MAN
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Drama
-            </li>
-            <li
-              className="item"
-            >
-              History
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Drama
+              </li>
+              <li
+                className="item"
+              >
+                History
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "146px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -544,62 +520,58 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//wMq9kQXTeQCHUZOG4fAe5cAxyUA.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           THE PREDATOR
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Action
-            </li>
-            <li
-              className="item"
-            >
-              Horror
-            </li>
-            <li
-              className="item"
-            >
-              Science Fiction
-            </li>
-            <li
-              className="item"
-            >
-              Thriller
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Action
+              </li>
+              <li
+                className="item"
+              >
+                Horror
+              </li>
+              <li
+                className="item"
+              >
+                Science Fiction
+              </li>
+              <li
+                className="item"
+              >
+                Thriller
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "106px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -640,62 +612,58 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//tCBxnZwLiY1BOKw3tH6AxHZdqPh.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           JOHNNY ENGLISH STRIKES AGAIN
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Action
-            </li>
-            <li
-              className="item"
-            >
-              Adventure
-            </li>
-            <li
-              className="item"
-            >
-              Comedy
-            </li>
-            <li
-              className="item"
-            >
-              Family
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Action
+              </li>
+              <li
+                className="item"
+              >
+                Adventure
+              </li>
+              <li
+                className="item"
+              >
+                Comedy
+              </li>
+              <li
+                className="item"
+              >
+                Family
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "124px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -736,57 +704,53 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//sFC1ElvoKGdHJIWRpNB3xWJ9lJA.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           THE NUN
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Horror
-            </li>
-            <li
-              className="item"
-            >
-              Mystery
-            </li>
-            <li
-              className="item"
-            >
-              Thriller
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Horror
+              </li>
+              <li
+                className="item"
+              >
+                Mystery
+              </li>
+              <li
+                className="item"
+              >
+                Thriller
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "116px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -827,62 +791,58 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//bT5WuAsjDJYQv2vXbWGDQTmjKav.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           BLACKKKLANSMAN
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Comedy
-            </li>
-            <li
-              className="item"
-            >
-              Crime
-            </li>
-            <li
-              className="item"
-            >
-              Drama
-            </li>
-            <li
-              className="item"
-            >
-              History
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Comedy
+              </li>
+              <li
+                className="item"
+              >
+                Crime
+              </li>
+              <li
+                className="item"
+              >
+                Drama
+              </li>
+              <li
+                className="item"
+              >
+                History
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "150px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -923,52 +883,48 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//afdZAIcAQscziqVtsEoh2PwsYTW.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           ALPHA
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Adventure
-            </li>
-            <li
-              className="item"
-            >
-              Drama
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Adventure
+              </li>
+              <li
+                className="item"
+              >
+                Drama
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "106px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -1009,67 +965,63 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//8bcpki9GfXdXj9esFpPtlate8v0.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           GOOSEBUMPS 2: HAUNTED HALLOWEEN
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Adventure
-            </li>
-            <li
-              className="item"
-            >
-              Comedy
-            </li>
-            <li
-              className="item"
-            >
-              Family
-            </li>
-            <li
-              className="item"
-            >
-              Fantasy
-            </li>
-            <li
-              className="item"
-            >
-              Horror
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Adventure
+              </li>
+              <li
+                className="item"
+              >
+                Comedy
+              </li>
+              <li
+                className="item"
+              >
+                Family
+              </li>
+              <li
+                className="item"
+              >
+                Fantasy
+              </li>
+              <li
+                className="item"
+              >
+                Horror
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "116px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -1110,52 +1062,48 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//rW0A73hjzPWVwADlCTLnjLhAFLX.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           KUNG FU LEAGUE
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Action
-            </li>
-            <li
-              className="item"
-            >
-              Comedy
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Action
+              </li>
+              <li
+                className="item"
+              >
+                Comedy
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "82px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -1196,47 +1144,43 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//1NSMAaBPSbWv7sGmF8oLGMNb8Qm.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           NIGHT SCHOOL
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Comedy
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Comedy
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "122px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -1277,67 +1221,63 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//4nKoB6wMVXfsYgRZK5lHZ5VMQ6J.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           SMALLFOOT
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Adventure
-            </li>
-            <li
-              className="item"
-            >
-              Animation
-            </li>
-            <li
-              className="item"
-            >
-              Comedy
-            </li>
-            <li
-              className="item"
-            >
-              Family
-            </li>
-            <li
-              className="item"
-            >
-              Fantasy
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Adventure
+              </li>
+              <li
+                className="item"
+              >
+                Animation
+              </li>
+              <li
+                className="item"
+              >
+                Comedy
+              </li>
+              <li
+                className="item"
+              >
+                Family
+              </li>
+              <li
+                className="item"
+              >
+                Fantasy
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "128px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -1378,57 +1318,53 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//m0yf7J7HsKeK6E81SMRcX8vx6mH.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           MANDY
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Action
-            </li>
-            <li
-              className="item"
-            >
-              Horror
-            </li>
-            <li
-              className="item"
-            >
-              Thriller
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Action
+              </li>
+              <li
+                className="item"
+              >
+                Horror
+              </li>
+              <li
+                className="item"
+              >
+                Thriller
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "128px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -1469,52 +1405,48 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//jf7jiy0rDVn1ljUwv3pWKousQ1p.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           BOHEMIAN RHAPSODY
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Drama
-            </li>
-            <li
-              className="item"
-            >
-              Music
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Drama
+              </li>
+              <li
+                className="item"
+              >
+                Music
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "168px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -1555,57 +1487,53 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//5LYSsOPzuP13201qSzMjNxi8FxN.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           SKYSCRAPER
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Action
-            </li>
-            <li
-              className="item"
-            >
-              Drama
-            </li>
-            <li
-              className="item"
-            >
-              Thriller
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Action
+              </li>
+              <li
+                className="item"
+              >
+                Drama
+              </li>
+              <li
+                className="item"
+              >
+                Thriller
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "122px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -1646,57 +1574,53 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//iNtFgXqXPRMkm1QO8CHn5sHfUgE.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           BAD TIMES AT THE EL ROYALE
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Crime
-            </li>
-            <li
-              className="item"
-            >
-              Mystery
-            </li>
-            <li
-              className="item"
-            >
-              Thriller
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Crime
+              </li>
+              <li
+                className="item"
+              >
+                Mystery
+              </li>
+              <li
+                className="item"
+              >
+                Thriller
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "130px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -1737,62 +1661,58 @@ exports[`1.test TABLE component render (rows = true) 1`] = `
       >
         <img
           alt="poster"
-          height="100%"
           src="http://image.tmdb.org/t/p/w300//gjAFM4xhA5vyLxxKMz38ujlUfDL.jpg"
-          width="100%"
         />
       </div>
       <div
-        className="description"
+        className="str"
       >
         <div
           className="title"
         >
           HOTEL TRANSYLVANIA 3: SUMMER VACATION
         </div>
-        <div>
-          <ul
-            className="list"
-          >
-            <li
-              className="item"
-            >
-              Animation
-            </li>
-            <li
-              className="item"
-            >
-              Comedy
-            </li>
-            <li
-              className="item"
-            >
-              Family
-            </li>
-            <li
-              className="item"
-            >
-              Fantasy
-            </li>
-          </ul>
-        </div>
         <div
-          className="rating"
+          className="description"
         >
           <div
-            className="container"
+            className="txt"
           >
-            <div
-              className="whiteStars"
+            <ul
+              className="list"
+            >
+              <li
+                className="item"
+              >
+                Animation
+              </li>
+              <li
+                className="item"
+              >
+                Comedy
+              </li>
+              <li
+                className="item"
+              >
+                Family
+              </li>
+              <li
+                className="item"
+              >
+                Fantasy
+              </li>
+            </ul>
+          </div>
+          <div
+            className="rating"
+          >
+            <img
+              alt="star"
+              height="20px"
+              src="test-file-stub"
+              width="20px"
             />
-            <div
-              className="fillStars"
-              style={
-                Object {
-                  "width": "136px",
-                }
-              }
-            />
+             
             <div
               className="container"
             >
@@ -3748,11 +3668,6 @@ exports[`3.test TABLE component render (rows = false) 1`] = `
     className="container"
   >
     <div
-      className="loader"
-    >
-      Spiner
-    </div>
-    <div
       className="container"
     />
     <div
@@ -5657,13 +5572,11 @@ exports[`4.test TABLE component render (rows = false) 1`] = `
       className="container"
     >
       <div>
-         
         <div
           className="loader"
         >
           Spiner
         </div>
-         
       </div>
     </div>
     <div
