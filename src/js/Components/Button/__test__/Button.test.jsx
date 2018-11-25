@@ -6,7 +6,6 @@ test('test component', () => {
   const render = renderer.create(
     <Button name="button" />,
   );
-
   const component = render.toJSON();
 
   expect(component).toMatchSnapshot();

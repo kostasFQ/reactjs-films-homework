@@ -1,19 +1,50 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
-
 .container {
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
   color: white;
-  z-index: 10;
-  position: relative;
-  bottom: 180px;
-  height: 180px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
   font-family: 'Work Sans', sans-serif;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    bottom: 0;
+  }
 }
 
-.div {
+.buttonsBlock {
+  width: 50%;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+
+  @media only screen and (max-width: 600px) {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+.prevField {
+  width: 230px;
+  height: 210px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: 45%;
+  right: 2%;
+  overflow-y: scroll;
+  text-align: left;
+  z-index: 1;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    position: absolute;
+    width: 93%;
+    bottom: -230px;
+  }
 }

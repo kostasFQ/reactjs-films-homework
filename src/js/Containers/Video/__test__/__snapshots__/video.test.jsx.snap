@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`1.test VIDEO component render 1`] = `
+<div>
+  <div
+    className="back"
+    onClick={[Function]}
+    role="presentation"
+  />
+  <div
+    className="con"
+  >
+    <div>
+      <button
+        className="button"
+        onClick={[Function]}
+        type="button"
+      >
+        ✕
+      </button>
+    </div>
+    <div
+      className="noTrailer"
+    />
+  </div>
+</div>
+`;
+
+exports[`3.test VIDEO component trailer 1`] = `
+<div>
+  <div
+    className="back"
+    onClick={[Function]}
+    role="presentation"
+  />
+  <div
+    className="con"
+  >
+    <div>
+      <button
+        className="button"
+        onClick={[Function]}
+        type="button"
+      >
+        ✕
+      </button>
+    </div>
+    <iframe
+      allow="autoplay; encrypted-media"
+      allowFullScreen={true}
+      className="iframe"
+      frameBorder="0"
+      height="100%"
+      src="qqq"
+      title="qqq"
+      width="100%"
+    />
+  </div>
+</div>
+`;

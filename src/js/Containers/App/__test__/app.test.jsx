@@ -1,13 +1,28 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import TestRenderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import { StaticRouter } from 'react-router-dom';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
 import App from '../index';
 
-test('test component render', () => {
-  const render = renderer.create(
-    <App />,
-  );
-  const component = render.toJSON();
+import { movie } from '../../../../../configs/jest/__mocks__/mockStore';
 
-  expect(component).toMatchSnapshot();
-  expect(component.type).toBe('div');
+const mockStore = configureMockStore([thunk]);
+const initialState = { movie };
+const store = mockStore(initialState);
+
+
+test('1.test APP component render', () => {
+  const testRenderer = TestRenderer.create(
+    <Provider store={store}>
+      <StaticRouter location="/main" context={{}}>
+        <App store={store} />
+      </StaticRouter>
+    </Provider>,
+  );
+  const result = testRenderer.toJSON();
+
+  expect(result.type).toBe('div');
+  expect(result).toMatchSnapshot();
 });

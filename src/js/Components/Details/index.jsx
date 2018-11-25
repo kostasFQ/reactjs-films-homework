@@ -1,20 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './details.scss';
+import styles from './details.scss';
 import Rating from '../Rating';
+import Genres from '../Genres';
 
 const Details = (props) => {
   const {
-    title, genres, duration, rating,
+    original_title, genre_ids, vote_average,
   } = props;
+
   return (
-    <div className={s.container}>
-      <h1 className={s.h1}>{title.toUpperCase()}</h1>
-      <ul className={s.list}>
-        {genres.map(item => <li key={item} className={s.item}>{item}</li>)}
-        <span>{duration}</span>
-      </ul>
-      <Rating rating={rating} />
+    <div className={styles.container}>
+      <h1 className={styles.h1}>{original_title.toUpperCase()}</h1>
+      <Genres genre_ids={genre_ids} />
+      <Rating rating={vote_average} />
     </div>
   );
 };
@@ -22,8 +21,7 @@ const Details = (props) => {
 export default Details;
 
 Details.propTypes = {
-  title: PropTypes.string.isRequired,
-  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
-  duration: PropTypes.string.isRequired,
-  rating: PropTypes.number.isRequired,
+  original_title: PropTypes.string.isRequired,
+  vote_average: PropTypes.number.isRequired,
+  genre_ids: PropTypes.arrayOf(PropTypes.number).isRequired,
 };

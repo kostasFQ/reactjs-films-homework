@@ -5,18 +5,120 @@ exports[`test component render (rating is correct) 1`] = `
   className="container"
 >
   <div
-    className="whiteStars"
-  />
+    className="ratingBox"
+  >
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+  </div>
   <div
-    className="fillStars"
+    className="x"
     style={
       Object {
         "width": "100px",
       }
     }
-  />
+  >
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+    <img
+      alt="star"
+      className="star"
+      src="test-file-stub"
+    />
+  </div>
   <div
-    className="ratingBox"
+    className="container"
   >
     5
   </div>

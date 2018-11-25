@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import Poster from '../index';
 import pict from '../../../../imgs/cover-image.png';
 
-test('test component', () => {
+test('test POSTER component', () => {
   const render = renderer.create(
     <Poster pict={pict} />,
   );
@@ -11,5 +11,5 @@ test('test component', () => {
   const component = render.toJSON();
 
   expect(component).toMatchSnapshot();
-  expect(component.type).toBe('img');
+  expect(component.type).toBe('div');
 });

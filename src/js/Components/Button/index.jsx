@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './button.scss';
+import styles from './button.scss';
 
 const Button = (props) => {
   const { name, action } = props;
   return (
-    <button className={s.container} onClick={action} type="button">
+    <button className={styles.container} onClick={action} type="button">
       {name}
     </button>
   );
